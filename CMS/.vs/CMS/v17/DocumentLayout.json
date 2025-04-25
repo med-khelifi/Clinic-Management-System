@@ -1,0 +1,159 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\persons\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:persons\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\persons\\controls\\ucpersoncardwithsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:persons\\controls\\ucpersoncardwithsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\persons\\controls\\ucpersoncardwithsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:persons\\controls\\ucpersoncardwithsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\users\\controls\\ctrmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:users\\controls\\ctrmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucPersonCardWithSearch.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "RelativeDocumentMoniker": "Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\Controls\\ucPersonCardWithSearch.cs [Design]",
+              "RelativeToolTip": "Persons\\Controls\\ucPersonCardWithSearch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:35:38.609Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ucPersonCardWithSearch.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "RelativeDocumentMoniker": "Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "RelativeToolTip": "Persons\\Controls\\ucPersonCardWithSearch.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAIAwwEoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:34:11.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAddEditPerson.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\frmAddEditPerson.cs",
+              "RelativeDocumentMoniker": "Persons\\frmAddEditPerson.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Persons\\frmAddEditPerson.cs [Design]",
+              "RelativeToolTip": "Persons\\frmAddEditPerson.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:21:36.515Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddEditUser.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs",
+              "RelativeDocumentMoniker": "Users\\frmAddEditUser.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs",
+              "RelativeToolTip": "Users\\frmAddEditUser.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADgv1cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:18:07.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddEditUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs",
+              "RelativeDocumentMoniker": "Users\\frmAddEditUser.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs [Design]",
+              "RelativeToolTip": "Users\\frmAddEditUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:14:56.493Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ctrManageUsers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\Controls\\ctrManageUsers.cs",
+              "RelativeDocumentMoniker": "Users\\Controls\\ctrManageUsers.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\Controls\\ctrManageUsers.cs [Design]",
+              "RelativeToolTip": "Users\\Controls\\ctrManageUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:14:52.598Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAjwBgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:13:55.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:13:53.91Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

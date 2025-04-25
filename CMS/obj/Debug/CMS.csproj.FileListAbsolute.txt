@@ -1,0 +1,36 @@
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\CMS.exe.config
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\CMS.exe
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\CMS.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\Guna.UI2.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.csproj.AssemblyReference.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.Properties.Resources.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.csproj.GenerateResource.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.csproj.CoreCompileInputs.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.csproj.Up2Date
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.exe
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\obj\Debug\CMS.FrmMain.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS\bin\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.csproj.AssemblyReference.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.FrmMain.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Properties.Resources.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.csproj.GenerateResource.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.csproj.CoreCompileInputs.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.exe
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS.exe.config
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS.exe
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS-Data Access Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS-Data Access Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.csproj.Up2Date
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.Controls.ucPersonCard.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmAddEditPerson.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Persons.Controls.ucPersonCardWithSearch.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmAddEditUser.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Doctors.Controls.ctrManageDoctors.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Patients.Controls.ctrManagePatiants.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.ctrManagePeople.resources

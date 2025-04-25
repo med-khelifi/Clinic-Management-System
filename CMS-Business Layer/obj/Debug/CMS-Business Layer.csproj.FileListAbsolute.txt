@@ -1,0 +1,18 @@
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\bin\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\bin\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\bin\Debug\CMS-Data Access Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\bin\Debug\CMS-Data Access Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\obj\Debug\CMS-Business Layer.csproj.AssemblyReference.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\obj\Debug\CMS-Business Layer.csproj.CoreCompileInputs.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\obj\Debug\CMS-Busi.5EF8682E.Up2Date
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\obj\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS-Business Layer\obj\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\obj\Debug\CMS-Business Layer.csproj.AssemblyReference.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\obj\Debug\CMS-Business Layer.csproj.CoreCompileInputs.cache
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\obj\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\obj\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\bin\Debug\CMS-Business Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\bin\Debug\CMS-Business Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\bin\Debug\CMS-Data Access Layer.dll
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\bin\Debug\CMS-Data Access Layer.pdb
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS-Business Layer\obj\Debug\CMS-Busi.5EF8682E.Up2Date
