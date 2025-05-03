@@ -45,7 +45,16 @@ namespace CMS.Users
                 lblTitle.Text = "Edit User";
             }
         }
+        void _ResetForm()
+        {
+            txtUserName.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtConfirmePassword.Text = string.Empty;
+            chk_isActive.Checked = false;
+            ucPersonCardWithSearch1.EnableSearch = true;
 
+            _ShowFormTitle();
+        }
         void _LoadInfo()
         {
             _User = clsUser.Find(_UserID);
@@ -59,17 +68,18 @@ namespace CMS.Users
             txtPassword.Text = _User.Password;
             chk_isActive.Checked = _User.IsActive;
             ucPersonCardWithSearch1.LoadPersonInfo(_User.PersonInfo.NationalNo); 
+            ucPersonCardWithSearch1.EnableSearch = false;
+
         }
 
         private void frmAddEditUser_Load(object sender, EventArgs e)
         {
-            _ShowFormTitle();
+            _ResetForm();
+            if(_eFormMode == enFormMode.eAddNewMode)
+                _User = new clsUser();
+            else
+                _LoadInfo();    
            
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -101,6 +111,84 @@ namespace CMS.Users
             }
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUserName.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUserName, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUserName, null);
+            }
+
+            //Make sure the national number is not used by another person
+            if (txtUserName.Text.Trim() != _User.Username && clsUser.isUserExistsByUserName(txtUserName.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUserName, "User name is used for another user!");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtUserName, null);
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtPassword, null);
+            }
+
+            //Make sure the national number is not used by another person
+            if (txtPassword.Text.Trim().Length < 6)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "Password have to be 6 char at least!");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void txtConfirmePassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtConfirmePassword.Text.Trim()))
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtConfirmePassword, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtConfirmePassword, null);
+            }
+
+            //Make sure the national number is not used by another person
+            if (txtConfirmePassword.Text.Trim() != txtPassword.Text.Trim())
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtConfirmePassword, "Password does't match!");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtConfirmePassword, null);
+            }
         }
     }
 }

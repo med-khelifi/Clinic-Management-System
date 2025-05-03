@@ -52,6 +52,7 @@
     <Compile Include="clsPrescription.cs" />
     <Compile Include="clsRole.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="GlobalClasses\clsPasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

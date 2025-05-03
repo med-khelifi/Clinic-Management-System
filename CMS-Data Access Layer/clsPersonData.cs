@@ -181,7 +181,7 @@ namespace DataLayer
         public static bool IsNationalNoExists(string nationalNo)
         {
             using (var conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (var cmd = new SqlCommand("sp_isNationalNoExists", conn))
+            using (var cmd = new SqlCommand("sp_isPersonExistsByUserName", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NationalNo", nationalNo);

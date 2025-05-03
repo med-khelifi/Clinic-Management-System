@@ -33,4 +33,5 @@ C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmAddEditUser.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Doctors.Controls.ctrManageDoctors.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Patients.Controls.ctrManagePatiants.resources
-C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.ctrManagePeople.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.Controls.ucManageUsers.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Login.frmLogin.resources

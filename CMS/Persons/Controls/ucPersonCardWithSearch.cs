@@ -61,18 +61,18 @@ namespace CMS.Persons.Controls
         {
 
         }
-        public void EnableSearchBox()
-        {
-            EnableSearch = true;
-        }
-        public void DisableSearchBox()
-        {
-            EnableSearch = false;
-        }
+        //public void EnableSearchBox()
+        //{
+        //    EnableSearch = true;
+        //}
+        //public void DisableSearchBox()
+        //{
+        //    EnableSearch = false;
+        //}
         public void LoadPersonInfo(string nationalNo)
         {
             ucPersonCard1.LoadPersonInfo(nationalNo);
-            DisableSearchBox();
+            EnableSearch = false;   
         }
     }
 }

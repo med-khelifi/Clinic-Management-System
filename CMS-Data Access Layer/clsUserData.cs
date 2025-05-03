@@ -125,5 +125,53 @@ namespace DataLayer
             }
             return result > 0;
         }
+        public static bool isUserExistsByUserName(string UserName)
+        {
+            using (var conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (var cmd = new SqlCommand("sp_isPersonExistsByUserName", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@UserName", UserName);
+
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    return reader.HasRows;
+                }
+            }
+        }
+
+        public static bool LogIn(ref int UserId,string Username,string Password, ref int RoleId, ref bool IsActive, ref int PersonID)
+        {
+            bool isFound = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_LogIn", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@UserName", Username);
+                command.Parameters.AddWithValue("@Password", Password);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Username = reader["Username"].ToString();
+                            Password = reader["Password"].ToString();
+                            RoleId = Convert.ToInt32(reader["RoleId"]);
+                            IsActive = Convert.ToBoolean(reader["IsActive"]);
+                            PersonID = Convert.ToInt32(reader["PersonID"]);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return isFound;
+        }
+        
     }
 }

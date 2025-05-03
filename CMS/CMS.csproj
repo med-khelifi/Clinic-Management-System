@@ -63,8 +63,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalClasses\clsAppDetails.cs" />
+    <Compile Include="GlobalClasses\clsGlobal.cs" />
     <Compile Include="GlobalClasses\clsValidation.cs" />
-    <Compile Include="Logger\clsLogger.cs" />
+    <Compile Include="GlobalClasses\clsLogger.cs" />
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\Controls\ctrManagePatiants.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,17 +93,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Users\Controls\ctrManageUsers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Users\Controls\ctrManageUsers.Designer.cs">
-      <DependentUpon>ctrManageUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persons\frmAddEditPerson.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Persons\frmAddEditPerson.Designer.cs">
       <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Controls\ucManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\ucManageUsers.Designer.cs">
+      <DependentUpon>ucManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
@@ -103,12 +111,15 @@
     <Compile Include="Users\frmAddEditUser.Designer.cs">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility\clsUtil.cs" />
+    <Compile Include="GlobalClasses\clsUtil.cs" />
     <EmbeddedResource Include="Doctors\Contorls\ctrManageDoctors.resx">
       <DependentUpon>ctrManageDoctors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients\Controls\ctrManagePatiants.resx">
       <DependentUpon>ctrManagePatiants.cs</DependentUpon>
@@ -129,11 +140,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Users\Controls\ctrManageUsers.resx">
-      <DependentUpon>ctrManageUsers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Persons\frmAddEditPerson.resx">
       <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Controls\ucManageUsers.resx">
+      <DependentUpon>ucManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
@@ -231,6 +242,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\globe_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logger\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

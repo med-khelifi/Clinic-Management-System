@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CMS.GlobalClasses;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,7 +13,7 @@ namespace CMS.Utility
 {
     public static class clsUtil
     {
-        static private string DestinationFolder = @"C:\CMS_PersonsPictures\";
+        
         public static void ShowUserControl(UserControl userControl,Panel panelContainer)
         {
             panelContainer.Controls.Clear(); // Optional: clear previous controls
@@ -65,12 +68,12 @@ namespace CMS.Utility
             // with GUID with the same extention, then it will update the sourceFileName with the new name.
 
             
-            if (!CreateFolderIfDoesNotExist(DestinationFolder))
+            if (!CreateFolderIfDoesNotExist(clsAppDetails.ImageFolderPath))
             {
                 return false;
             }
 
-            string destinationFile = DestinationFolder + ReplaceFileNameWithGUID(sourceFile);
+            string destinationFile = clsAppDetails.ImageFolderPath + ReplaceFileNameWithGUID(sourceFile);
             try
             {
                 File.Copy(sourceFile, destinationFile, true);
@@ -84,6 +87,55 @@ namespace CMS.Utility
 
             sourceFile = destinationFile;
             return true;
+        }
+        public static bool RememberUsernameAndPassword(string Username, string Password)
+        {
+
+            string keyPath = $@"HKEY_CURRENT_USER\Software\{clsAppDetails.ApplicationName}";
+            string UserName_ValueName = "UserName";
+            string Password_ValueName = "Password";
+
+
+            try
+            {
+                // Write the value to the Registry
+                Registry.SetValue(keyPath, UserName_ValueName, Username, RegistryValueKind.String);
+                Registry.SetValue(keyPath, Password_ValueName, Password, RegistryValueKind.String);
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine($"An error occurred: {ex.Message}");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool GetStoredCredential(ref string Username, ref string Password)
+        {
+            string keyPath = $@"HKEY_CURRENT_USER\Software\{clsAppDetails.ApplicationName}";
+            string UserName_ValueName = "UserName";
+            string Password_ValueName = "Password";
+
+            try
+            {
+                // Read the value from the Registry
+                Password = Registry.GetValue(keyPath, Password_ValueName, null) as string;
+                Username = Registry.GetValue(keyPath, UserName_ValueName, null) as string;
+
+
+                if (Username == null || Password == null)
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Logger.clsLogger.LogError(ex);
+                return false;
+            }
+            return true;
+
         }
     }
 }

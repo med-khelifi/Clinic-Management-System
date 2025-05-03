@@ -57,7 +57,7 @@ namespace BusinessLayer
         private bool _addnew()
         {
             this.UserId = clsUserData.AddNew(this.Username, this.Password, this.RoleId, this.IsActive, this.PersonID);
-             return this.UserId != 0;
+            return this.UserId != 0;
         }
         private bool _update()
         {
@@ -81,6 +81,23 @@ namespace BusinessLayer
             if (clsUserData.GetByID(UserId, ref Username, ref Password, ref RoleId, ref IsActive, ref PersonID))
             {
                 return new clsUser(UserId, Username, Password, RoleId, IsActive, PersonID);
+            }
+            return null;
+        }
+        public static bool isUserExistsByUserName(string UserName)
+        {
+            return clsUserData.isUserExistsByUserName(UserName);
+        }
+        public static clsUser LogIn(string UserName, string Password)
+        {
+            int UserId = -1;
+            string HashedPassword = clsPasswordHasher.Hash(Password);
+            int RoleId = -1;
+            bool IsActive = false;
+            int PersonID = -1;
+            if (clsUserData.LogIn(ref UserId,UserName,HashedPassword, ref RoleId, ref IsActive, ref PersonID))
+            {
+                return new clsUser(UserId, UserName, HashedPassword, RoleId, IsActive, PersonID);
             }
             return null;
         }

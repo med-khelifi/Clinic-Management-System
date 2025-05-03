@@ -30,17 +30,17 @@
         {
             this.ucPersonCard1 = new CMS.Users.Controls.ucPersonCard();
             this.gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearchPerson = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // ucPersonCard1
             // 
             this.ucPersonCard1.BackColor = System.Drawing.Color.White;
-            this.ucPersonCard1.Location = new System.Drawing.Point(3, 97);
+            this.ucPersonCard1.Location = new System.Drawing.Point(3, 116);
             this.ucPersonCard1.Name = "ucPersonCard1";
             this.ucPersonCard1.Size = new System.Drawing.Size(828, 303);
             this.ucPersonCard1.TabIndex = 15;
@@ -60,9 +60,33 @@
             this.gbFilter.Location = new System.Drawing.Point(3, 3);
             this.gbFilter.Name = "gbFilter";
             this.gbFilter.ShadowDecoration.Parent = this.gbFilter;
-            this.gbFilter.Size = new System.Drawing.Size(828, 90);
+            this.gbFilter.Size = new System.Drawing.Size(828, 107);
             this.gbFilter.TabIndex = 17;
             this.gbFilter.Text = "Search Person by :";
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchBox.DefaultText = "";
+            this.txtSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.DisabledState.Parent = this.txtSearchBox;
+            this.txtSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.FocusedState.Parent = this.txtSearchBox;
+            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.HoverState.Parent = this.txtSearchBox;
+            this.txtSearchBox.Location = new System.Drawing.Point(119, 41);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(8);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.PasswordChar = '\0';
+            this.txtSearchBox.PlaceholderText = "";
+            this.txtSearchBox.SelectedText = "";
+            this.txtSearchBox.ShadowDecoration.Parent = this.txtSearchBox;
+            this.txtSearchBox.Size = new System.Drawing.Size(266, 42);
+            this.txtSearchBox.TabIndex = 16;
             // 
             // btnSearchPerson
             // 
@@ -76,7 +100,7 @@
             this.btnSearchPerson.ForeColor = System.Drawing.Color.Black;
             this.btnSearchPerson.HoverState.Parent = this.btnSearchPerson;
             this.btnSearchPerson.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearchPerson.Location = new System.Drawing.Point(396, 33);
+            this.btnSearchPerson.Location = new System.Drawing.Point(396, 41);
             this.btnSearchPerson.Name = "btnSearchPerson";
             this.btnSearchPerson.ShadowDecoration.Parent = this.btnSearchPerson;
             this.btnSearchPerson.Size = new System.Drawing.Size(52, 42);
@@ -95,7 +119,7 @@
             this.btnAddNewPerson.ForeColor = System.Drawing.Color.Black;
             this.btnAddNewPerson.HoverState.Parent = this.btnAddNewPerson;
             this.btnAddNewPerson.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAddNewPerson.Location = new System.Drawing.Point(465, 33);
+            this.btnAddNewPerson.Location = new System.Drawing.Point(472, 41);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
             this.btnAddNewPerson.ShadowDecoration.Parent = this.btnAddNewPerson;
             this.btnAddNewPerson.Size = new System.Drawing.Size(52, 42);
@@ -106,36 +130,12 @@
             // 
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 33);
+            this.label3.Location = new System.Drawing.Point(15, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 42);
             this.label3.TabIndex = 13;
             this.label3.Text = "National No :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtSearchBox
-            // 
-            this.txtSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchBox.DefaultText = "";
-            this.txtSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchBox.DisabledState.Parent = this.txtSearchBox;
-            this.txtSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchBox.FocusedState.Parent = this.txtSearchBox;
-            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchBox.HoverState.Parent = this.txtSearchBox;
-            this.txtSearchBox.Location = new System.Drawing.Point(119, 33);
-            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.PasswordChar = '\0';
-            this.txtSearchBox.PlaceholderText = "";
-            this.txtSearchBox.SelectedText = "";
-            this.txtSearchBox.ShadowDecoration.Parent = this.txtSearchBox;
-            this.txtSearchBox.Size = new System.Drawing.Size(266, 42);
-            this.txtSearchBox.TabIndex = 16;
             // 
             // ucPersonCardWithSearch
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.gbFilter);
             this.Controls.Add(this.ucPersonCard1);
             this.Name = "ucPersonCardWithSearch";
-            this.Size = new System.Drawing.Size(834, 403);
+            this.Size = new System.Drawing.Size(834, 424);
             this.gbFilter.ResumeLayout(false);
             this.ResumeLayout(false);
 

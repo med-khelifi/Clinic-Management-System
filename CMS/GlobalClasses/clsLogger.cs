@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.GlobalClasses;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,19 +10,18 @@ namespace CMS.Logger
 {
     static class clsLogger
     {
-        static private string ApplicationName = "CMS";
         public static void LogError(Exception ex)
         {
             try
             {
                 // Check if the Event Log source exists, if not, create it
-                if (!EventLog.SourceExists(ApplicationName))
+                if (!EventLog.SourceExists(clsAppDetails.ApplicationName))
                 {
                     EventLog.CreateEventSource("MyApp", "Application");
                 }
 
                 // Write the error message to the Windows Event Log
-                EventLog.WriteEntry("MyApp", $"Error: {ex.Message}\nStackTrace: {ex.StackTrace}", EventLogEntryType.Error);
+                EventLog.WriteEntry(clsAppDetails.ApplicationName, $"Error: {ex.Message}\nStackTrace: {ex.StackTrace}", EventLogEntryType.Error);
             }
             catch (Exception logEx)
             {

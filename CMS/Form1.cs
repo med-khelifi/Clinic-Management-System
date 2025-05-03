@@ -20,8 +20,8 @@ namespace CMS
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            //var uc = new Persons.Controls.ucma();
-            //clsUtil.ShowUserControl(uc, pMain);
+            var uc = new Users.Controls.ucManageUsers();
+            clsUtil.ShowUserControl(uc, pMain);
             //uc.RefreshData();
         }
 
@@ -37,6 +37,11 @@ namespace CMS
             var uc = new Patients.Controls.ctrManagePatiants();
             clsUtil.ShowUserControl(uc, pMain);
             //uc.RefreshData();
+        }
+
+        private void pHeader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
