@@ -3,12 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\users\\frmchangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:users\\frmchangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{162D3CE3-0966-4BAD-8C71-93F29B09C58F}|..\\CMS-Data Access Layer\\CMS-Data Access Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-data access layer\\clsuserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A6E44F-2B2F-4B06-8913-114056A76CC9}|..\\CMS-Business Layer\\CMS-Business Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-business layer\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +33,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Login\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Login\\frmLogin.cs",
-              "RelativeToolTip": "Login\\frmLogin.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwCcAAAAMAAAAAAAAAA==",
+              "Title": "frmChangePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmChangePassword.cs",
+              "RelativeDocumentMoniker": "Users\\frmChangePassword.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmChangePassword.cs [Design]",
+              "RelativeToolTip": "Users\\frmChangePassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:39:52.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T20:27:22.37Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Login\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Login\\frmLogin.cs [Design]",
-              "RelativeToolTip": "Login\\frmLogin.cs [Design]",
+              "Title": "clsUserData.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsUserData.cs",
+              "RelativeDocumentMoniker": "..\\CMS-Data Access Layer\\clsUserData.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsUserData.cs",
+              "RelativeToolTip": "..\\CMS-Data Access Layer\\clsUserData.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAzwA4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:39:46.16Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-05T19:41:22.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsUser.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsUser.cs",
+              "RelativeDocumentMoniker": "..\\CMS-Business Layer\\clsUser.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsUser.cs",
+              "RelativeToolTip": "..\\CMS-Business Layer\\clsUser.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T19:29:14.189Z",
+              "EditorCaption": ""
             }
           ]
         }

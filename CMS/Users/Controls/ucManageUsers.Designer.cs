@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbRecordCount = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUsersList = new System.Windows.Forms.DataGridView();
+            this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsIShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsIUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsIDeactivate = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsIChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsersList)).BeginInit();
+            this.cmsUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +132,7 @@
             this.dgvUsersList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsersList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsersList.ContextMenuStrip = this.cmsUsers;
             this.dgvUsersList.Location = new System.Drawing.Point(22, 365);
             this.dgvUsersList.MultiSelect = false;
             this.dgvUsersList.Name = "dgvUsersList";
@@ -134,6 +142,43 @@
             this.dgvUsersList.RowTemplate.Height = 24;
             this.dgvUsersList.Size = new System.Drawing.Size(1240, 296);
             this.dgvUsersList.TabIndex = 15;
+            // 
+            // cmsUsers
+            // 
+            this.cmsUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsIShowDetails,
+            this.cmsIUpdate,
+            this.cmsIDeactivate,
+            this.cmsIChangePassword});
+            this.cmsUsers.Name = "cmsUsers";
+            this.cmsUsers.Size = new System.Drawing.Size(211, 128);
+            // 
+            // cmsIShowDetails
+            // 
+            this.cmsIShowDetails.Name = "cmsIShowDetails";
+            this.cmsIShowDetails.Size = new System.Drawing.Size(210, 24);
+            this.cmsIShowDetails.Text = "Show Details";
+            this.cmsIShowDetails.Click += new System.EventHandler(this.cmsIShowDetails_Click);
+            // 
+            // cmsIUpdate
+            // 
+            this.cmsIUpdate.Name = "cmsIUpdate";
+            this.cmsIUpdate.Size = new System.Drawing.Size(210, 24);
+            this.cmsIUpdate.Text = "Edit";
+            this.cmsIUpdate.Click += new System.EventHandler(this.cmsIUpdate_Click);
+            // 
+            // cmsIDeactivate
+            // 
+            this.cmsIDeactivate.Name = "cmsIDeactivate";
+            this.cmsIDeactivate.Size = new System.Drawing.Size(210, 24);
+            this.cmsIDeactivate.Text = "Deactivate";
+            // 
+            // cmsIChangePassword
+            // 
+            this.cmsIChangePassword.Name = "cmsIChangePassword";
+            this.cmsIChangePassword.Size = new System.Drawing.Size(210, 24);
+            this.cmsIChangePassword.Text = "Change Password";
             // 
             // btnAddNewUser
             // 
@@ -185,6 +230,7 @@
             this.Size = new System.Drawing.Size(1274, 708);
             this.Load += new System.EventHandler(this.ucManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsersList)).EndInit();
+            this.cmsUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,5 +247,10 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.DataGridView dgvUsersList;
+        private System.Windows.Forms.ContextMenuStrip cmsUsers;
+        private System.Windows.Forms.ToolStripMenuItem cmsIShowDetails;
+        private System.Windows.Forms.ToolStripMenuItem cmsIUpdate;
+        private System.Windows.Forms.ToolStripMenuItem cmsIDeactivate;
+        private System.Windows.Forms.ToolStripMenuItem cmsIChangePassword;
     }
 }

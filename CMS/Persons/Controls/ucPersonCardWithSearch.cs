@@ -40,20 +40,13 @@ namespace CMS.Persons.Controls
                 MessageBox.Show("Please enter a National No to search.","Empty Box",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-            ucPersonCard1.LoadPersonInfo(txtSearchBox.Text);
+            //ucPersonCard1.LoadPersonInfo(txtSearchBox.Text);
             OnSearchPersonClicked?.Invoke(this, ucPersonCard1.NationalNo);
         }
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            frmAddEditPerson frm = new frmAddEditPerson();
-            frm.OnSaveClicked += 
-            (string NationalNo) =>
-            {
-                ucPersonCard1.LoadPersonInfo(NationalNo);
-                OnSearchPersonClicked?.Invoke(this, NationalNo);
-                txtSearchBox.Text = NationalNo;
-            };
+            frmAddEditUser frm = new frmAddEditUser();
             frm.ShowDialog();
         }
 
@@ -61,18 +54,18 @@ namespace CMS.Persons.Controls
         {
 
         }
-        //public void EnableSearchBox()
+        ////public void EnableSearchBox()
+        ////{
+        ////    EnableSearch = true;
+        ////}
+        ////public void DisableSearchBox()
+        ////{
+        ////    EnableSearch = false;
+        ////}
+        //public void LoadPersonInfo(string nationalNo)
         //{
-        //    EnableSearch = true;
+        //    ucPersonCard1.LoadPersonInfo(nationalNo);
+        //    EnableSearch = false;   
         //}
-        //public void DisableSearchBox()
-        //{
-        //    EnableSearch = false;
-        //}
-        public void LoadPersonInfo(string nationalNo)
-        {
-            ucPersonCard1.LoadPersonInfo(nationalNo);
-            EnableSearch = false;   
-        }
     }
 }

@@ -213,6 +213,16 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap isActive {
+            get {
+                object obj = ResourceManager.GetObject("isActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Male {
             get {
                 object obj = ResourceManager.GetObject("Male", resourceCulture);
@@ -286,6 +296,16 @@ namespace CMS.Properties {
         internal static System.Drawing.Bitmap phone_Iconl {
             get {
                 object obj = ResourceManager.GetObject("phone_Iconl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Role {
+            get {
+                object obj = ResourceManager.GetObject("Role", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

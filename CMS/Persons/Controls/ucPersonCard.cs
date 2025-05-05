@@ -49,7 +49,6 @@ namespace CMS.Users.Controls
         }
         private void _FillPersonInfo()
         {
-            llEditPersonInfo.Enabled = true;
             _NationalNo = _Person.NationalNo;
             _PersonID = _Person.PersonID;
             lblNationalNo.Text = _Person.NationalNo;
@@ -77,30 +76,18 @@ namespace CMS.Users.Controls
 
         }
         
-        public void LoadPersonInfo(string NationalNo)
-        {
-            _Person = clsPerson.Find(NationalNo);
+        public void LoadPersonInfo(clsPerson _Person)
+        {  
 
             if (_Person == null)
             {
-                llEditPersonInfo.Enabled = false;
                 ResetPersonInfo();
-                MessageBox.Show("No Person with National No. = " + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Person found !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            this._Person = _Person; 
             _FillPersonInfo();
         }
 
-        private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmAddEditPerson frm = new frmAddEditPerson(_PersonID);
-            frm.OnSaveClicked += LoadPersonInfo;
-            frm.ShowDialog();
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

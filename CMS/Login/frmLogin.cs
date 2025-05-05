@@ -66,14 +66,19 @@ namespace CMS.Login
                 clsGlobal.CurrentUser = user;
 
                 //this.Hide();
-                //FrmMainMenu f = new FrmMainMenu(this);
-                //f.ShowDialog();
+                FrmMain f = new FrmMain();
+                f.ShowDialog();
             }
             else
             {
                 txtUserName.Focus();
                 MessageBox.Show("Invalid Username/Password.", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

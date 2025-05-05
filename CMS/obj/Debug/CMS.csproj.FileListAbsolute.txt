@@ -28,10 +28,12 @@ C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\bin\Debug\CMS-Data Access Layer.pdb
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.csproj.Up2Date
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.Controls.ucPersonCard.resources
-C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmAddEditPerson.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Persons.Controls.ucPersonCardWithSearch.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmAddEditUser.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Doctors.Controls.ctrManageDoctors.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Patients.Controls.ctrManagePatiants.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.Controls.ucManageUsers.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Login.frmLogin.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Dashboard.ucDashbord.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.Controls.ucUserCard.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Users.frmUserInfo.resources

@@ -15,6 +15,7 @@ namespace BusinessLayer
         public bool IsActive { get; set; }
         public int PersonID { get; set; }
         public clsPerson PersonInfo { get; set; }
+        public clsRole RoleInfo { get; set; } // Added RoleInfo property
         public clsUser()
         {
             Mode = enMode.AddNew;
@@ -36,7 +37,37 @@ namespace BusinessLayer
             this.PersonID = PersonID;
             Mode = enMode.Update;
             PersonInfo = clsPerson.Find(PersonID);
+            RoleInfo = clsRole.Find(RoleId);
         }
+
+        //// Constructor to initialize all properties including PersonInfo that will be used in transactions add user and person
+        //private clsUser(int UserId, string Username, string Password, int RoleId, bool IsActive, int PersonID , 
+        //    string Name, DateTime DateOfBirth, bool Gender, string PhoneNumber, string Email, string Address, 
+        //    string ImagePath, int NationalityID, string NationalNo)
+        //{
+        //    this.UserId = UserId;
+        //    this.Username = Username;
+        //    this.Password = Password;
+        //    this.RoleId = RoleId;
+        //    this.IsActive = IsActive;
+        //    this.PersonID = PersonID;
+        //    // Initialize PersonInfo
+        //    PersonInfo.PersonID = PersonID;
+        //    PersonInfo.Name = Name;
+        //    PersonInfo.DateOfBirth = DateOfBirth;
+        //    PersonInfo.Gender = Gender;
+        //    PersonInfo.PhoneNumber = PhoneNumber;
+        //    PersonInfo.Email = Email;
+        //    PersonInfo.Address = Address;
+        //    PersonInfo.ImagePath = ImagePath;
+        //    PersonInfo.NationalityID = NationalityID;
+        //    PersonInfo.NationalNo = NationalNo;
+
+
+        //    Mode = enMode.Update;
+            
+        //}
+
         public bool Save()
         {
             bool success = false;
@@ -56,12 +87,25 @@ namespace BusinessLayer
         }
         private bool _addnew()
         {
-            this.UserId = clsUserData.AddNew(this.Username, this.Password, this.RoleId, this.IsActive, this.PersonID);
+            this.UserId = clsUserData.AddNew
+                (
+                this.Username, clsPasswordHasher.Hash(this.Password), this.RoleId, this.IsActive,
+                PersonInfo.Name, PersonInfo.DateOfBirth, PersonInfo.Gender,
+                PersonInfo.PhoneNumber, PersonInfo.Email, PersonInfo.Address,
+                PersonInfo.ImagePath, PersonInfo.NationalityID, PersonInfo.NationalNo
+                );
             return this.UserId != 0;
         }
         private bool _update()
         {
-            return clsUserData.Update(UserId, Username, Password, RoleId, IsActive, PersonID);
+            return clsUserData.Update
+                (
+                this.UserId, this.Username, clsPasswordHasher.Hash(this.Password), this.RoleId, this.IsActive,
+                this.PersonInfo.PersonID, this.PersonInfo.Name, this.PersonInfo.DateOfBirth,
+                this.PersonInfo.Gender, this.PersonInfo.PhoneNumber, this.PersonInfo.Email,
+                this.PersonInfo.Address, this.PersonInfo.ImagePath, this.PersonInfo.NationalityID,
+                this.PersonInfo.NationalNo
+                );
         }
         public bool Delete()
         {
@@ -84,6 +128,19 @@ namespace BusinessLayer
             }
             return null;
         }
+        public static clsUser Find(string Username)
+        {
+            int UserId = 0;
+            string Password = "";
+            int RoleId = -1;
+            bool IsActive = false;
+            int PersonID = -1;
+            if (clsUserData.GetByUsername(Username, ref UserId,ref Password, ref RoleId, ref IsActive, ref PersonID))
+            {
+                return new clsUser(UserId, Username, Password, RoleId, IsActive, PersonID);
+            }
+            return null;
+        }
         public static bool isUserExistsByUserName(string UserName)
         {
             return clsUserData.isUserExistsByUserName(UserName);
@@ -100,6 +157,12 @@ namespace BusinessLayer
                 return new clsUser(UserId, UserName, HashedPassword, RoleId, IsActive, PersonID);
             }
             return null;
+        }
+
+        public bool ChangePassword(string NewPassword)
+        {
+            string HashedNewPassword = clsPasswordHasher.Hash(NewPassword);
+            return clsUserData.ChangePassword(this.UserId, HashedNewPassword);
         }
     }
 }

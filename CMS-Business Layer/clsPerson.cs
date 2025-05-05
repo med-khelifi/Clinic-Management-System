@@ -98,7 +98,6 @@ namespace BusinessLayer
             }
             return null;
         }
-
         public static clsPerson Find(string NationalNo)
         {
             string Name = "";

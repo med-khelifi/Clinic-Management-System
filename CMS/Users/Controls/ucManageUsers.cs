@@ -33,8 +33,32 @@ namespace CMS.Users.Controls
         {
             using(var frm = new frmAddEditUser())
             {
+                frm.OnUserSaved += () =>
+                {
+                    RefreshData();
+                };
                 frm.ShowDialog();
             }
+        }
+
+        private void cmsIUpdate_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmAddEditUser(dgvUsersList.CurrentRow.Cells[2].Value.ToString()))
+            {
+                frm.OnUserSaved += () =>
+                {
+                    RefreshData();
+                };
+                frm.ShowDialog();
+            }
+        }
+
+        private void cmsIShowDetails_Click(object sender, EventArgs e)
+        {
+            using (frmUserInfo frm = new frmUserInfo(dgvUsersList.CurrentRow.Cells[2].Value.ToString())) 
+            {
+                frm.ShowDialog();
+            }          
         }
     }
 }

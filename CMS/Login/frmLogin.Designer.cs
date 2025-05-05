@@ -93,7 +93,7 @@
             this.lblForgotPassword.TabIndex = 168;
             this.lblForgotPassword.Text = "Forgot Password?";
             // 
-            // txtUsername
+            // txtUserName
             // 
             this.txtUserName.BorderColor = System.Drawing.Color.Silver;
             this.txtUserName.BorderThickness = 2;
@@ -112,7 +112,7 @@
             this.txtUserName.HoverState.Parent = this.txtUserName;
             this.txtUserName.Location = new System.Drawing.Point(26, 27);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtUserName.Name = "txtUsername";
+            this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.SelectedText = "";
@@ -214,6 +214,7 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 160;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // guna2PictureBox1
             // 
@@ -260,6 +261,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.guna2Panel1.ResumeLayout(false);

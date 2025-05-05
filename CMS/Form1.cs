@@ -18,30 +18,35 @@ namespace CMS
             InitializeComponent();
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+        private void btnDashbord_Click(object sender, EventArgs e)
+        {
+            var uc = new Dashboard.ucDashbord();
+            clsUtil.ShowUserControl(uc, pMain);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
         {
             var uc = new Users.Controls.ucManageUsers();
             clsUtil.ShowUserControl(uc, pMain);
-            //uc.RefreshData();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnDoctors_Click(object sender, EventArgs e)
         {
             var uc = new Doctors.Controls.ctrManageDoctors();
             clsUtil.ShowUserControl(uc, pMain);
-            //uc.RefreshData();
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnPatients_Click(object sender, EventArgs e)
         {
             var uc = new Patients.Controls.ctrManagePatiants();
             clsUtil.ShowUserControl(uc, pMain);
-            //uc.RefreshData();
         }
 
-        private void pHeader_Paint(object sender, PaintEventArgs e)
+        private void btnAppointements_Click(object sender, EventArgs e)
         {
-
+            //var uc = new Appo();
+            //clsUtil.ShowUserControl(uc, pMain);
+            ////uc.RefreshData();
         }
     }
 }

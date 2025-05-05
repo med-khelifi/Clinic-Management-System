@@ -7,19 +7,19 @@ namespace BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-
-        public int RoleId { get; set; }
+        public enum enRole { eAdmin = 1, eDoctor = 2, eSimpleUser = 3 }; 
+        public enRole RoleId { get; set; }
         public string RoleName { get; set; }
 
         public clsRole()
         {
             Mode = enMode.AddNew;
-            RoleId = -1;
+            RoleId = enRole.eSimpleUser;
             RoleName = "";
         }
         private clsRole(int RoleId, string RoleName)
         {
-            this.RoleId = RoleId;
+            this.RoleId = (enRole)RoleId;
             this.RoleName = RoleName;
             Mode = enMode.Update;
         }
@@ -42,16 +42,16 @@ namespace BusinessLayer
         }
         private bool _addnew()
         {
-            this.RoleId = clsRoleData.AddNew(this.RoleName);
+            this.RoleId = (enRole)clsRoleData.AddNew(this.RoleName);
              return this.RoleId != 0;
         }
         private bool _update()
         {
-            return clsRoleData.Update(RoleId, RoleName);
+            return clsRoleData.Update(Convert.ToInt32( RoleId), RoleName);
         }
         public bool Delete()
         {
-            return clsRoleData.Delete(this.RoleId);
+            return clsRoleData.Delete(Convert.ToInt32(RoleId));
         }
         public static DataTable GetAllRolesTable()
         {
@@ -65,6 +65,20 @@ namespace BusinessLayer
                 return new clsRole(RoleId, RoleName);
             }
             return null;
+        }
+        public static string GetRoleNameString(enRole RoleId)
+        {
+            switch(RoleId)
+            {
+                case enRole.eAdmin:
+                    return "Administrator";
+                case enRole.eDoctor:
+                    return "Doctor";
+                case enRole.eSimpleUser:
+                    return "Simple User";
+                default:
+                    return "";
+            }
         }
     }
 }
