@@ -170,6 +170,9 @@
     <EmbeddedResource Include="Users\Controls\ucManageUsers.resx">
       <DependentUpon>ucManageUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +284,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\isActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemovePerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-assistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-team.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

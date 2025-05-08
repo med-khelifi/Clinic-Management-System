@@ -18,6 +18,16 @@ namespace CMS.Users.Controls
         clsUser _user;
         int _UserID;
 
+        public int UserID
+        {
+            get { return _UserID; }
+            set { _UserID = value; }
+        }
+        public clsUser User
+        {
+            get { return _user; }
+        }
+
         public ucUserCard()
         {
             InitializeComponent();

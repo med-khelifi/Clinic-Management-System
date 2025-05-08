@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.lbRecordCount = new System.Windows.Forms.Label();
-            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dgvDoctors = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbRecordCount
@@ -50,27 +50,6 @@
             this.lbRecordCount.Size = new System.Drawing.Size(180, 36);
             this.lbRecordCount.TabIndex = 14;
             this.lbRecordCount.Text = "#Count = ";
-            // 
-            // btnAddNewUser
-            // 
-            this.btnAddNewUser.BorderRadius = 6;
-            this.btnAddNewUser.BorderThickness = 2;
-            this.btnAddNewUser.CheckedState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.CustomImages.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewUser.HoverState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Image = global::CMS.Properties.Resources.add_user;
-            this.btnAddNewUser.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddNewUser.Location = new System.Drawing.Point(1207, 312);
-            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Padding = new System.Windows.Forms.Padding(2);
-            this.btnAddNewUser.PressedColor = System.Drawing.Color.Silver;
-            this.btnAddNewUser.ShadowDecoration.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
-            this.btnAddNewUser.TabIndex = 13;
             // 
             // guna2TextBox1
             // 
@@ -131,22 +110,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(405, 195);
+            this.label1.Location = new System.Drawing.Point(404, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 34);
             this.label1.TabIndex = 10;
             this.label1.Text = "Manage Doctors";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::CMS.Properties.Resources.UsersImage;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(410, 10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(209, 182);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // dgvDoctors
             // 
@@ -167,6 +135,39 @@
             this.dgvDoctors.Size = new System.Drawing.Size(1240, 296);
             this.dgvDoctors.TabIndex = 7;
             // 
+            // btnAddNewUser
+            // 
+            this.btnAddNewUser.BorderRadius = 6;
+            this.btnAddNewUser.BorderThickness = 2;
+            this.btnAddNewUser.CheckedState.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.CustomImages.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewUser.HoverState.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.Image = global::CMS.Properties.Resources.add_user;
+            this.btnAddNewUser.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnAddNewUser.Location = new System.Drawing.Point(1207, 312);
+            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewUser.Name = "btnAddNewUser";
+            this.btnAddNewUser.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAddNewUser.PressedColor = System.Drawing.Color.Silver;
+            this.btnAddNewUser.ShadowDecoration.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
+            this.btnAddNewUser.TabIndex = 13;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::CMS.Properties.Resources.medical_team;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(410, 25);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(209, 182);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // ctrManageDoctors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,8 +184,8 @@
             this.Name = "ctrManageDoctors";
             this.Size = new System.Drawing.Size(1274, 708);
             this.Load += new System.EventHandler(this.ctrManageDoctors_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,7 +38,7 @@
             this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsIShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsIUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsIDeactivate = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsIActivate_Deactivate = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsIChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -149,36 +149,44 @@
             this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsIShowDetails,
             this.cmsIUpdate,
-            this.cmsIDeactivate,
+            this.cmsIActivate_Deactivate,
             this.cmsIChangePassword});
             this.cmsUsers.Name = "cmsUsers";
-            this.cmsUsers.Size = new System.Drawing.Size(211, 128);
+            this.cmsUsers.Size = new System.Drawing.Size(215, 136);
+            this.cmsUsers.Opening += new System.ComponentModel.CancelEventHandler(this.cmsUsers_Opening);
             // 
             // cmsIShowDetails
             // 
+            this.cmsIShowDetails.Image = global::CMS.Properties.Resources.PersonInfo;
             this.cmsIShowDetails.Name = "cmsIShowDetails";
-            this.cmsIShowDetails.Size = new System.Drawing.Size(210, 24);
+            this.cmsIShowDetails.Size = new System.Drawing.Size(214, 26);
             this.cmsIShowDetails.Text = "Show Details";
             this.cmsIShowDetails.Click += new System.EventHandler(this.cmsIShowDetails_Click);
             // 
             // cmsIUpdate
             // 
+            this.cmsIUpdate.Image = global::CMS.Properties.Resources.EditPerson;
+            this.cmsIUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmsIUpdate.Name = "cmsIUpdate";
-            this.cmsIUpdate.Size = new System.Drawing.Size(210, 24);
+            this.cmsIUpdate.Size = new System.Drawing.Size(214, 26);
             this.cmsIUpdate.Text = "Edit";
             this.cmsIUpdate.Click += new System.EventHandler(this.cmsIUpdate_Click);
             // 
             // cmsIDeactivate
             // 
-            this.cmsIDeactivate.Name = "cmsIDeactivate";
-            this.cmsIDeactivate.Size = new System.Drawing.Size(210, 24);
-            this.cmsIDeactivate.Text = "Deactivate";
+            this.cmsIActivate_Deactivate.Image = global::CMS.Properties.Resources.deactivate;
+            this.cmsIActivate_Deactivate.Name = "cmsIDeactivate";
+            this.cmsIActivate_Deactivate.Size = new System.Drawing.Size(214, 26);
+            this.cmsIActivate_Deactivate.Text = "Deactivate";
+            this.cmsIActivate_Deactivate.Click += new System.EventHandler(this.cmsIActivate_Deactivate_Click);
             // 
             // cmsIChangePassword
             // 
+            this.cmsIChangePassword.Image = global::CMS.Properties.Resources.Change_password;
             this.cmsIChangePassword.Name = "cmsIChangePassword";
-            this.cmsIChangePassword.Size = new System.Drawing.Size(210, 24);
+            this.cmsIChangePassword.Size = new System.Drawing.Size(214, 26);
             this.cmsIChangePassword.Text = "Change Password";
+            this.cmsIChangePassword.Click += new System.EventHandler(this.cmsIChangePassword_Click);
             // 
             // btnAddNewUser
             // 
@@ -250,7 +258,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsUsers;
         private System.Windows.Forms.ToolStripMenuItem cmsIShowDetails;
         private System.Windows.Forms.ToolStripMenuItem cmsIUpdate;
-        private System.Windows.Forms.ToolStripMenuItem cmsIDeactivate;
+        private System.Windows.Forms.ToolStripMenuItem cmsIActivate_Deactivate;
         private System.Windows.Forms.ToolStripMenuItem cmsIChangePassword;
     }
 }

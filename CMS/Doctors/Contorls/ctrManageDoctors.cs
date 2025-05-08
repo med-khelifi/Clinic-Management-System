@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using CMS.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,18 @@ namespace CMS.Doctors.Controls
         private void ctrManageDoctors_Load(object sender, EventArgs e)
         {
             RefreshData();
+        }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            using(frmAddEditUser frm = new frmAddEditUser(true))
+            {
+                frm.ShowDialog();
+                frm.OnUserSaved += () =>
+                {
+                    RefreshData();
+                };
+            }
         }
     }
 }

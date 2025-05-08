@@ -122,7 +122,20 @@ namespace BusinessLayer
             int RoleId = -1;
             bool IsActive = false;
             int PersonID = -1;
-            if (clsUserData.GetByID(UserId, ref Username, ref Password, ref RoleId, ref IsActive, ref PersonID))
+            if (clsUserData.GetByUserID(UserId, ref Username, ref Password, ref RoleId, ref IsActive, ref PersonID))
+            {
+                return new clsUser(UserId, Username, Password, RoleId, IsActive, PersonID);
+            }
+            return null;
+        }
+        public static clsUser FindByUserID(int PersonID)
+        {
+            string Username = "";
+            string Password = "";
+            int RoleId = -1;
+            bool IsActive = false;
+            int UserId = -1;
+            if (clsUserData.GetByUserID(UserId, ref Username, ref Password, ref RoleId, ref IsActive,ref PersonID))
             {
                 return new clsUser(UserId, Username, Password, RoleId, IsActive, PersonID);
             }
@@ -158,11 +171,22 @@ namespace BusinessLayer
             }
             return null;
         }
-
         public bool ChangePassword(string NewPassword)
         {
             string HashedNewPassword = clsPasswordHasher.Hash(NewPassword);
             return clsUserData.ChangePassword(this.UserId, HashedNewPassword);
+        }
+        public static bool? ChangeUserStatus(string username, bool newStatus)
+        {
+            return clsUserData.ChangeUserStatus(username, newStatus);
+        }
+        public static bool? getUserStatus(string username)
+        {
+            return clsUserData.GetUserStatus(username);
+        }
+        public bool? getUserStatus()
+        {
+            return clsUserData.GetUserStatus(this.Username);
         }
     }
 }

@@ -21,23 +21,29 @@ namespace CMS.Users
 {
     public partial class frmAddEditUser : Form
     {
-        string _UserName;
-        clsUser _User;
+        string _UserName = null;
+
+        clsUser _User = null;
+        clsDoctor _Doctor = null;
+
+        bool _isDoctor = false;
         public delegate void OnUserSavedDelegate();
         public event OnUserSavedDelegate OnUserSaved;
 
         enum enFormMode { eUpdateMode,eAddNewMode}
         enFormMode _eFormMode;
-        public frmAddEditUser()
+        public frmAddEditUser(bool isDoctor = false)
         {
             InitializeComponent();
             _eFormMode = enFormMode.eAddNewMode;
+            _isDoctor = isDoctor;
         }
-        public frmAddEditUser(string UserName)
+        public frmAddEditUser(string UserName, bool isDoctor = false)
         {
             InitializeComponent();
             this._UserName = UserName;
             _eFormMode = enFormMode.eUpdateMode;
+            _isDoctor = isDoctor;   
         }
         private void _HandleFormSize()
         {
@@ -73,7 +79,7 @@ namespace CMS.Users
         {
             //this will initialize the reset the defaule values
             _FillCountriesInComoboBox();
-            _ShowFormTitle();
+            _ShowFormUI();
 
             //hide/show the remove linke incase there is no image for the person.
             llRemovePicture.Visible = (pbPersonImage.ImageLocation != null);
@@ -94,30 +100,63 @@ namespace CMS.Users
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtAddress.Text = "";
-
-            
-           pbPersonImage.Image = Resources.Male;
+            txtSpecialization.Text = "";
+            rbAdmin.Checked = true;
+            pbPersonImage.Image = Resources.Male;
             
         }
-        void _ShowFormTitle()
+        void _ShowFormUI()
         {
-            if(_eFormMode == enFormMode.eAddNewMode)
+            string title = null;
+            if (_eFormMode == enFormMode.eAddNewMode)
             {
-                this.Text = "Add New User";
-                lblTitle.Text = "Add New User";
+                if (_isDoctor)
+                {
+                    title = "Add New Doctor";
+                }
+                else
+                {
+                    title = "Add New User";
+                }
+                this.Text = title;
+                lblTitle.Text = title;
             }
             else
             {
-                this.Text = "Edit User";
-                lblTitle.Text = "Edit User";
+                if (_isDoctor)
+                {
+                    title = "Update Doctor";
+                }
+                else
+                {
+                    title = "Update User";
+                }
+                this.Text = title;
+                lblTitle.Text = title;
+            }
+
+            lblSpecialization.Visible = _isDoctor;
+            txtSpecialization.Visible = _isDoctor;
+            pbSpecialization.Visible = _isDoctor;   
+
+            rbAdmin.Text = _isDoctor ? "Doctor" : "Admin";
+            rbUser.Visible = !_isDoctor;
+
+        }
+        private void _initializeUserType()
+        {
+            _User = new clsUser();
+            if (_isDoctor)
+            {
+                _Doctor = new clsDoctor();
             }
         }
-        void _LoadInfo()
+        void _LoadUserInfo()
         {
             _User = clsUser.Find(_UserName);
             if (_User == null) 
             {
-                MessageBox.Show("Cannot Retrive Person Info", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot Retrive User Info", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -142,6 +181,45 @@ namespace CMS.Users
             rbUser.Checked = _User.RoleId == (int)clsRole.enRole.eSimpleUser;
             this.ValidateChildren();
         }
+        void _LoadDoctorInfo()
+        {
+            _Doctor = clsDoctor.FindByUsername(_UserName);
+            if (_Doctor == null)
+            {
+                MessageBox.Show("Cannot Retrive Doctor Info", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            txtName.Text = _Doctor.UserInfo.PersonInfo.Name;
+            txtNationalNo.Text = _Doctor.UserInfo.PersonInfo.NationalNo;
+            rbMale.Checked = _Doctor.UserInfo.PersonInfo.Gender == false;
+            rbFemale.Checked = _Doctor.UserInfo.PersonInfo.Gender == true;
+            txtEmail.Text = _Doctor.UserInfo.PersonInfo.Email;
+            txtAddress.Text = _Doctor.UserInfo.PersonInfo.Address;
+            dtpDateOfBirth.Value = _Doctor.UserInfo.PersonInfo.DateOfBirth;
+            txtPhone.Text = _Doctor.UserInfo.PersonInfo.PhoneNumber;
+
+            cbCountries.Text = clsCountry.Find(_Doctor.UserInfo.PersonInfo.NationalityID).CountryName ?? "Undefine";
+
+            if (_Doctor.UserInfo.PersonInfo.ImagePath != "")
+                pbPersonImage.Load(_Doctor.UserInfo.PersonInfo.ImagePath);
+
+            // load user data
+            txtUserName.Text = _Doctor.UserInfo.Username;
+            chk_isActive.Checked = _Doctor.UserInfo.IsActive;
+           
+            txtSpecialization.Text = _Doctor.Specialization;
+            this.ValidateChildren();
+        }
+
+        private void _LoadInfo()
+        {
+            if (_isDoctor)
+                _LoadDoctorInfo();
+            else
+                _LoadUserInfo();
+        }
+
         private void frmAddEditPerson_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
@@ -149,9 +227,9 @@ namespace CMS.Users
             if (_eFormMode == enFormMode.eUpdateMode)
                 _LoadInfo();
             else
-                _User = new clsUser();
+                _initializeUserType();
         }
-        private bool _HandlePersonImage()
+        private bool _HandleUserImage()
         {
 
             //this procedure will handle the person image,
@@ -161,7 +239,8 @@ namespace CMS.Users
 
 
             //_Person.ImagePath contains the old Image, we check if it changed then we copy the new image
-            if (_User.PersonInfo.ImagePath != pbPersonImage.ImageLocation)
+            string userImage = _isDoctor ? _Doctor.UserInfo.PersonInfo.ImagePath : _User.PersonInfo.ImagePath;
+            if ( userImage != pbPersonImage.ImageLocation)
             {
                 if ( !string.IsNullOrEmpty(_User.PersonInfo.ImagePath))
                 {
@@ -201,7 +280,6 @@ namespace CMS.Users
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (!this.ValidateChildren())
             {
                 //Here we dont continue becuase the form is not valid
@@ -210,11 +288,17 @@ namespace CMS.Users
 
             }
 
-            if (!_HandlePersonImage())
+            if (!_HandleUserImage())
                 return;
 
             int NationalityCountryID = clsCountry.Find(cbCountries.Text).CountryID;
             _User.Username = txtUserName.Text.Trim();
+
+            if (_isDoctor) 
+            {
+                _User.RoleId = (int)clsRole.enRole.eDoctor;
+            }
+            
             if (rbAdmin.Checked) 
             {
                 _User.RoleId = (int)clsRole.enRole.eAdmin;
@@ -249,7 +333,17 @@ namespace CMS.Users
             if (enFormMode.eAddNewMode == _eFormMode)
                 _User.Password = txtPassword.Text.Trim();
 
-            if (_User.Save())
+            // load the doctor info
+            if (_isDoctor)
+            {
+                _Doctor.UserInfo = _User;
+                _Doctor.Specialization = txtSpecialization.Text.Trim();
+            }
+            
+            
+            bool save = _isDoctor ? _Doctor.Save() : _User.Save();
+
+            if (save)
             {
                 OnUserSaved?.Invoke();
                 btnSave.Enabled = false;
@@ -356,9 +450,9 @@ namespace CMS.Users
             {
                 errorProvider1.SetError(txtNationalNo, null);
             }
-
+            string nationalNo = _isDoctor ? _Doctor.UserInfo.PersonInfo.NationalNo : _User.PersonInfo.NationalNo;
             //Make sure the national number is not used by another person
-            if (txtNationalNo.Text.Trim() != _User.PersonInfo.NationalNo && clsPerson.isPersonExistsByNationalNo(txtNationalNo.Text.Trim()))
+            if (txtNationalNo.Text.Trim() != nationalNo && clsPerson.isPersonExistsByNationalNo(txtNationalNo.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
@@ -383,7 +477,8 @@ namespace CMS.Users
             }
 
             //Make sure the user name is not used by another person
-            if (txtUserName.Text.Trim() != _User.Username && clsUser.isUserExistsByUserName(txtUserName.Text.Trim()))
+            string username = _isDoctor ? _Doctor.UserInfo.Username : _User.Username;
+            if (txtUserName.Text.Trim() != username && clsUser.isUserExistsByUserName(txtUserName.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtUserName, "Username is used for another person!");

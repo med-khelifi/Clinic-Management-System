@@ -6,11 +6,11 @@ namespace DataLayer
 {
     public static class clsUserData
     {
-        public static bool GetByID(int UserId, ref string Username, ref string Password, ref int RoleId, ref bool IsActive, ref int PersonID)
+        public static bool GetByUserID(int UserId, ref string Username, ref string Password, ref int RoleId, ref bool IsActive, ref int PersonID)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_GetUserByID", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetUserByUserID", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@UserId", UserId);
@@ -21,6 +21,7 @@ namespace DataLayer
                     {
                         if (reader.Read())
                         {
+                            isFound = true;
                             Username = reader["Username"].ToString();
                             Password = reader["Password"].ToString();
                             RoleId = Convert.ToInt32(reader["RoleId"]);
@@ -221,7 +222,6 @@ namespace DataLayer
             }
             return isFound;
         }
-
         public static bool GetByUsername(string UsernameToFind, ref int UserId, ref string Password, ref int RoleId, ref bool IsActive, ref int PersonID)
         {
             bool isFound = false;
@@ -254,7 +254,6 @@ namespace DataLayer
             }
             return isFound;
         }
-
         public static bool ChangePassword(int userId, string hashedPassword)
         {
             using (SqlConnection conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -268,6 +267,36 @@ namespace DataLayer
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        public static bool ChangeUserStatus(string username, bool isActive)
+        {
+            using (SqlConnection conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_ChangeUserStatus", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@IsActive", isActive);
+                conn.Open();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public static bool? GetUserStatus(string username)
+        {
+            using (SqlConnection conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_GetUserStatusByUsername", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Username", username);
 
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToBoolean(result);
+                }
+
+                return null; // ???????? ??? ?????
+            }
+        }
     }
 }

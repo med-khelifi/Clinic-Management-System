@@ -35,6 +35,13 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gbUserDetails = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbPassword = new System.Windows.Forms.PictureBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbConfirmPassword = new System.Windows.Forms.PictureBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.llbChangePassword = new System.Windows.Forms.LinkLabel();
             this.rbUser = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.chk_isActive = new Guna.UI2.WinForms.Guna2CustomCheckBox();
@@ -42,7 +49,10 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtSpecialization = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbSpecialization = new System.Windows.Forms.PictureBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSpecialization = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.gbPesonalInfo = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -74,17 +84,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.llbChangePassword = new System.Windows.Forms.LinkLabel();
-            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbConfirmPassword = new System.Windows.Forms.PictureBox();
-            this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbPassword = new System.Windows.Forms.PictureBox();
-            this.lblPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbUserDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSpecialization)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.gbPesonalInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -96,8 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -176,7 +180,10 @@
             this.gbUserDetails.Controls.Add(this.pictureBox10);
             this.gbUserDetails.Controls.Add(this.label1);
             this.gbUserDetails.Controls.Add(this.label9);
+            this.gbUserDetails.Controls.Add(this.txtSpecialization);
+            this.gbUserDetails.Controls.Add(this.pbSpecialization);
             this.gbUserDetails.Controls.Add(this.txtUserName);
+            this.gbUserDetails.Controls.Add(this.lblSpecialization);
             this.gbUserDetails.Controls.Add(this.pictureBox11);
             this.gbUserDetails.Controls.Add(this.label12);
             this.gbUserDetails.CustomBorderColor = System.Drawing.Color.Black;
@@ -190,6 +197,109 @@
             this.gbUserDetails.TabIndex = 83;
             this.gbUserDetails.Text = "User Details :";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.Parent = this.txtPassword;
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.FocusedState.Parent = this.txtPassword;
+            this.txtPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.HoverState.Parent = this.txtPassword;
+            this.txtPassword.Location = new System.Drawing.Point(232, 135);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(8);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
+            this.txtPassword.Size = new System.Drawing.Size(193, 33);
+            this.txtPassword.TabIndex = 114;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
+            // 
+            // pbPassword
+            // 
+            this.pbPassword.Image = global::CMS.Properties.Resources.password;
+            this.pbPassword.Location = new System.Drawing.Point(180, 135);
+            this.pbPassword.Name = "pbPassword";
+            this.pbPassword.Size = new System.Drawing.Size(32, 32);
+            this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbPassword.TabIndex = 113;
+            this.pbPassword.TabStop = false;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.Location = new System.Drawing.Point(89, 141);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(85, 21);
+            this.lblPassword.TabIndex = 112;
+            this.lblPassword.Text = "Password : ";
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.DefaultText = "";
+            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.DisabledState.Parent = this.txtConfirmPassword;
+            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.FocusedState.Parent = this.txtConfirmPassword;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.HoverState.Parent = this.txtConfirmPassword;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(232, 185);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(8);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '\0';
+            this.txtConfirmPassword.PlaceholderText = "";
+            this.txtConfirmPassword.SelectedText = "";
+            this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(193, 33);
+            this.txtConfirmPassword.TabIndex = 111;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
+            // 
+            // pbConfirmPassword
+            // 
+            this.pbConfirmPassword.Image = global::CMS.Properties.Resources.password;
+            this.pbConfirmPassword.Location = new System.Drawing.Point(180, 185);
+            this.pbConfirmPassword.Name = "pbConfirmPassword";
+            this.pbConfirmPassword.Size = new System.Drawing.Size(32, 32);
+            this.pbConfirmPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbConfirmPassword.TabIndex = 110;
+            this.pbConfirmPassword.TabStop = false;
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.lblConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(36, 185);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(138, 21);
+            this.lblConfirmPassword.TabIndex = 109;
+            this.lblConfirmPassword.Text = "Confirm Password :";
+            // 
+            // llbChangePassword
+            // 
+            this.llbChangePassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.llbChangePassword.Location = new System.Drawing.Point(790, 40);
+            this.llbChangePassword.Name = "llbChangePassword";
+            this.llbChangePassword.Size = new System.Drawing.Size(188, 28);
+            this.llbChangePassword.TabIndex = 108;
+            this.llbChangePassword.TabStop = true;
+            this.llbChangePassword.Text = "Change Password";
+            this.llbChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // rbUser
             // 
             this.rbUser.AutoSize = true;
@@ -200,7 +310,7 @@
             this.rbUser.CheckedState.InnerOffset = -4;
             this.rbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbUser.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.rbUser.Location = new System.Drawing.Point(658, 43);
+            this.rbUser.Location = new System.Drawing.Point(690, 43);
             this.rbUser.Name = "rbUser";
             this.rbUser.Size = new System.Drawing.Size(60, 25);
             this.rbUser.TabIndex = 89;
@@ -223,7 +333,7 @@
             this.rbAdmin.CheckedState.InnerOffset = -4;
             this.rbAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbAdmin.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.rbAdmin.Location = new System.Drawing.Point(576, 43);
+            this.rbAdmin.Location = new System.Drawing.Point(608, 43);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(72, 25);
             this.rbAdmin.TabIndex = 88;
@@ -255,7 +365,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(533, 39);
+            this.pictureBox1.Image = global::CMS.Properties.Resources.Role;
+            this.pictureBox1.Location = new System.Drawing.Point(565, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -264,6 +375,7 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Image = global::CMS.Properties.Resources.isActive;
             this.pictureBox10.Location = new System.Drawing.Point(180, 88);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(32, 32);
@@ -287,11 +399,45 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(481, 45);
+            this.label9.Location = new System.Drawing.Point(513, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 21);
             this.label9.TabIndex = 82;
             this.label9.Text = "Role :";
+            // 
+            // txtSpecialization
+            // 
+            this.txtSpecialization.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSpecialization.DefaultText = "";
+            this.txtSpecialization.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSpecialization.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSpecialization.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSpecialization.DisabledState.Parent = this.txtSpecialization;
+            this.txtSpecialization.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSpecialization.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSpecialization.FocusedState.Parent = this.txtSpecialization;
+            this.txtSpecialization.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.txtSpecialization.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSpecialization.HoverState.Parent = this.txtSpecialization;
+            this.txtSpecialization.Location = new System.Drawing.Point(617, 88);
+            this.txtSpecialization.Margin = new System.Windows.Forms.Padding(8);
+            this.txtSpecialization.Name = "txtSpecialization";
+            this.txtSpecialization.PasswordChar = '\0';
+            this.txtSpecialization.PlaceholderText = "";
+            this.txtSpecialization.SelectedText = "";
+            this.txtSpecialization.ShadowDecoration.Parent = this.txtSpecialization;
+            this.txtSpecialization.Size = new System.Drawing.Size(193, 33);
+            this.txtSpecialization.TabIndex = 80;
+            // 
+            // pbSpecialization
+            // 
+            this.pbSpecialization.Image = global::CMS.Properties.Resources.medical_assistance;
+            this.pbSpecialization.Location = new System.Drawing.Point(565, 88);
+            this.pbSpecialization.Name = "pbSpecialization";
+            this.pbSpecialization.Size = new System.Drawing.Size(32, 32);
+            this.pbSpecialization.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSpecialization.TabIndex = 78;
+            this.pbSpecialization.TabStop = false;
             // 
             // txtUserName
             // 
@@ -318,8 +464,20 @@
             this.txtUserName.TabIndex = 80;
             this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
+            // lblSpecialization
+            // 
+            this.lblSpecialization.AutoSize = true;
+            this.lblSpecialization.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.lblSpecialization.ForeColor = System.Drawing.Color.Black;
+            this.lblSpecialization.Location = new System.Drawing.Point(450, 94);
+            this.lblSpecialization.Name = "lblSpecialization";
+            this.lblSpecialization.Size = new System.Drawing.Size(109, 21);
+            this.lblSpecialization.TabIndex = 76;
+            this.lblSpecialization.Text = "Specialization :";
+            // 
             // pictureBox11
             // 
+            this.pictureBox11.Image = global::CMS.Properties.Resources.name1_Icon;
             this.pictureBox11.Location = new System.Drawing.Point(180, 39);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(32, 32);
@@ -377,7 +535,7 @@
             this.gbPesonalInfo.ShadowDecoration.Parent = this.gbPesonalInfo;
             this.gbPesonalInfo.Size = new System.Drawing.Size(1059, 308);
             this.gbPesonalInfo.TabIndex = 90;
-            this.gbPesonalInfo.Text = "User Details :";
+            this.gbPesonalInfo.Text = "Persenal Details :";
             // 
             // cbCountries
             // 
@@ -785,107 +943,6 @@
             this.label13.TabIndex = 81;
             this.label13.Text = "Date Of Birth :";
             // 
-            // llbChangePassword
-            // 
-            this.llbChangePassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.llbChangePassword.Location = new System.Drawing.Point(483, 87);
-            this.llbChangePassword.Name = "llbChangePassword";
-            this.llbChangePassword.Size = new System.Drawing.Size(188, 28);
-            this.llbChangePassword.TabIndex = 108;
-            this.llbChangePassword.TabStop = true;
-            this.llbChangePassword.Text = "Change Password";
-            this.llbChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPassword.DefaultText = "";
-            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.DisabledState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.FocusedState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.HoverState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(232, 185);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(8);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '\0';
-            this.txtConfirmPassword.PlaceholderText = "";
-            this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(193, 33);
-            this.txtConfirmPassword.TabIndex = 111;
-            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
-            // 
-            // pbConfirmPassword
-            // 
-            this.pbConfirmPassword.Location = new System.Drawing.Point(180, 185);
-            this.pbConfirmPassword.Name = "pbConfirmPassword";
-            this.pbConfirmPassword.Size = new System.Drawing.Size(32, 32);
-            this.pbConfirmPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbConfirmPassword.TabIndex = 110;
-            this.pbConfirmPassword.TabStop = false;
-            // 
-            // lblConfirmPassword
-            // 
-            this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.lblConfirmPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(36, 185);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(138, 21);
-            this.lblConfirmPassword.TabIndex = 109;
-            this.lblConfirmPassword.Text = "Confirm Password :";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.Parent = this.txtPassword;
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.FocusedState.Parent = this.txtPassword;
-            this.txtPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(232, 135);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(8);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "";
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(193, 33);
-            this.txtPassword.TabIndex = 114;
-            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
-            // 
-            // pbPassword
-            // 
-            this.pbPassword.Location = new System.Drawing.Point(180, 135);
-            this.pbPassword.Name = "pbPassword";
-            this.pbPassword.Size = new System.Drawing.Size(32, 32);
-            this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbPassword.TabIndex = 113;
-            this.pbPassword.TabStop = false;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.lblPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblPassword.Location = new System.Drawing.Point(89, 141);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(85, 21);
-            this.lblPassword.TabIndex = 112;
-            this.lblPassword.Text = "Password : ";
-            // 
             // frmAddEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -906,8 +963,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbUserDetails.ResumeLayout(false);
             this.gbUserDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSpecialization)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.gbPesonalInfo.ResumeLayout(false);
             this.gbPesonalInfo.PerformLayout();
@@ -920,8 +980,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -980,5 +1038,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
         private System.Windows.Forms.PictureBox pbConfirmPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtSpecialization;
+        private System.Windows.Forms.PictureBox pbSpecialization;
+        private System.Windows.Forms.Label lblSpecialization;
     }
 }
