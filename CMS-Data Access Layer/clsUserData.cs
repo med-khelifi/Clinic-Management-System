@@ -298,5 +298,25 @@ namespace DataLayer
                 return null; // ???????? ??? ?????
             }
         }
+        public static bool isDoctor(string Username)
+        {
+            bool isDoctor = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("isUserADoctor", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@username", Username);
+                try
+                {
+                    connection.Open();
+                    isDoctor = command.ExecuteReader().HasRows;
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return isDoctor;
+        }
     }
 }

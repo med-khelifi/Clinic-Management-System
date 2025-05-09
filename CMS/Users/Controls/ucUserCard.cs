@@ -46,6 +46,19 @@ namespace CMS.Users.Controls
 
             }
         }
+        public void LoadUserInfo(clsUser User)
+        {
+            _user = User;
+            if (_user != null)
+            {
+                _LoadInfo();
+            }
+            else
+            {
+                ResetUserInfo();
+                MessageBox.Show("No User found !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void ResetUserInfo()
         {
             _UserID = -1;

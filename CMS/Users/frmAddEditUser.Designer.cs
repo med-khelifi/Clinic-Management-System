@@ -860,7 +860,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(25, 199);
+            this.label6.Location = new System.Drawing.Point(57, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 82;
@@ -871,7 +871,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(25, 249);
+            this.label5.Location = new System.Drawing.Point(41, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 21);
             this.label5.TabIndex = 83;
@@ -882,7 +882,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(25, 145);
+            this.label4.Location = new System.Drawing.Point(47, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 21);
             this.label4.TabIndex = 86;
@@ -893,7 +893,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(25, 97);
+            this.label3.Location = new System.Drawing.Point(17, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 21);
             this.label3.TabIndex = 84;
@@ -904,7 +904,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(25, 50);
+            this.label2.Location = new System.Drawing.Point(55, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 21);
             this.label2.TabIndex = 85;
@@ -915,7 +915,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(380, 196);
+            this.label8.Location = new System.Drawing.Point(431, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 21);
             this.label8.TabIndex = 88;
@@ -926,7 +926,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(387, 145);
+            this.label7.Location = new System.Drawing.Point(441, 145);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 21);
             this.label7.TabIndex = 87;
@@ -937,7 +937,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(387, 93);
+            this.label13.Location = new System.Drawing.Point(398, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 21);
             this.label13.TabIndex = 81;

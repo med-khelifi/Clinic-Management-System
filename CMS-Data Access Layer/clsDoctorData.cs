@@ -34,7 +34,7 @@ namespace DataLayer
             }
             return isFound;
         }
-        public static bool GetByUsername(ref int DoctorID, ref int PersonID, ref string Specialization,string username)
+        public static bool GetByUsername(ref int DoctorID, ref int UserID, ref string Specialization,string username)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -51,7 +51,7 @@ namespace DataLayer
                         {
                             isFound = true;
                             DoctorID = Convert.ToInt32(reader["DoctorID"]);
-                            PersonID = Convert.ToInt32(reader["PersonID"]);
+                            UserID = Convert.ToInt32(reader["UserID"]);
                             Specialization = reader["Specialization"].ToString();
                         }
                     }

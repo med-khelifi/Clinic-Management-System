@@ -63,6 +63,18 @@
     <Compile Include="Doctors\Contorls\ctrManageDoctors.Designer.cs">
       <DependentUpon>ctrManageDoctors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctors\Contorls\ucDoctorCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctors\Contorls\ucDoctorCard.Designer.cs">
+      <DependentUpon>ucDoctorCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\frmDoctorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\frmDoctorInfo.Designer.cs">
+      <DependentUpon>frmDoctorInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\Contorls\ctrManageDoctors.resx">
       <DependentUpon>ctrManageDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\Contorls\ucDoctorCard.resx">
+      <DependentUpon>ucDoctorCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\frmDoctorInfo.resx">
+      <DependentUpon>frmDoctorInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

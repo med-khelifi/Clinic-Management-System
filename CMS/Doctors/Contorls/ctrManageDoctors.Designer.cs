@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbRecordCount = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoctors = new System.Windows.Forms.DataGridView();
+            this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsIShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsIUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
+            this.cmsUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +130,7 @@
             this.dgvDoctors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoctors.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoctors.ContextMenuStrip = this.cmsUsers;
             this.dgvDoctors.Location = new System.Drawing.Point(17, 364);
             this.dgvDoctors.MultiSelect = false;
             this.dgvDoctors.Name = "dgvDoctors";
@@ -134,6 +140,32 @@
             this.dgvDoctors.RowTemplate.Height = 24;
             this.dgvDoctors.Size = new System.Drawing.Size(1240, 296);
             this.dgvDoctors.TabIndex = 7;
+            // 
+            // cmsUsers
+            // 
+            this.cmsUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsIShowDetails,
+            this.cmsIUpdate});
+            this.cmsUsers.Name = "cmsUsers";
+            this.cmsUsers.Size = new System.Drawing.Size(215, 84);
+            // 
+            // cmsIShowDetails
+            // 
+            this.cmsIShowDetails.Image = global::CMS.Properties.Resources.PersonInfo;
+            this.cmsIShowDetails.Name = "cmsIShowDetails";
+            this.cmsIShowDetails.Size = new System.Drawing.Size(214, 26);
+            this.cmsIShowDetails.Text = "Show Details";
+            this.cmsIShowDetails.Click += new System.EventHandler(this.cmsIShowDetails_Click);
+            // 
+            // cmsIUpdate
+            // 
+            this.cmsIUpdate.Image = global::CMS.Properties.Resources.EditPerson;
+            this.cmsIUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.cmsIUpdate.Name = "cmsIUpdate";
+            this.cmsIUpdate.Size = new System.Drawing.Size(214, 26);
+            this.cmsIUpdate.Text = "Edit";
+            this.cmsIUpdate.Click += new System.EventHandler(this.cmsIUpdate_Click);
             // 
             // btnAddNewUser
             // 
@@ -185,6 +217,7 @@
             this.Size = new System.Drawing.Size(1274, 708);
             this.Load += new System.EventHandler(this.ctrManageDoctors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
+            this.cmsUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,5 +234,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.DataGridView dgvDoctors;
+        private System.Windows.Forms.ContextMenuStrip cmsUsers;
+        private System.Windows.Forms.ToolStripMenuItem cmsIShowDetails;
+        private System.Windows.Forms.ToolStripMenuItem cmsIUpdate;
     }
 }

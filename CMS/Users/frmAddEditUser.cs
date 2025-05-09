@@ -170,8 +170,9 @@ namespace CMS.Users
             txtPhone.Text = _User.PersonInfo.PhoneNumber;
 
             cbCountries.Text = clsCountry.Find(_User.PersonInfo.NationalityID).CountryName ?? "Undefine";
-            
-            if(_User.PersonInfo.ImagePath != "")
+           
+            llRemovePicture.Visible = (pbPersonImage.ImageLocation != null);
+            if (_User.PersonInfo.ImagePath != "")
                 pbPersonImage.Load(_User.PersonInfo.ImagePath);
 
             // load user data
@@ -224,10 +225,10 @@ namespace CMS.Users
         {
             _ResetDefualtValues();
             _HandleFormSize();
+            _initializeUserType();
             if (_eFormMode == enFormMode.eUpdateMode)
                 _LoadInfo();
-            else
-                _initializeUserType();
+                
         }
         private bool _HandleUserImage()
         {
@@ -242,13 +243,13 @@ namespace CMS.Users
             string userImage = _isDoctor ? _Doctor.UserInfo.PersonInfo.ImagePath : _User.PersonInfo.ImagePath;
             if ( userImage != pbPersonImage.ImageLocation)
             {
-                if ( !string.IsNullOrEmpty(_User.PersonInfo.ImagePath))
+                if ( !string.IsNullOrEmpty(userImage))
                 {
                     //first we delete the old image from the folder in case there is any.
 
                     try
                     {
-                        File.Delete(_User.PersonInfo.ImagePath);
+                        File.Delete(userImage);
                     }
                     catch (IOException io)
                     {
@@ -296,17 +297,23 @@ namespace CMS.Users
 
             if (_isDoctor) 
             {
+                if (_eFormMode == enFormMode.eUpdateMode)
+                    _User = _Doctor.UserInfo;
                 _User.RoleId = (int)clsRole.enRole.eDoctor;
+                
             }
-            
-            if (rbAdmin.Checked) 
+            else
             {
-                _User.RoleId = (int)clsRole.enRole.eAdmin;
+                if (rbAdmin.Checked)
+                {
+                    _User.RoleId = (int)clsRole.enRole.eAdmin;
+                }
+                if (rbUser.Checked)
+                {
+                    _User.RoleId = (int)clsRole.enRole.eSimpleUser;
+                }
             }
-            if (rbUser.Checked)
-            {
-                _User.RoleId = (int)clsRole.enRole.eSimpleUser;
-            }
+
 
             _User.IsActive = chk_isActive.Checked;
 

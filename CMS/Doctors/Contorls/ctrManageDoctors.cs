@@ -32,11 +32,34 @@ namespace CMS.Doctors.Controls
         {
             using(frmAddEditUser frm = new frmAddEditUser(true))
             {
-                frm.ShowDialog();
+
                 frm.OnUserSaved += () =>
                 {
                     RefreshData();
                 };
+                frm.ShowDialog();
+                
+            }
+        }
+
+        private void cmsIUpdate_Click(object sender, EventArgs e)
+        {
+            using (frmAddEditUser frm = new frmAddEditUser(dgvDoctors.CurrentRow.Cells[1].Value.ToString(),true))
+            {
+                frm.OnUserSaved += () =>
+                {
+                    RefreshData();
+                };
+                frm.ShowDialog();
+                
+            }
+        }
+
+        private void cmsIShowDetails_Click(object sender, EventArgs e)
+        {
+            using(frmDoctorInfo frm = new frmDoctorInfo(dgvDoctors.CurrentRow.Cells[1].Value.ToString()))
+            {
+                frm.ShowDialog();
             }
         }
     }
