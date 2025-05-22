@@ -6,7 +6,7 @@ namespace DataLayer
 {
     public static class clsDoctorData
     {
-        public static bool GetByID(int DoctorID, ref int PersonID, ref string Specialization)
+        public static bool GetByID(int DoctorID, ref int PersonID, ref string Specialization,ref float BasePrice)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -24,6 +24,7 @@ namespace DataLayer
                             isFound = true;
                             PersonID = Convert.ToInt32(reader["PersonID"]);
                             Specialization = reader["Specialization"].ToString();
+                            BasePrice = Convert.ToSingle(reader["BasePrice"]);
                         }
                     }
                 }
@@ -34,7 +35,7 @@ namespace DataLayer
             }
             return isFound;
         }
-        public static bool GetByUsername(ref int DoctorID, ref int UserID, ref string Specialization,string username)
+        public static bool GetByUsername(ref int DoctorID, ref int UserID, ref string Specialization,ref float BasePrice,string username)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -52,6 +53,37 @@ namespace DataLayer
                             isFound = true;
                             DoctorID = Convert.ToInt32(reader["DoctorID"]);
                             UserID = Convert.ToInt32(reader["UserID"]);
+                            Specialization = reader["Specialization"].ToString();
+                            BasePrice = Convert.ToSingle(reader["BasePrice"]);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return isFound;
+        }
+        public static bool GetByNationalNo(ref int DoctorID, ref int UserID, ref string Specialization, ref float BasePrice ,string nationalNo)
+        {
+            bool isFound = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetDoctorByNationalNo", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@@ationalNo", nationalNo);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            DoctorID = Convert.ToInt32(reader["DoctorID"]);
+                            UserID = Convert.ToInt32(reader["UserID"]);
+                            BasePrice = Convert.ToSingle(reader["BasePrice"]);
                             Specialization = reader["Specialization"].ToString();
                         }
                     }
@@ -107,7 +139,7 @@ namespace DataLayer
                 string Username, string Password, int RoleId, bool IsActive,
                 string Name, DateTime DateOfBirth, bool Gender, string PhoneNumber,
                 string Email, string Address, string ImagePath, int NationalityID, string NationalNo,
-                string Specialization
+                string Specialization,float BasePrice
             )
 
         {
@@ -135,7 +167,8 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@RoleId", RoleId);
                 command.Parameters.AddWithValue("@IsActive", IsActive);
                 // Doctor parameters
-                command.Parameters.AddWithValue("@Specialization", Specialization); // Assuming specialization is not needed here
+                command.Parameters.AddWithValue("@Specialization", Specialization); 
+                command.Parameters.AddWithValue("@BasePrice", BasePrice);
                 // Output parameter
                 SqlParameter outputParam = new SqlParameter("@NewDoctorID", SqlDbType.Int)
                 {
@@ -161,7 +194,7 @@ namespace DataLayer
                 int UserId, string Username, string Password, int RoleId, bool IsActive,
                 int PersonID, string Name, DateTime DateOfBirth, bool Gender, string PhoneNumber,
                 string Email, string Address, string ImagePath, int NationalityID, string NationalNo,
-                int DoctorID ,string Specialization
+                int DoctorID ,string Specialization, float BasePrice
             )
 
         {
@@ -193,6 +226,7 @@ namespace DataLayer
                 // Doctor parameters
                 command.Parameters.AddWithValue("@Specialization", Specialization);
                 command.Parameters.AddWithValue("@DoctorID", DoctorID);
+                command.Parameters.AddWithValue("@BasePrice", BasePrice);
                 try
                 {
                     connection.Open();

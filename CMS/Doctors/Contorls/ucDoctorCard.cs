@@ -68,6 +68,7 @@ namespace CMS.Doctors.Contorls
         {
             _DoctorID = _Doctor.DoctorID;
             lblspecializationValue.Text = _Doctor.Specialization;    
+            lblBasePrice.Text = _Doctor.BasePrice.ToString();
             ucUserCard1.LoadUserInfo(_Doctor.UserInfo);
         }
     }

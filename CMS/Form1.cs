@@ -44,9 +44,8 @@ namespace CMS
 
         private void btnAppointements_Click(object sender, EventArgs e)
         {
-            //var uc = new Appo();
-            //clsUtil.ShowUserControl(uc, pMain);
-            ////uc.RefreshData();
+            var uc = new Appointments.Controls.ucManageAppointments();
+            clsUtil.ShowUserControl(uc, pMain);
         }
     }
 }

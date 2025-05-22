@@ -119,5 +119,29 @@ namespace BusinessLayer
         {
             return clsPersonData.IsNationalNoExists(NationalNo);
         }   
+        public static bool isPatient(string NationalNo)
+        {
+            return clsPersonData.isPatient(NationalNo);
+        }
+        public bool isPatient()
+        {
+            return isPatient(this.NationalNo);
+        }
+        public static bool isDoctor(string NationalNo)
+        {
+            return clsPersonData.IsDoctor(NationalNo);
+        }
+        public bool isDoctor()
+        {
+            return isDoctor(this.NationalNo);
+        }
+        public static bool isUser(string NationalNo)
+        {
+            return clsPersonData.IsUser(NationalNo);
+        }
+        public bool isUser()
+        {
+            return isUser(this.NationalNo);
+        }
     }
 }

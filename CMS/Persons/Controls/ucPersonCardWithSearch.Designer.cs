@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucPersonCard1 = new CMS.Users.Controls.ucPersonCard();
             this.gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearchPerson = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.llEditPerson = new System.Windows.Forms.LinkLabel();
+            this.ucPersonCard1 = new CMS.Users.Controls.ucPersonCard();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ucPersonCard1
-            // 
-            this.ucPersonCard1.BackColor = System.Drawing.Color.White;
-            this.ucPersonCard1.Location = new System.Drawing.Point(3, 116);
-            this.ucPersonCard1.Name = "ucPersonCard1";
-            this.ucPersonCard1.Size = new System.Drawing.Size(828, 303);
-            this.ucPersonCard1.TabIndex = 15;
-            this.ucPersonCard1.Load += new System.EventHandler(this.ucPersonCard1_Load);
             // 
             // gbFilter
             // 
@@ -52,6 +45,7 @@
             this.gbFilter.Controls.Add(this.txtSearchBox);
             this.gbFilter.Controls.Add(this.btnSearchPerson);
             this.gbFilter.Controls.Add(this.btnAddNewPerson);
+            this.gbFilter.Controls.Add(this.label1);
             this.gbFilter.Controls.Add(this.label3);
             this.gbFilter.CustomBorderColor = System.Drawing.Color.Black;
             this.gbFilter.CustomBorderThickness = new System.Windows.Forms.Padding(2);
@@ -62,7 +56,7 @@
             this.gbFilter.ShadowDecoration.Parent = this.gbFilter;
             this.gbFilter.Size = new System.Drawing.Size(828, 107);
             this.gbFilter.TabIndex = 17;
-            this.gbFilter.Text = "Search Person by :";
+            this.gbFilter.Text = "Search Doctor/ User by :";
             // 
             // txtSearchBox
             // 
@@ -85,7 +79,7 @@
             this.txtSearchBox.PlaceholderText = "";
             this.txtSearchBox.SelectedText = "";
             this.txtSearchBox.ShadowDecoration.Parent = this.txtSearchBox;
-            this.txtSearchBox.Size = new System.Drawing.Size(266, 42);
+            this.txtSearchBox.Size = new System.Drawing.Size(292, 42);
             this.txtSearchBox.TabIndex = 16;
             // 
             // btnSearchPerson
@@ -99,11 +93,12 @@
             this.btnSearchPerson.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchPerson.ForeColor = System.Drawing.Color.Black;
             this.btnSearchPerson.HoverState.Parent = this.btnSearchPerson;
+            this.btnSearchPerson.Image = global::CMS.Properties.Resources.SearchPerson;
             this.btnSearchPerson.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearchPerson.Location = new System.Drawing.Point(396, 41);
+            this.btnSearchPerson.Location = new System.Drawing.Point(422, 34);
             this.btnSearchPerson.Name = "btnSearchPerson";
             this.btnSearchPerson.ShadowDecoration.Parent = this.btnSearchPerson;
-            this.btnSearchPerson.Size = new System.Drawing.Size(52, 42);
+            this.btnSearchPerson.Size = new System.Drawing.Size(66, 49);
             this.btnSearchPerson.TabIndex = 12;
             this.btnSearchPerson.Click += new System.EventHandler(this.btnSearchPerson_Click);
             // 
@@ -118,35 +113,72 @@
             this.btnAddNewPerson.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewPerson.ForeColor = System.Drawing.Color.Black;
             this.btnAddNewPerson.HoverState.Parent = this.btnAddNewPerson;
+            this.btnAddNewPerson.Image = global::CMS.Properties.Resources.add_user;
             this.btnAddNewPerson.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAddNewPerson.Location = new System.Drawing.Point(472, 41);
+            this.btnAddNewPerson.Location = new System.Drawing.Point(645, 34);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
             this.btnAddNewPerson.ShadowDecoration.Parent = this.btnAddNewPerson;
-            this.btnAddNewPerson.Size = new System.Drawing.Size(52, 42);
+            this.btnAddNewPerson.Size = new System.Drawing.Size(66, 49);
             this.btnAddNewPerson.TabIndex = 12;
             this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(21, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 42);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "NationalNo :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 41);
+            this.label3.Location = new System.Drawing.Point(494, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 42);
+            this.label3.Size = new System.Drawing.Size(171, 49);
             this.label3.TabIndex = 13;
-            this.label3.Text = "National No :";
+            this.label3.Text = "Or Add New Person :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // llEditPerson
+            // 
+            this.llEditPerson.AutoSize = true;
+            this.llEditPerson.BackColor = System.Drawing.Color.White;
+            this.llEditPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llEditPerson.Location = new System.Drawing.Point(643, 146);
+            this.llEditPerson.Name = "llEditPerson";
+            this.llEditPerson.Size = new System.Drawing.Size(138, 29);
+            this.llEditPerson.TabIndex = 18;
+            this.llEditPerson.TabStop = true;
+            this.llEditPerson.Text = "Edit Person";
+            this.llEditPerson.Visible = false;
+            this.llEditPerson.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llEditPerson_LinkClicked);
+            // 
+            // ucPersonCard1
+            // 
+            this.ucPersonCard1.BackColor = System.Drawing.Color.White;
+            this.ucPersonCard1.Location = new System.Drawing.Point(3, 116);
+            this.ucPersonCard1.Name = "ucPersonCard1";
+            this.ucPersonCard1.Size = new System.Drawing.Size(828, 303);
+            this.ucPersonCard1.TabIndex = 15;
+            this.ucPersonCard1.Load += new System.EventHandler(this.ucPersonCard1_Load);
             // 
             // ucPersonCardWithSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.llEditPerson);
             this.Controls.Add(this.gbFilter);
             this.Controls.Add(this.ucPersonCard1);
             this.Name = "ucPersonCardWithSearch";
             this.Size = new System.Drawing.Size(834, 424);
             this.gbFilter.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -157,5 +189,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSearchPerson;
         private Guna.UI2.WinForms.Guna2Button btnAddNewPerson;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel llEditPerson;
     }
 }

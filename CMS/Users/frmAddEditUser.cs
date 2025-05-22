@@ -30,6 +30,9 @@ namespace CMS.Users
         public delegate void OnUserSavedDelegate();
         public event OnUserSavedDelegate OnUserSaved;
 
+        public delegate void OnUserSavedDatBackDelegate(string username);
+        public event OnUserSavedDatBackDelegate OnUserSavedDataBack;
+
         enum enFormMode { eUpdateMode,eAddNewMode}
         enFormMode _eFormMode;
         public frmAddEditUser(bool isDoctor = false)
@@ -134,10 +137,14 @@ namespace CMS.Users
                 this.Text = title;
                 lblTitle.Text = title;
             }
-
+            // specialisation ui
             lblSpecialization.Visible = _isDoctor;
             txtSpecialization.Visible = _isDoctor;
             pbSpecialization.Visible = _isDoctor;   
+            // base price ui
+            BasePrice.Visible = _isDoctor;
+            lblPrice.Visible = _isDoctor;   
+            pbPrice.Visible = _isDoctor;    
 
             rbAdmin.Text = _isDoctor ? "Doctor" : "Admin";
             rbUser.Visible = !_isDoctor;
@@ -210,6 +217,7 @@ namespace CMS.Users
             chk_isActive.Checked = _Doctor.UserInfo.IsActive;
            
             txtSpecialization.Text = _Doctor.Specialization;
+            BasePrice.Value = (decimal)_Doctor.BasePrice;
             this.ValidateChildren();
         }
 
@@ -345,6 +353,7 @@ namespace CMS.Users
             {
                 _Doctor.UserInfo = _User;
                 _Doctor.Specialization = txtSpecialization.Text.Trim();
+                _Doctor.BasePrice = (float)BasePrice.Value;
             }
             
             
@@ -353,6 +362,7 @@ namespace CMS.Users
             if (save)
             {
                 OnUserSaved?.Invoke();
+                OnUserSavedDataBack?.Invoke(_isDoctor ? _Doctor.UserInfo.Username : _User.Username);
                 btnSave.Enabled = false;
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -538,6 +548,21 @@ namespace CMS.Users
             else
             {
                 errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void BasePrice_Validating(object sender, CancelEventArgs e)
+        {
+            if (!BasePrice.Visible) return;
+            if (BasePrice.Value <= 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(BasePrice, "This field is required! value cannot be 0 !");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(BasePrice, null);
             }
         }
     }

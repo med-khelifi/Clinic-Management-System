@@ -37,7 +37,7 @@ namespace CMS.Users.Controls
         private void _LoadPersonImage()
         {
             string ImagePath = _Person.ImagePath;
-            if (ImagePath == "")
+            if (string.IsNullOrEmpty( ImagePath))
             {
                 pbPersonImage.Image = (_Person.Gender == false ? Resources.Male : Resources.female);
                 return;
@@ -86,6 +86,18 @@ namespace CMS.Users.Controls
                 return;
             }
             this._Person = _Person; 
+            _FillPersonInfo();
+        }
+
+        public void LoadPersonInfo(string nationalNo)
+        {
+            _Person = clsPerson.Find(nationalNo);
+            if (_Person == null)
+            {
+                ResetPersonInfo();
+                MessageBox.Show("No Person found !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _FillPersonInfo();
         }
 

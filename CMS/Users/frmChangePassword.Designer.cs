@@ -286,6 +286,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ucUserCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pHeader = new System.Windows.Forms.Panel();
-            this.pMain = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
@@ -41,11 +36,16 @@
             this.btnAppointements = new Guna.UI2.WinForms.Guna2Button();
             this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashbord = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pHeader = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,57 +65,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 808);
             this.panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(155, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Plus";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(155, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 47);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Clinica";
-            // 
-            // pHeader
-            // 
-            this.pHeader.Controls.Add(this.guna2CirclePictureBox1);
-            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pHeader.Location = new System.Drawing.Point(274, 0);
-            this.pHeader.Name = "pHeader";
-            this.pHeader.Size = new System.Drawing.Size(1274, 100);
-            this.pHeader.TabIndex = 1;
-            // 
-            // pMain
-            // 
-            this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMain.Location = new System.Drawing.Point(274, 100);
-            this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(1274, 708);
-            this.pMain.TabIndex = 2;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::CMS.Properties.Resources.doctorWhite;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1198, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // btnDoctors
             // 
@@ -239,7 +188,7 @@
             this.btnAppointements.ShadowDecoration.Parent = this.btnAppointements;
             this.btnAppointements.Size = new System.Drawing.Size(251, 52);
             this.btnAppointements.TabIndex = 2;
-            this.btnAppointements.Text = "Appointements";
+            this.btnAppointements.Text = "Appointments";
             this.btnAppointements.UseTransparentBackground = true;
             this.btnAppointements.Click += new System.EventHandler(this.btnAppointements_Click);
             // 
@@ -296,6 +245,28 @@
             this.btnDashbord.UseTransparentBackground = true;
             this.btnDashbord.Click += new System.EventHandler(this.btnDashbord_Click);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(155, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Plus";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(155, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 47);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Clinica";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::CMS.Properties.Resources.clinicLogo;
@@ -306,6 +277,35 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // pHeader
+            // 
+            this.pHeader.Controls.Add(this.guna2CirclePictureBox1);
+            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pHeader.Location = new System.Drawing.Point(274, 0);
+            this.pHeader.Name = "pHeader";
+            this.pHeader.Size = new System.Drawing.Size(1274, 100);
+            this.pHeader.TabIndex = 1;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::CMS.Properties.Resources.doctorWhite;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1198, 12);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // pMain
+            // 
+            this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMain.Location = new System.Drawing.Point(274, 100);
+            this.pMain.Name = "pMain";
+            this.pMain.Size = new System.Drawing.Size(1274, 708);
+            this.pMain.TabIndex = 2;
             // 
             // FrmMain
             // 
@@ -322,10 +322,10 @@
             this.Text = "Main ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pHeader.ResumeLayout(false);
             this.pHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

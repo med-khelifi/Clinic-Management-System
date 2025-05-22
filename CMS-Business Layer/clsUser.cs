@@ -188,7 +188,6 @@ namespace BusinessLayer
         {
             return clsUserData.GetUserStatus(this.Username);
         }
-
         public static bool isDoctor(string username)
         {
             return clsUserData.isDoctor(username);

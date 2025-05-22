@@ -13,19 +13,23 @@ namespace BusinessLayer
         public clsUser UserInfo { get; set; }
         public string Specialization { get; set; }
 
+        public float BasePrice { get; set; }
+
         public clsDoctor()
         {
             Mode = enMode.AddNew;
             DoctorID = -1;
             UserID = -1;
             Specialization = null;
+            BasePrice = 0;
             UserInfo = new clsUser();
         }
-        private clsDoctor(int DoctorID, int PersonID, string Specialization)
+        private clsDoctor(int DoctorID, int PersonID, string Specialization,float BasePrice)
         {
             this.DoctorID = DoctorID;
             this.UserID = PersonID;
             this.Specialization = Specialization;
+            this.BasePrice = BasePrice;
             this.UserInfo = clsUser.Find(UserID);
             Mode = enMode.Update;
         }
@@ -50,16 +54,18 @@ namespace BusinessLayer
         {
             this.DoctorID = clsDoctorData.AddNew
                 (
+                
                 this.UserInfo.Username, clsPasswordHasher.Hash(this.UserInfo.Password), this.UserInfo.RoleId, 
                 this.UserInfo.IsActive,this.UserInfo.PersonInfo.Name, this.UserInfo.PersonInfo.DateOfBirth, 
                 this.UserInfo.PersonInfo.Gender,this.UserInfo.PersonInfo.PhoneNumber, this.UserInfo.PersonInfo.Email,
                 this.UserInfo.PersonInfo.Address,this.UserInfo.PersonInfo.ImagePath, this.UserInfo.PersonInfo.NationalityID,
-                this.UserInfo.PersonInfo.NationalNo,this.Specialization
+                this.UserInfo.PersonInfo.NationalNo,this.Specialization,this.BasePrice
                 );
             return this.DoctorID != 0;
         }
         private bool _update()
         {
+            
             return clsDoctorData.Update(
                 this.UserInfo.UserId,
                 this.UserInfo.Username,
@@ -77,7 +83,8 @@ namespace BusinessLayer
                 this.UserInfo.PersonInfo.NationalityID,
                 this.UserInfo.PersonInfo.NationalNo,
                 this.DoctorID,
-                this.Specialization
+                this.Specialization,
+                this.BasePrice
             );
         }
 
@@ -93,9 +100,10 @@ namespace BusinessLayer
         {
             int PersonID = -1;
             string Specialization = null;
-            if (clsDoctorData.GetByID(DoctorID, ref PersonID, ref Specialization))
+            float BasePrice = 0;
+            if (clsDoctorData.GetByID(DoctorID, ref PersonID, ref Specialization,ref BasePrice))
             {
-                return new clsDoctor(DoctorID, PersonID, Specialization);
+                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
             }
             return null;
         }
@@ -104,9 +112,23 @@ namespace BusinessLayer
             int PersonID = -1;
             int DoctorID = -1;  
             string Specialization = null;
-            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, username))
+            float BasePrice = 0;
+            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice ,username))
             {
-                return new clsDoctor(DoctorID, PersonID, Specialization);
+                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
+            }
+            return null;
+        }
+
+        public static clsDoctor FindByNationalNo(string nationalNo)
+        {
+            int PersonID = -1;
+            int DoctorID = -1;
+            string Specialization = null;
+            float BasePrice = 0;
+            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice , nationalNo))
+            {
+                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
             }
             return null;
         }

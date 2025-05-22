@@ -103,6 +103,16 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blood {
+            get {
+                object obj = ResourceManager.GetObject("blood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Change_password {
             get {
                 object obj = ResourceManager.GetObject("Change password", resourceCulture);
@@ -326,6 +336,16 @@ namespace CMS.Properties {
         internal static System.Drawing.Bitmap password {
             get {
                 object obj = ResourceManager.GetObject("password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap patient {
+            get {
+                object obj = ResourceManager.GetObject("patient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

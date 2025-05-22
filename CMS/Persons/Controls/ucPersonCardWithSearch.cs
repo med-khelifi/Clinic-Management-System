@@ -1,4 +1,5 @@
-﻿using CMS.Users;
+﻿using BusinessLayer;
+using CMS.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,27 @@ namespace CMS.Persons.Controls
                 gbFilter.Enabled = value;
             }
         }
+        public string NationalNoSearchText
+        {
+            set
+            {
+                txtSearchBox.Text = value;
+            }
+        }
+        public string NationalNo
+        {
+            get
+            {
+                return ucPersonCard1.NationalNo;
+            }
+        }
+        public clsPerson PersonInfo
+        {
+            get
+            {
+                return ucPersonCard1.PersonInfo;
+            }
+        }
         public ucPersonCardWithSearch()
         {
             InitializeComponent();
@@ -41,12 +63,18 @@ namespace CMS.Persons.Controls
                 return;
             }
             //ucPersonCard1.LoadPersonInfo(txtSearchBox.Text);
-            OnSearchPersonClicked?.Invoke(this, ucPersonCard1.NationalNo);
+            OnSearchPersonClicked?.Invoke(this, txtSearchBox.Text);
         }
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            frmAddEditUser frm = new frmAddEditUser();
+            frmAddEditPerson frm = new frmAddEditPerson();
+            frm.OnUserSaved += (person) =>
+            {
+                txtSearchBox.Text = person.NationalNo;
+                EnableSearch = false;
+                ucPersonCard1.LoadPersonInfo(person);
+            };
             frm.ShowDialog();
         }
 
@@ -62,10 +90,51 @@ namespace CMS.Persons.Controls
         ////{
         ////    EnableSearch = false;
         ////}
-        //public void LoadPersonInfo(string nationalNo)
-        //{
-        //    ucPersonCard1.LoadPersonInfo(nationalNo);
-        //    EnableSearch = false;   
-        //}
+        public void LoadPersonInfo(clsPerson Person)
+        {
+            if (Person == null)
+            {
+                MessageBox.Show("No Person Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ucPersonCard1.ResetPersonInfo();    
+                return;
+            }
+            ucPersonCard1.LoadPersonInfo(Person);
+            llEditPerson.Visible = true;
+            EnableSearch = false;
+        }
+
+        public void LoadPersonInfo(string NationalNo)
+        {
+            clsPerson Person = clsPerson.Find(NationalNo);
+            if (Person == null)
+            {
+                MessageBox.Show("No Person Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ucPersonCard1.ResetPersonInfo();
+                return;
+            }
+            ucPersonCard1.LoadPersonInfo(Person);
+            llEditPerson.Visible = true;
+        }
+
+        public void ResetPersonInfo()
+        {
+
+            ucPersonCard1.ResetPersonInfo();
+            llEditPerson.Visible = false;   
+        }
+
+        private void llEditPerson_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using(frmAddEditPerson frm = new frmAddEditPerson(ucPersonCard1.PersonInfo.NationalNo))
+            {
+                frm.OnUserSaved += (person) =>
+                {
+                    txtSearchBox.Text = person.NationalNo;
+                    EnableSearch = false;
+                    ucPersonCard1.LoadPersonInfo(person);
+                };
+                frm.ShowDialog();
+            }
+        }
     }
 }

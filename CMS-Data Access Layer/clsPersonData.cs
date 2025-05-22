@@ -79,7 +79,6 @@ namespace DataLayer
             }
             return isFound;
         }
-
         public static bool Delete(int PersonID)
         {
             int result = 0;
@@ -132,9 +131,9 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
                 command.Parameters.AddWithValue("@Gender", Gender);
                 command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
-                command.Parameters.AddWithValue("@Email", Email);
+                command.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email);
                 command.Parameters.AddWithValue("@Address", Address);
-                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                command.Parameters.AddWithValue("@ImagePath", string.IsNullOrEmpty(ImagePath) ? (object)DBNull.Value : ImagePath);
                 command.Parameters.AddWithValue("@NationalityID", NationalityID);
                 command.Parameters.AddWithValue("@NationalNo", NationalNo);
                 try
@@ -161,9 +160,9 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
                 command.Parameters.AddWithValue("@Gender", Gender);
                 command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
-                command.Parameters.AddWithValue("@Email", Email);
+                command.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email);
                 command.Parameters.AddWithValue("@Address", Address);
-                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                command.Parameters.AddWithValue("@ImagePath", string.IsNullOrEmpty(ImagePath) ? (object)DBNull.Value : ImagePath);
                 command.Parameters.AddWithValue("@NationalityID", NationalityID);
                 command.Parameters.AddWithValue("@NationalNo", NationalNo);
                 try
@@ -190,6 +189,57 @@ namespace DataLayer
                 using (var reader = cmd.ExecuteReader())
                 {
                     return reader.HasRows;
+                }
+            }
+        }
+        public static bool isPatient(string nationalNo)
+        {
+            bool hasPatientRecord = false;
+
+            using (var conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_isPatient", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NationalNo", nationalNo);
+
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    hasPatientRecord = reader.HasRows;
+                }                
+            }
+            return hasPatientRecord;
+        }
+
+        public static bool IsDoctor(string nationalNo)
+        {
+            using (SqlConnection conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_IsPersonDoctor", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NationalNo", nationalNo);
+
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    return reader.HasRows; // If a row is returned, the person is a doctor
+                }
+            }
+        }
+
+        public static bool IsUser(string nationalNo)
+        {
+            using (SqlConnection conn = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_IsPersonUser", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NationalNo", nationalNo);
+
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    return reader.HasRows; // If a row is returned, the person is a user
                 }
             }
         }

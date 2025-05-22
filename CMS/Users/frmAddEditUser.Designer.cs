@@ -35,13 +35,13 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gbUserDetails = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.BasePrice = new System.Windows.Forms.NumericUpDown();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbPassword = new System.Windows.Forms.PictureBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbConfirmPassword = new System.Windows.Forms.PictureBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.llbChangePassword = new System.Windows.Forms.LinkLabel();
             this.rbUser = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.chk_isActive = new Guna.UI2.WinForms.Guna2CustomCheckBox();
@@ -50,11 +50,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSpecialization = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbPrice = new System.Windows.Forms.PictureBox();
             this.pbSpecialization = new System.Windows.Forms.PictureBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.lblSpecialization = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.llbChangePassword = new System.Windows.Forms.LinkLabel();
             this.gbPesonalInfo = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbCountries = new System.Windows.Forms.ComboBox();
             this.llRemovePicture = new System.Windows.Forms.LinkLabel();
@@ -86,10 +89,12 @@
             this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbUserDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BasePrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpecialization)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.gbPesonalInfo.SuspendLayout();
@@ -166,13 +171,14 @@
             // 
             // gbUserDetails
             // 
+            this.gbUserDetails.Controls.Add(this.BasePrice);
             this.gbUserDetails.Controls.Add(this.txtPassword);
             this.gbUserDetails.Controls.Add(this.pbPassword);
             this.gbUserDetails.Controls.Add(this.lblPassword);
             this.gbUserDetails.Controls.Add(this.txtConfirmPassword);
+            this.gbUserDetails.Controls.Add(this.llbChangePassword);
             this.gbUserDetails.Controls.Add(this.pbConfirmPassword);
             this.gbUserDetails.Controls.Add(this.lblConfirmPassword);
-            this.gbUserDetails.Controls.Add(this.llbChangePassword);
             this.gbUserDetails.Controls.Add(this.rbUser);
             this.gbUserDetails.Controls.Add(this.rbAdmin);
             this.gbUserDetails.Controls.Add(this.chk_isActive);
@@ -181,8 +187,10 @@
             this.gbUserDetails.Controls.Add(this.label1);
             this.gbUserDetails.Controls.Add(this.label9);
             this.gbUserDetails.Controls.Add(this.txtSpecialization);
+            this.gbUserDetails.Controls.Add(this.pbPrice);
             this.gbUserDetails.Controls.Add(this.pbSpecialization);
             this.gbUserDetails.Controls.Add(this.txtUserName);
+            this.gbUserDetails.Controls.Add(this.lblPrice);
             this.gbUserDetails.Controls.Add(this.lblSpecialization);
             this.gbUserDetails.Controls.Add(this.pictureBox11);
             this.gbUserDetails.Controls.Add(this.label12);
@@ -196,6 +204,14 @@
             this.gbUserDetails.Size = new System.Drawing.Size(1059, 232);
             this.gbUserDetails.TabIndex = 83;
             this.gbUserDetails.Text = "User Details :";
+            // 
+            // BasePrice
+            // 
+            this.BasePrice.Location = new System.Drawing.Point(945, 26);
+            this.BasePrice.Name = "BasePrice";
+            this.BasePrice.Size = new System.Drawing.Size(65, 40);
+            this.BasePrice.TabIndex = 115;
+            this.BasePrice.Validating += new System.ComponentModel.CancelEventHandler(this.BasePrice_Validating);
             // 
             // txtPassword
             // 
@@ -288,17 +304,6 @@
             this.lblConfirmPassword.Size = new System.Drawing.Size(138, 21);
             this.lblConfirmPassword.TabIndex = 109;
             this.lblConfirmPassword.Text = "Confirm Password :";
-            // 
-            // llbChangePassword
-            // 
-            this.llbChangePassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
-            this.llbChangePassword.Location = new System.Drawing.Point(790, 40);
-            this.llbChangePassword.Name = "llbChangePassword";
-            this.llbChangePassword.Size = new System.Drawing.Size(188, 28);
-            this.llbChangePassword.TabIndex = 108;
-            this.llbChangePassword.TabStop = true;
-            this.llbChangePassword.Text = "Change Password";
-            this.llbChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rbUser
             // 
@@ -429,6 +434,16 @@
             this.txtSpecialization.Size = new System.Drawing.Size(193, 33);
             this.txtSpecialization.TabIndex = 80;
             // 
+            // pbPrice
+            // 
+            this.pbPrice.Image = global::CMS.Properties.Resources.medical_assistance;
+            this.pbPrice.Location = new System.Drawing.Point(899, 34);
+            this.pbPrice.Name = "pbPrice";
+            this.pbPrice.Size = new System.Drawing.Size(32, 32);
+            this.pbPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbPrice.TabIndex = 78;
+            this.pbPrice.TabStop = false;
+            // 
             // pbSpecialization
             // 
             this.pbSpecialization.Image = global::CMS.Properties.Resources.medical_assistance;
@@ -464,6 +479,17 @@
             this.txtUserName.TabIndex = 80;
             this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.lblPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblPrice.Location = new System.Drawing.Point(806, 45);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(87, 21);
+            this.lblPrice.TabIndex = 76;
+            this.lblPrice.Text = "Base Price :";
+            // 
             // lblSpecialization
             // 
             this.lblSpecialization.AutoSize = true;
@@ -495,6 +521,17 @@
             this.label12.Size = new System.Drawing.Size(90, 21);
             this.label12.TabIndex = 76;
             this.label12.Text = "User Name :";
+            // 
+            // llbChangePassword
+            // 
+            this.llbChangePassword.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 10.2F);
+            this.llbChangePassword.Location = new System.Drawing.Point(855, 87);
+            this.llbChangePassword.Name = "llbChangePassword";
+            this.llbChangePassword.Size = new System.Drawing.Size(188, 28);
+            this.llbChangePassword.TabIndex = 108;
+            this.llbChangePassword.TabStop = true;
+            this.llbChangePassword.Text = "Change Password";
+            this.llbChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbPesonalInfo
             // 
@@ -963,10 +1000,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbUserDetails.ResumeLayout(false);
             this.gbUserDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BasePrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpecialization)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.gbPesonalInfo.ResumeLayout(false);
@@ -1041,5 +1080,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSpecialization;
         private System.Windows.Forms.PictureBox pbSpecialization;
         private System.Windows.Forms.Label lblSpecialization;
+        private System.Windows.Forms.NumericUpDown BasePrice;
+        private System.Windows.Forms.PictureBox pbPrice;
+        private System.Windows.Forms.Label lblPrice;
     }
 }

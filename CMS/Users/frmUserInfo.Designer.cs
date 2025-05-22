@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucUserCard1 = new CMS.Users.Controls.ucUserCard();
             this.BtnClose = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.ucUserCard1 = new CMS.Users.Controls.ucUserCard();
             this.SuspendLayout();
-            // 
-            // ucUserCard1
-            // 
-            this.ucUserCard1.BackColor = System.Drawing.Color.White;
-            this.ucUserCard1.Location = new System.Drawing.Point(2, 65);
-            this.ucUserCard1.Name = "ucUserCard1";
-            this.ucUserCard1.Size = new System.Drawing.Size(822, 487);
-            this.ucUserCard1.TabIndex = 0;
             // 
             // BtnClose
             // 
@@ -73,6 +65,15 @@
             this.lblTitle.TabIndex = 85;
             this.lblTitle.Text = "User Info :";
             // 
+            // ucUserCard1
+            // 
+            this.ucUserCard1.BackColor = System.Drawing.Color.White;
+            this.ucUserCard1.Location = new System.Drawing.Point(2, 65);
+            this.ucUserCard1.Name = "ucUserCard1";
+            this.ucUserCard1.Size = new System.Drawing.Size(822, 487);
+            this.ucUserCard1.TabIndex = 0;
+            this.ucUserCard1.UserID = 0;
+            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -82,6 +83,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.ucUserCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUserInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUserInfo";

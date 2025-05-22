@@ -7,6 +7,10 @@ namespace BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
+        public enum enAppointmentStatus
+        {
+            Scheduled = 0,Completed = 1, Cancelled = 2,NoShow = 3,Rescheduled = 4,FollowUpNeeded = 5
+        }
 
         public int AppointmentID { get; set; }
         public int PatientID { get; set; }

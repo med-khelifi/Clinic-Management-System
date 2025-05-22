@@ -156,9 +156,9 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
                 command.Parameters.AddWithValue("@Gender",  Gender);
                 command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
-                command.Parameters.AddWithValue("@Email", Email);
+                command.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email);
                 command.Parameters.AddWithValue("@Address", Address);
-                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                command.Parameters.AddWithValue("@ImagePath", string.IsNullOrEmpty(ImagePath) ? (object)DBNull.Value : ImagePath);
                 command.Parameters.AddWithValue("@NationalityID", NationalityID);
                 command.Parameters.AddWithValue("@NationalNo", NationalNo);
 
@@ -302,7 +302,7 @@ namespace DataLayer
         {
             bool isDoctor = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("isUserADoctor", connection))
+            using (SqlCommand command = new SqlCommand("sp_isUserADoctor", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@username", Username);
