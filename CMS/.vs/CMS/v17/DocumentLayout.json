@@ -3,12 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\controls\\ucmanageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\controls\\ucmanageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\controls\\ucmanageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\controls\\ucmanageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A6E44F-2B2F-4B06-8913-114056A76CC9}|..\\CMS-Business Layer\\CMS-Business Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-business layer\\clsappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{162D3CE3-0966-4BAD-8C71-93F29B09C58F}|..\\CMS-Data Access Layer\\CMS-Data Access Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-data access layer\\clsappointmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,27 +44,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAddEditUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs",
-              "RelativeDocumentMoniker": "Users\\frmAddEditUser.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Users\\frmAddEditUser.cs [Design]",
-              "RelativeToolTip": "Users\\frmAddEditUser.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frmAddEditAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
+              "RelativeDocumentMoniker": "Appointments\\frmAddEditAppointments.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
+              "RelativeToolTip": "Appointments\\frmAddEditAppointments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T06:13:23.35Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-31T21:16:48.976Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "frmAddEditAppointments.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
               "RelativeDocumentMoniker": "Appointments\\frmAddEditAppointments.cs",
               "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs [Design]",
               "RelativeToolTip": "Appointments\\frmAddEditAppointments.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T06:12:09.706Z",
+              "WhenOpened": "2025-05-31T21:16:44.189Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsAppointment.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsAppointment.cs",
+              "RelativeDocumentMoniker": "..\\CMS-Business Layer\\clsAppointment.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsAppointment.cs",
+              "RelativeToolTip": "..\\CMS-Business Layer\\clsAppointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAlwA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T21:10:36.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ucManageAppointments.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\Controls\\ucManageAppointments.cs",
+              "RelativeDocumentMoniker": "Appointments\\Controls\\ucManageAppointments.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\Controls\\ucManageAppointments.cs [Design]",
+              "RelativeToolTip": "Appointments\\Controls\\ucManageAppointments.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T19:21:05.175Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsAppointmentData.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsAppointmentData.cs",
+              "RelativeDocumentMoniker": "..\\CMS-Data Access Layer\\clsAppointmentData.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsAppointmentData.cs",
+              "RelativeToolTip": "..\\CMS-Data Access Layer\\clsAppointmentData.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T18:54:42.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ucManageAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\Controls\\ucManageAppointments.cs",
+              "RelativeDocumentMoniker": "Appointments\\Controls\\ucManageAppointments.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\Controls\\ucManageAppointments.cs",
+              "RelativeToolTip": "Appointments\\Controls\\ucManageAppointments.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADgv0gAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T19:26:24.33Z",
+              "EditorCaption": ""
             }
           ]
         }

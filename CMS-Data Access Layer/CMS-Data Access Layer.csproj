@@ -43,14 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAppointmentData.cs" />
+    <Compile Include="clsPatientData.cs" />
     <Compile Include="clsBloodTypeData.cs" />
     <Compile Include="clsCountryData.cs" />
     <Compile Include="clsDataAccessUtil.cs" />
     <Compile Include="clsDoctorData.cs" />
     <Compile Include="clsMedicalRecordData.cs" />
     <Compile Include="clsMessageData.cs" />
-    <Compile Include="clsPatientData.cs" />
     <Compile Include="clsPaymentData.cs" />
+    <Compile Include="clsPaymentTransactionData.cs" />
     <Compile Include="clsPersonData.cs" />
     <Compile Include="clsPrescriptionData.cs" />
     <Compile Include="clsRoleData.cs" />

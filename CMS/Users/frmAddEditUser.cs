@@ -550,7 +550,6 @@ namespace CMS.Users
                 errorProvider1.SetError(txtPassword, null);
             }
         }
-
         private void BasePrice_Validating(object sender, CancelEventArgs e)
         {
             if (!BasePrice.Visible) return;

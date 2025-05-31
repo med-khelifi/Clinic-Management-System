@@ -21,7 +21,7 @@ namespace CMS.Doctors.Contorls
             get { return _DoctorID; }
             set { _DoctorID = value; }
         }
-        public clsDoctor Doctor
+        public clsDoctor DoctorInfo
         {
             get { return _Doctor; }
         }

@@ -49,6 +49,7 @@
     <Compile Include="clsMessage.cs" />
     <Compile Include="clsPatient.cs" />
     <Compile Include="clsPayment.cs" />
+    <Compile Include="clsPaymentTransaction.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsPrescription.cs" />
     <Compile Include="clsRole.cs" />

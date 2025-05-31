@@ -84,6 +84,7 @@
             this.Controls.Add(this.ucPatientCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPatientInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient Info";
             this.Load += new System.EventHandler(this.frmPatientInfo_Load);
             this.ResumeLayout(false);

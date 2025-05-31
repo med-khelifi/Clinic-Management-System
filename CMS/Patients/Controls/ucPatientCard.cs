@@ -14,6 +14,22 @@ namespace CMS.Patients.Controls
     public partial class ucPatientCard : UserControl
     {
         clsPatient _patient;
+
+        public int PatientID
+        {
+            get
+            {
+                return _patient.PatientID;
+            }
+        }
+        
+        public clsPatient PatientInfo
+        {
+            get
+            {
+                return _patient;
+            }
+        }
         public ucPatientCard()
         {
             InitializeComponent();

@@ -9,27 +9,27 @@ namespace BusinessLayer
         public enMode Mode = enMode.AddNew;
 
         public int PaymentID { get; set; }
-        public DateTime PaymentDate { get; set; }
-        public string PaymentMethod { get; set; }
-        public decimal AmountPaid { get; set; }
-        public string AdditionalNotes { get; set; }
+        public double TotalAmount { get; set; }
+        public double AmountPaid { get; set; }
+        public bool isFullyPaid { get; set; }
+        public int AppointmentID { get; set; }
 
         public clsPayment()
         {
             Mode = enMode.AddNew;
             PaymentID = -1;
-            PaymentDate = DateTime.Now;
-            PaymentMethod = null;
+            TotalAmount = 0;
             AmountPaid = 0;
-            AdditionalNotes = null;
+            isFullyPaid = false;
+            AppointmentID = -1;
         }
-        private clsPayment(int PaymentID, DateTime PaymentDate, string PaymentMethod, decimal AmountPaid, string AdditionalNotes)
+        private clsPayment(int PaymentID, double TotalAmount, double AmountPaid, bool isFullyPaid, int AppointmentID)
         {
             this.PaymentID = PaymentID;
-            this.PaymentDate = PaymentDate;
-            this.PaymentMethod = PaymentMethod;
+            this.TotalAmount = TotalAmount;
             this.AmountPaid = AmountPaid;
-            this.AdditionalNotes = AdditionalNotes;
+            this.isFullyPaid = isFullyPaid;
+            this.AppointmentID = AppointmentID;
             Mode = enMode.Update;
         }
         public bool Save()
@@ -51,12 +51,12 @@ namespace BusinessLayer
         }
         private bool _addnew()
         {
-            this.PaymentID = clsPaymentData.AddNew(this.PaymentDate, this.PaymentMethod, this.AmountPaid, this.AdditionalNotes);
+            this.PaymentID = clsPaymentData.AddNew(this.TotalAmount, this.AmountPaid, this.isFullyPaid, this.AppointmentID);
              return this.PaymentID != 0;
         }
         private bool _update()
         {
-            return clsPaymentData.Update(PaymentID, PaymentDate, PaymentMethod, AmountPaid, AdditionalNotes);
+            return clsPaymentData.Update(PaymentID, TotalAmount, AmountPaid, isFullyPaid, AppointmentID);
         }
         public bool Delete()
         {
@@ -68,13 +68,13 @@ namespace BusinessLayer
         }
         public static clsPayment Find(int PaymentID)
         {
-            DateTime PaymentDate = DateTime.Now;
-            string PaymentMethod = null;
-            decimal AmountPaid = 0;
-            string AdditionalNotes = null;
-            if (clsPaymentData.GetByID(PaymentID, ref PaymentDate, ref PaymentMethod, ref AmountPaid, ref AdditionalNotes))
+            double TotalAmount = 0;
+            double AmountPaid = 0;
+            bool isFullyPaid = false;
+            int AppointmentID = -1;
+            if (clsPaymentData.GetByID(PaymentID, ref TotalAmount, ref AmountPaid, ref isFullyPaid, ref AppointmentID))
             {
-                return new clsPayment(PaymentID, PaymentDate, PaymentMethod, AmountPaid, AdditionalNotes);
+                return new clsPayment(PaymentID, TotalAmount, AmountPaid, isFullyPaid, AppointmentID);
             }
             return null;
         }

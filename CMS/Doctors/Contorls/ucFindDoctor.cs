@@ -26,6 +26,13 @@ namespace CMS.Doctors.Contorls
                 return ucShortDoctorCard1.DoctorID;
             }
         }
+        public clsDoctor DoctorInfo
+        {
+            get
+            {
+                return ucShortDoctorCard1.DoctorInfo;
+            }
+        }
         public ucFindDoctor()
         {
             InitializeComponent();
@@ -91,6 +98,30 @@ namespace CMS.Doctors.Contorls
         private void ucShortDoctorCard1_Load(object sender, EventArgs e)
         {
             cbFindBy.SelectedIndex = 0;
+        }
+
+        public void LoadDoctorInfo(int DoctorID)
+        {
+            _doctor = clsDoctor.Find(DoctorID);
+
+            if (_doctor is null)
+            {
+                MessageBox.Show("Cannot load info,Doctor is null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ucShortDoctorCard1.LoadDoctorInfo(_doctor);
+        }
+
+        public void LoadDoctorInfo(clsDoctor _doctor)
+        {
+            if (_doctor is null)
+            {
+                MessageBox.Show("Cannot load info,Doctor is null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            this._doctor = _doctor;
+            ucShortDoctorCard1.LoadDoctorInfo(_doctor);
         }
     }
 }

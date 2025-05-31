@@ -62,5 +62,15 @@ namespace CMS.Doctors.Controls
                 frm.ShowDialog();
             }
         }
+
+        private void cxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showDetaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

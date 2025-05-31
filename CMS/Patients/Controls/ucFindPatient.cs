@@ -21,7 +21,20 @@ namespace CMS.Patients.Controls
         {
             InitializeComponent();
         }
-
+        public int PatientID
+        {
+            get
+            {
+                return ucPatientCard1.PatientID;
+            }
+        }
+        public clsPatient PatientInfo
+        {
+            get 
+            { 
+                return ucPatientCard1.PatientInfo; 
+            }
+        }
         private void btnSearchPerson_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSearchBox.Text))
@@ -54,6 +67,28 @@ namespace CMS.Patients.Controls
                 };
                 frm.ShowDialog();
             }
+        }
+
+        public void LoadPatientInfo(int patientID)
+        {
+            _patient = clsPatient.Find(patientID);  
+            if(_patient is null)
+            {
+                MessageBox.Show("Cannot load info,Patient is null","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ucPatientCard1.LoadPatientData(_patient);
+        }
+        public void LoadPatientInfo(clsPatient _patient)
+        {
+            if (_patient is null)
+            {
+                MessageBox.Show("Cannot load info,Patient is null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            this._patient = _patient;
+            ucPatientCard1.LoadPatientData(_patient);
         }
     }
 }

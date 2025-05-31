@@ -4,16 +4,16 @@ using System.Configuration;
 using System.Data.SqlClient;
 namespace DataLayer
 {
-    public static class clsPaymentData
+    public static class clsPaymentTransactionData
     {
-        public static bool GetByID(int PaymentID, ref double TotalAmount, ref double AmountPaid, ref bool isFullyPaid, ref int AppointmentID)
+        public static bool GetByID(int PaymentTransactionID, ref int PaymentID, ref double Amount, ref DateTime PaymentDate, ref int PaymentType, ref string PaymentMethod)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_GetPaymentByID", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetPaymentTransactionByID", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                command.Parameters.AddWithValue("@PaymentTransactionID", PaymentTransactionID);
                 try
                 {
                     connection.Open();
@@ -22,10 +22,11 @@ namespace DataLayer
                         if (reader.Read())
                         {
                             isFound = true;
-                            TotalAmount = Convert.ToDouble( reader["TotalAmount"]);
-                            AmountPaid = Convert.ToDouble(reader["AmountPaid"]);
-                            isFullyPaid = Convert.ToBoolean(reader["isFullyPaid"]);
-                            AppointmentID = Convert.ToInt32(reader["AppointmentID"]);
+                            PaymentID = Convert.ToInt32(reader["PaymentID"]);
+                            Amount = Convert.ToDouble(reader["Amount"]);
+                            PaymentDate = Convert.ToDateTime(reader["PaymentDate"]);
+                            PaymentType = Convert.ToInt32(reader["PaymentType"]);
+                            PaymentMethod = reader["PaymentMethod"].ToString();
                         }
                     }
                 }
@@ -36,14 +37,14 @@ namespace DataLayer
             }
             return isFound;
         }
-        public static bool Delete(int PaymentID)
+        public static bool Delete(int PaymentTransactionID)
         {
             int result = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_DeletePayment", connection))
+            using (SqlCommand command = new SqlCommand("sp_DeletePaymentTransaction", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                command.Parameters.AddWithValue("@PaymentTransactionID", PaymentTransactionID);
                 try
                 {
                     connection.Open();
@@ -60,7 +61,7 @@ namespace DataLayer
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_GetAllPayments", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetAllPaymentTransactions", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 try
@@ -76,17 +77,18 @@ namespace DataLayer
             }
             return dt;
         }
-        public static int AddNew(double TotalAmount, double AmountPaid, bool isFullyPaid, int AppointmentID)
+        public static int AddNew(int PaymentID, double Amount, DateTime PaymentDate, int PaymentType, string PaymentMethod)
         {
             int newID = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_AddNewPayment", connection))
+            using (SqlCommand command = new SqlCommand("sp_AddNewPaymentTransaction", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@TotalAmount", TotalAmount);
-                command.Parameters.AddWithValue("@AmountPaid", AmountPaid);
-                command.Parameters.AddWithValue("@isFullyPaid", isFullyPaid);
-                command.Parameters.AddWithValue("@AppointmentID", AppointmentID);
+                command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                command.Parameters.AddWithValue("@Amount", Amount);
+                command.Parameters.AddWithValue("@PaymentDate", PaymentDate);
+                command.Parameters.AddWithValue("@PaymentType", PaymentType);
+                command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
                 try
                 {
                     connection.Open();
@@ -99,18 +101,19 @@ namespace DataLayer
             }
             return newID;
         }
-        public static bool Update(int PaymentID, double TotalAmount, double AmountPaid, bool isFullyPaid, int AppointmentID)
+        public static bool Update(int PaymentTransactionID, int PaymentID, double Amount, DateTime PaymentDate, int PaymentType, string PaymentMethod)
         {
             int result = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_UpdatePayment", connection))
+            using (SqlCommand command = new SqlCommand("sp_UpdatePaymentTransaction", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PaymentTransactionID", PaymentTransactionID);
                 command.Parameters.AddWithValue("@PaymentID", PaymentID);
-                command.Parameters.AddWithValue("@TotalAmount", TotalAmount);
-                command.Parameters.AddWithValue("@AmountPaid", AmountPaid);
-                command.Parameters.AddWithValue("@isFullyPaid", isFullyPaid);
-                command.Parameters.AddWithValue("@AppointmentID", AppointmentID);
+                command.Parameters.AddWithValue("@Amount", Amount);
+                command.Parameters.AddWithValue("@PaymentDate", PaymentDate);
+                command.Parameters.AddWithValue("@PaymentType", PaymentType);
+                command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
                 try
                 {
                     connection.Open();

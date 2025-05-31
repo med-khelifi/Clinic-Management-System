@@ -28,14 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbRecordCount = new System.Windows.Forms.Label();
             this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvDoctors = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.csmAppointments = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripMenuConfirm = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuReschedule = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuCancel = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.doctorInformarionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
+            this.csmAppointments.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbRecordCount
@@ -136,24 +147,97 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Manage Appointments\r\n";
             // 
-            // dgvDoctors
+            // dgvAppointments
             // 
-            this.dgvDoctors.AllowUserToAddRows = false;
-            this.dgvDoctors.AllowUserToDeleteRows = false;
-            this.dgvDoctors.AllowUserToResizeColumns = false;
-            this.dgvDoctors.AllowUserToResizeRows = false;
-            this.dgvDoctors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDoctors.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoctors.Location = new System.Drawing.Point(5, 117);
-            this.dgvDoctors.MultiSelect = false;
-            this.dgvDoctors.Name = "dgvDoctors";
-            this.dgvDoctors.ReadOnly = true;
-            this.dgvDoctors.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvDoctors.RowHeadersWidth = 51;
-            this.dgvDoctors.RowTemplate.Height = 24;
-            this.dgvDoctors.Size = new System.Drawing.Size(1253, 540);
-            this.dgvDoctors.TabIndex = 15;
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.AllowUserToResizeColumns = false;
+            this.dgvAppointments.AllowUserToResizeRows = false;
+            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAppointments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.ContextMenuStrip = this.csmAppointments;
+            this.dgvAppointments.Location = new System.Drawing.Point(5, 117);
+            this.dgvAppointments.MultiSelect = false;
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvAppointments.RowHeadersWidth = 51;
+            this.dgvAppointments.RowTemplate.Height = 24;
+            this.dgvAppointments.Size = new System.Drawing.Size(1253, 540);
+            this.dgvAppointments.TabIndex = 15;
+            // 
+            // csmAppointments
+            // 
+            this.csmAppointments.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.csmAppointments.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuShowDetails,
+            this.toolStripSeparator1,
+            this.ToolStripMenuConfirm,
+            this.toolStripMenuReschedule,
+            this.toolStripMenuCancel,
+            this.toolStripMenuItem5,
+            this.doctorInformarionToolStripMenuItem,
+            this.patientInformationToolStripMenuItem});
+            this.csmAppointments.Name = "cmsUsers";
+            this.csmAppointments.Size = new System.Drawing.Size(215, 200);
+            this.csmAppointments.Opening += new System.ComponentModel.CancelEventHandler(this.csmAppointments_Opening);
+            // 
+            // toolStripMenuShowDetails
+            // 
+            this.toolStripMenuShowDetails.Image = global::CMS.Properties.Resources.info;
+            this.toolStripMenuShowDetails.Name = "toolStripMenuShowDetails";
+            this.toolStripMenuShowDetails.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuShowDetails.Text = "Show Details";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            // 
+            // ToolStripMenuConfirm
+            // 
+            this.ToolStripMenuConfirm.Image = global::CMS.Properties.Resources.isActive;
+            this.ToolStripMenuConfirm.Name = "ToolStripMenuConfirm";
+            this.ToolStripMenuConfirm.Size = new System.Drawing.Size(214, 26);
+            this.ToolStripMenuConfirm.Text = "Confirm";
+            // 
+            // toolStripMenuReschedule
+            // 
+            this.toolStripMenuReschedule.Image = global::CMS.Properties.Resources.tasks;
+            this.toolStripMenuReschedule.Name = "toolStripMenuReschedule";
+            this.toolStripMenuReschedule.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuReschedule.Text = "Reschedule";
+            this.toolStripMenuReschedule.Click += new System.EventHandler(this.toolStripMenuReschedule_Click);
+            // 
+            // toolStripMenuCancel
+            // 
+            this.toolStripMenuCancel.Image = global::CMS.Properties.Resources.deactivate;
+            this.toolStripMenuCancel.Name = "toolStripMenuCancel";
+            this.toolStripMenuCancel.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuCancel.Text = "Cancel";
+            this.toolStripMenuCancel.Click += new System.EventHandler(this.toolStripMenuCancel_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(211, 6);
+            // 
+            // doctorInformarionToolStripMenuItem
+            // 
+            this.doctorInformarionToolStripMenuItem.Image = global::CMS.Properties.Resources.medical_assistance;
+            this.doctorInformarionToolStripMenuItem.Name = "doctorInformarionToolStripMenuItem";
+            this.doctorInformarionToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.doctorInformarionToolStripMenuItem.Text = "Doctor Informarion";
+            this.doctorInformarionToolStripMenuItem.Click += new System.EventHandler(this.doctorInformarionToolStripMenuItem_Click);
+            // 
+            // patientInformationToolStripMenuItem
+            // 
+            this.patientInformationToolStripMenuItem.Image = global::CMS.Properties.Resources.name1_Icon;
+            this.patientInformationToolStripMenuItem.Name = "patientInformationToolStripMenuItem";
+            this.patientInformationToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.patientInformationToolStripMenuItem.Text = "Patient Information";
+            this.patientInformationToolStripMenuItem.Click += new System.EventHandler(this.patientInformationToolStripMenuItem_Click);
             // 
             // ucManageAppointments
             // 
@@ -166,11 +250,12 @@
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvDoctors);
+            this.Controls.Add(this.dgvAppointments);
             this.Name = "ucManageAppointments";
             this.Size = new System.Drawing.Size(1274, 708);
             this.Load += new System.EventHandler(this.ucManageAppointments_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
+            this.csmAppointments.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +269,15 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvDoctors;
+        private System.Windows.Forms.DataGridView dgvAppointments;
+        private System.Windows.Forms.ContextMenuStrip csmAppointments;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuShowDetails;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuReschedule;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuCancel;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem doctorInformarionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem patientInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuConfirm;
     }
 }

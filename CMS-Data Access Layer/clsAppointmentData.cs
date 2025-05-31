@@ -6,7 +6,7 @@ namespace DataLayer
 {
     public static class clsAppointmentData
     {
-        public static bool GetByID(int AppointmentID, ref int PatientID, ref int DoctorID, ref DateTime AppointmentDateTime, ref byte AppointmentStatus, ref int? MedicalRecordID, ref int? PaymentID)
+        public static bool GetByID(int AppointmentID, ref int PatientID, ref int DoctorID, ref DateTime AppointmentDateTime, ref byte AppointmentStatus, ref int? MedicalRecordID)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -21,12 +21,13 @@ namespace DataLayer
                     {
                         if (reader.Read())
                         {
+                            isFound = true;
                             PatientID = Convert.ToInt32(reader["PatientID"]);
                             DoctorID = Convert.ToInt32(reader["DoctorID"]);
                             AppointmentDateTime = Convert.ToDateTime(reader["AppointmentDateTime"]);
                             AppointmentStatus = Convert.ToByte(reader["AppointmentStatus"]);
-                            MedicalRecordID =Convert.ToInt32( reader["MedicalRecordID"]);
-                            PaymentID = Convert.ToInt32(reader["PaymentID"]);
+                            MedicalRecordID = reader["MedicalRecordID"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["MedicalRecordID"]);
+
                         }
                     }
                 }
@@ -77,7 +78,7 @@ namespace DataLayer
             }
             return dt;
         }
-        public static int AddNew(int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID, int? PaymentID)
+        public static int AddNew(int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID)
         {
             int newID = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -88,8 +89,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DoctorID", DoctorID);
                 command.Parameters.AddWithValue("@AppointmentDateTime", AppointmentDateTime);
                 command.Parameters.AddWithValue("@AppointmentStatus", AppointmentStatus);
-                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID);
-                command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID is null ? (object)DBNull.Value : MedicalRecordID);
                 try
                 {
                     connection.Open();
@@ -102,7 +102,7 @@ namespace DataLayer
             }
             return newID;
         }
-        public static bool Update(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID, int? PaymentID)
+        public static bool Update(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID)
         {
             int result = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -115,7 +115,55 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@AppointmentDateTime", AppointmentDateTime);
                 command.Parameters.AddWithValue("@AppointmentStatus", AppointmentStatus);
                 command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID);
-                command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                try
+                {
+                    connection.Open();
+                    result = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return result > 0;
+        }
+        public static sbyte GetAppointmentStatus(int appointmentID)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+                using (SqlCommand command = new SqlCommand("sp_GetAppointmentStatus", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@AppointmentID", appointmentID);
+
+                    connection.Open();
+                    object value = command.ExecuteScalar();
+
+                    if (value != null && sbyte.TryParse(value.ToString(), out sbyte result))
+                    {
+                        return result;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                clsDataAccessUtil.LogError(ex);
+            }
+
+            return -1; // Indicates an error or invalid value
+        }
+
+        public static bool ChangeStatus(int AppointmentID, byte NewStatus) 
+        {
+            int result = 0;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_ChangeAppointmentStatus", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@AppointmentID", AppointmentID);
+                command.Parameters.AddWithValue("@NewStatus", NewStatus);
+       
                 try
                 {
                     connection.Open();
