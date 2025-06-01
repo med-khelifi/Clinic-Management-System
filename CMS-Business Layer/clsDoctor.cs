@@ -24,10 +24,10 @@ namespace BusinessLayer
             BasePrice = 0;
             UserInfo = new clsUser();
         }
-        private clsDoctor(int DoctorID, int PersonID, string Specialization,float BasePrice)
+        private clsDoctor(int DoctorID, int UserID, string Specialization,float BasePrice)
         {
             this.DoctorID = DoctorID;
-            this.UserID = PersonID;
+            this.UserID = UserID;
             this.Specialization = Specialization;
             this.BasePrice = BasePrice;
             this.UserInfo = clsUser.Find(UserID);
@@ -98,12 +98,12 @@ namespace BusinessLayer
         }
         public static clsDoctor Find(int DoctorID)
         {
-            int PersonID = -1;
+            int UserID = -1;
             string Specialization = null;
             float BasePrice = 0;
-            if (clsDoctorData.GetByID(DoctorID, ref PersonID, ref Specialization,ref BasePrice))
+            if (clsDoctorData.GetByID(DoctorID, ref UserID, ref Specialization,ref BasePrice))
             {
-                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
+                return new clsDoctor(DoctorID, UserID, Specialization,BasePrice);
             }
             return null;
         }

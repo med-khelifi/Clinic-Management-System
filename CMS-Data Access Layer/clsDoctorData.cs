@@ -6,7 +6,7 @@ namespace DataLayer
 {
     public static class clsDoctorData
     {
-        public static bool GetByID(int DoctorID, ref int PersonID, ref string Specialization,ref float BasePrice)
+        public static bool GetByID(int DoctorID, ref int UserID, ref string Specialization,ref float BasePrice)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -22,7 +22,7 @@ namespace DataLayer
                         if (reader.Read())
                         {
                             isFound = true;
-                            PersonID = Convert.ToInt32(reader["PersonID"]);
+                            UserID = Convert.ToInt32(reader["UserID"]);
                             Specialization = reader["Specialization"].ToString();
                             BasePrice = Convert.ToSingle(reader["BasePrice"]);
                         }

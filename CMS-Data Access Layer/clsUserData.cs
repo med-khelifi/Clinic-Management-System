@@ -10,7 +10,7 @@ namespace DataLayer
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_GetUserByUserID", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetUserByID", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@UserId", UserId);

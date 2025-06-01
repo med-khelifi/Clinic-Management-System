@@ -10,7 +10,7 @@ namespace BusinessLayer
 
         public enum enPaymentType
         {
-            Advance = 1,Remaining = 2
+            Advance = 1,Remaining = 2,wholeAmount = 3
         }
         public enum enPaymentMethod
         {

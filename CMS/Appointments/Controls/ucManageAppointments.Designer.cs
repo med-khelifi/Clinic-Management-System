@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lbRecordCount = new System.Windows.Forms.Label();
-            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.csmAppointments = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
+            this.toolStripMenuShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuConfirm = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuReschedule = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuCancel = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.doctorInformarionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
@@ -59,28 +59,6 @@
             this.lbRecordCount.Size = new System.Drawing.Size(180, 36);
             this.lbRecordCount.TabIndex = 22;
             this.lbRecordCount.Text = "#Count = ";
-            // 
-            // btnAddNewUser
-            // 
-            this.btnAddNewUser.BorderRadius = 6;
-            this.btnAddNewUser.BorderThickness = 2;
-            this.btnAddNewUser.CheckedState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.CustomImages.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewUser.HoverState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Image = global::CMS.Properties.Resources.add_user;
-            this.btnAddNewUser.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddNewUser.Location = new System.Drawing.Point(1208, 51);
-            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Padding = new System.Windows.Forms.Padding(2);
-            this.btnAddNewUser.PressedColor = System.Drawing.Color.Silver;
-            this.btnAddNewUser.ShadowDecoration.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
-            this.btnAddNewUser.TabIndex = 21;
-            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
             // 
             // guna2TextBox1
             // 
@@ -183,17 +161,45 @@
             this.csmAppointments.Size = new System.Drawing.Size(215, 200);
             this.csmAppointments.Opening += new System.ComponentModel.CancelEventHandler(this.csmAppointments_Opening);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(211, 6);
+            // 
+            // btnAddNewUser
+            // 
+            this.btnAddNewUser.BorderRadius = 6;
+            this.btnAddNewUser.BorderThickness = 2;
+            this.btnAddNewUser.CheckedState.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.CustomImages.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewUser.HoverState.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.Image = global::CMS.Properties.Resources.add_user;
+            this.btnAddNewUser.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnAddNewUser.Location = new System.Drawing.Point(1208, 51);
+            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewUser.Name = "btnAddNewUser";
+            this.btnAddNewUser.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAddNewUser.PressedColor = System.Drawing.Color.Silver;
+            this.btnAddNewUser.ShadowDecoration.Parent = this.btnAddNewUser;
+            this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
+            this.btnAddNewUser.TabIndex = 21;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
+            // 
             // toolStripMenuShowDetails
             // 
             this.toolStripMenuShowDetails.Image = global::CMS.Properties.Resources.info;
             this.toolStripMenuShowDetails.Name = "toolStripMenuShowDetails";
             this.toolStripMenuShowDetails.Size = new System.Drawing.Size(214, 26);
             this.toolStripMenuShowDetails.Text = "Show Details";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            this.toolStripMenuShowDetails.Click += new System.EventHandler(this.toolStripMenuShowDetails_Click);
             // 
             // ToolStripMenuConfirm
             // 
@@ -217,11 +223,6 @@
             this.toolStripMenuCancel.Size = new System.Drawing.Size(214, 26);
             this.toolStripMenuCancel.Text = "Cancel";
             this.toolStripMenuCancel.Click += new System.EventHandler(this.toolStripMenuCancel_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(211, 6);
             // 
             // doctorInformarionToolStripMenuItem
             // 

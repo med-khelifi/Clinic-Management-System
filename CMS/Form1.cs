@@ -1,4 +1,5 @@
-﻿using CMS.Utility;
+﻿using CMS.Patients;
+using CMS.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,12 @@ namespace CMS
         private void btnAppointements_Click(object sender, EventArgs e)
         {
             var uc = new Appointments.Controls.ucManageAppointments();
+            clsUtil.ShowUserControl(uc, pMain);
+        }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            var uc = new ucManagePayments();
             clsUtil.ShowUserControl(uc, pMain);
         }
     }

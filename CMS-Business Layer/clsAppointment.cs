@@ -21,29 +21,38 @@ namespace BusinessLayer
 
         public int AppointmentID { get; set; }
         public int PatientID { get; set; }
+        public clsPatient PatientInfo { get; set; }
         public int DoctorID { get; set; }
+        public clsDoctor DoctorInfo { get; set; }   
         public DateTime AppointmentDateTime { get; set; }
         public enAppointmentStatus AppointmentStatus { get; set; }
         public int? MedicalRecordID { get; set; }
+        public clsMedicalRecord MedicalRecordInfo { get; set; }
 
         public clsAppointment()
         {
             Mode = enMode.AddNew;
             AppointmentID = -1;
             PatientID = -1;
+            PatientInfo = new clsPatient();
             DoctorID = -1;
+            DoctorInfo = new clsDoctor();
             AppointmentDateTime = DateTime.Now;
             AppointmentStatus = 0;
             MedicalRecordID = null;
+            MedicalRecordInfo = new clsMedicalRecord();
         }
         private clsAppointment(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, enAppointmentStatus AppointmentStatus, int? MedicalRecordID)
         {
             this.AppointmentID = AppointmentID;
             this.PatientID = PatientID;
+            this.PatientInfo = clsPatient.Find(PatientID);
             this.DoctorID = DoctorID;
+            DoctorInfo = clsDoctor.Find(DoctorID);
             this.AppointmentDateTime = AppointmentDateTime;
             this.AppointmentStatus = AppointmentStatus;
             this.MedicalRecordID = MedicalRecordID;
+            MedicalRecordInfo = MedicalRecordID.HasValue ? clsMedicalRecord.Find(MedicalRecordID.Value) : null;
             Mode = enMode.Update;
         }
         public bool Save()

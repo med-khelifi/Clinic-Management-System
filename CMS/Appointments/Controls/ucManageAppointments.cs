@@ -115,5 +115,13 @@ namespace CMS.Appointments.Controls
                 }
             }
         }
+
+        private void toolStripMenuShowDetails_Click(object sender, EventArgs e)
+        {
+            using (frmAppointmentInfo frm = new frmAppointmentInfo((int)dgvAppointments.CurrentRow.Cells[0].Value))
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
