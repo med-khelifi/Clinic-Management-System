@@ -77,7 +77,7 @@ namespace CMS.Patients.Controls
                 MessageBox.Show("Cannot load info,Patient is null","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            txtSearchBox.Text = _patient.PersonInfo.NationalNo;
             ucPatientCard1.LoadPatientData(_patient);
         }
         public void LoadPatientInfo(clsPatient _patient)
@@ -88,7 +88,16 @@ namespace CMS.Patients.Controls
                 return;
             }
             this._patient = _patient;
+            txtSearchBox.Text = _patient.PersonInfo.NationalNo;
             ucPatientCard1.LoadPatientData(_patient);
+        }
+        public void EnableFilter()
+        {
+            gbFilter.Enabled = true;
+        }
+        public void DisableFilter()
+        { 
+            gbFilter.Enabled = false;   
         }
     }
 }

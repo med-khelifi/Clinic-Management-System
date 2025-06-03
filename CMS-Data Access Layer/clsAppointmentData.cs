@@ -114,7 +114,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DoctorID", DoctorID);
                 command.Parameters.AddWithValue("@AppointmentDateTime", AppointmentDateTime);
                 command.Parameters.AddWithValue("@AppointmentStatus", AppointmentStatus);
-                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID);
+                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID is null ? (object)DBNull.Value : MedicalRecordID);
                 try
                 {
                     connection.Open();

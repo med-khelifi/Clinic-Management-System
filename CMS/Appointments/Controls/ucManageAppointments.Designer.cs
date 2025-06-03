@@ -36,15 +36,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.csmAppointments = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.toolStripMenuShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripMenuConfirm = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuReschedule = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuCancel = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.doctorInformarionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.csmAppointments.SuspendLayout();
             this.SuspendLayout();
@@ -161,15 +161,63 @@
             this.csmAppointments.Size = new System.Drawing.Size(215, 200);
             this.csmAppointments.Opening += new System.ComponentModel.CancelEventHandler(this.csmAppointments_Opening);
             // 
+            // toolStripMenuShowDetails
+            // 
+            this.toolStripMenuShowDetails.Image = global::CMS.Properties.Resources.info;
+            this.toolStripMenuShowDetails.Name = "toolStripMenuShowDetails";
+            this.toolStripMenuShowDetails.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuShowDetails.Text = "Show Details";
+            this.toolStripMenuShowDetails.Click += new System.EventHandler(this.toolStripMenuShowDetails_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
             // 
+            // ToolStripMenuConfirm
+            // 
+            this.ToolStripMenuConfirm.Image = global::CMS.Properties.Resources.isActive;
+            this.ToolStripMenuConfirm.Name = "ToolStripMenuConfirm";
+            this.ToolStripMenuConfirm.Size = new System.Drawing.Size(214, 26);
+            this.ToolStripMenuConfirm.Text = "Confirm";
+            this.ToolStripMenuConfirm.Click += new System.EventHandler(this.ToolStripMenuConfirm_Click);
+            // 
+            // toolStripMenuReschedule
+            // 
+            this.toolStripMenuReschedule.Image = global::CMS.Properties.Resources.tasks;
+            this.toolStripMenuReschedule.Name = "toolStripMenuReschedule";
+            this.toolStripMenuReschedule.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuReschedule.Text = "Reschedule";
+            this.toolStripMenuReschedule.Click += new System.EventHandler(this.toolStripMenuReschedule_Click);
+            // 
+            // toolStripMenuCancel
+            // 
+            this.toolStripMenuCancel.Image = global::CMS.Properties.Resources.deactivate;
+            this.toolStripMenuCancel.Name = "toolStripMenuCancel";
+            this.toolStripMenuCancel.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuCancel.Text = "Cancel";
+            this.toolStripMenuCancel.Click += new System.EventHandler(this.toolStripMenuCancel_Click);
+            // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(211, 6);
+            // 
+            // doctorInformarionToolStripMenuItem
+            // 
+            this.doctorInformarionToolStripMenuItem.Image = global::CMS.Properties.Resources.medical_assistance;
+            this.doctorInformarionToolStripMenuItem.Name = "doctorInformarionToolStripMenuItem";
+            this.doctorInformarionToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.doctorInformarionToolStripMenuItem.Text = "Doctor Informarion";
+            this.doctorInformarionToolStripMenuItem.Click += new System.EventHandler(this.doctorInformarionToolStripMenuItem_Click);
+            // 
+            // patientInformationToolStripMenuItem
+            // 
+            this.patientInformationToolStripMenuItem.Image = global::CMS.Properties.Resources.name1_Icon;
+            this.patientInformationToolStripMenuItem.Name = "patientInformationToolStripMenuItem";
+            this.patientInformationToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.patientInformationToolStripMenuItem.Text = "Patient Information";
+            this.patientInformationToolStripMenuItem.Click += new System.EventHandler(this.patientInformationToolStripMenuItem_Click);
             // 
             // btnAddNewUser
             // 
@@ -192,53 +240,6 @@
             this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
             this.btnAddNewUser.TabIndex = 21;
             this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
-            // 
-            // toolStripMenuShowDetails
-            // 
-            this.toolStripMenuShowDetails.Image = global::CMS.Properties.Resources.info;
-            this.toolStripMenuShowDetails.Name = "toolStripMenuShowDetails";
-            this.toolStripMenuShowDetails.Size = new System.Drawing.Size(214, 26);
-            this.toolStripMenuShowDetails.Text = "Show Details";
-            this.toolStripMenuShowDetails.Click += new System.EventHandler(this.toolStripMenuShowDetails_Click);
-            // 
-            // ToolStripMenuConfirm
-            // 
-            this.ToolStripMenuConfirm.Image = global::CMS.Properties.Resources.isActive;
-            this.ToolStripMenuConfirm.Name = "ToolStripMenuConfirm";
-            this.ToolStripMenuConfirm.Size = new System.Drawing.Size(214, 26);
-            this.ToolStripMenuConfirm.Text = "Confirm";
-            // 
-            // toolStripMenuReschedule
-            // 
-            this.toolStripMenuReschedule.Image = global::CMS.Properties.Resources.tasks;
-            this.toolStripMenuReschedule.Name = "toolStripMenuReschedule";
-            this.toolStripMenuReschedule.Size = new System.Drawing.Size(214, 26);
-            this.toolStripMenuReschedule.Text = "Reschedule";
-            this.toolStripMenuReschedule.Click += new System.EventHandler(this.toolStripMenuReschedule_Click);
-            // 
-            // toolStripMenuCancel
-            // 
-            this.toolStripMenuCancel.Image = global::CMS.Properties.Resources.deactivate;
-            this.toolStripMenuCancel.Name = "toolStripMenuCancel";
-            this.toolStripMenuCancel.Size = new System.Drawing.Size(214, 26);
-            this.toolStripMenuCancel.Text = "Cancel";
-            this.toolStripMenuCancel.Click += new System.EventHandler(this.toolStripMenuCancel_Click);
-            // 
-            // doctorInformarionToolStripMenuItem
-            // 
-            this.doctorInformarionToolStripMenuItem.Image = global::CMS.Properties.Resources.medical_assistance;
-            this.doctorInformarionToolStripMenuItem.Name = "doctorInformarionToolStripMenuItem";
-            this.doctorInformarionToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.doctorInformarionToolStripMenuItem.Text = "Doctor Informarion";
-            this.doctorInformarionToolStripMenuItem.Click += new System.EventHandler(this.doctorInformarionToolStripMenuItem_Click);
-            // 
-            // patientInformationToolStripMenuItem
-            // 
-            this.patientInformationToolStripMenuItem.Image = global::CMS.Properties.Resources.name1_Icon;
-            this.patientInformationToolStripMenuItem.Name = "patientInformationToolStripMenuItem";
-            this.patientInformationToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.patientInformationToolStripMenuItem.Text = "Patient Information";
-            this.patientInformationToolStripMenuItem.Click += new System.EventHandler(this.patientInformationToolStripMenuItem_Click);
             // 
             // ucManageAppointments
             // 

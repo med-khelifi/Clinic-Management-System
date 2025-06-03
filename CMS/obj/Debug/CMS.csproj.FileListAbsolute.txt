@@ -60,3 +60,5 @@ C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Appointments.Controls.ucAppointmentCard.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Appointments.frmAppointmentInfo.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Patients.ucManagePayments.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Payments.ucPaymentCard.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Payments.frmAddShowPayment.resources

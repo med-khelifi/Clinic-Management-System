@@ -39,7 +39,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(346, 33);
+            this.label1.Location = new System.Drawing.Point(343, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 34);
             this.label1.TabIndex = 19;

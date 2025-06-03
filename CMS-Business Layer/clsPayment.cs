@@ -13,7 +13,7 @@ namespace BusinessLayer
         public double AmountPaid { get; set; }
         public bool isFullyPaid { get; set; }
         public int AppointmentID { get; set; }
-
+        public clsAppointment AppointmentInfo { get; set; }
         public clsPayment()
         {
             Mode = enMode.AddNew;
@@ -22,6 +22,7 @@ namespace BusinessLayer
             AmountPaid = 0;
             isFullyPaid = false;
             AppointmentID = -1;
+            AppointmentInfo = new clsAppointment();
         }
         private clsPayment(int PaymentID, double TotalAmount, double AmountPaid, bool isFullyPaid, int AppointmentID)
         {
@@ -30,6 +31,7 @@ namespace BusinessLayer
             this.AmountPaid = AmountPaid;
             this.isFullyPaid = isFullyPaid;
             this.AppointmentID = AppointmentID;
+            AppointmentInfo = clsAppointment.Find(AppointmentID);
             Mode = enMode.Update;
         }
         public bool Save()

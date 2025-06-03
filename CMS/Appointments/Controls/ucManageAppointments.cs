@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using CMS.Doctors;
 using CMS.Patients;
+using CMS.Payments;
 using CMS.Users;
 using System;
 using System.Collections.Generic;
@@ -78,6 +79,12 @@ namespace CMS.Appointments.Controls
                 toolStripMenuReschedule.Enabled = false;
                 ToolStripMenuConfirm.Enabled = true;
             }
+            else if (status == clsAppointment.enAppointmentStatus.Scheduled)
+            {
+                toolStripMenuCancel.Enabled = true;
+                toolStripMenuReschedule.Enabled = true;
+                ToolStripMenuConfirm.Enabled = false;
+            }
             else if(status == clsAppointment.enAppointmentStatus.NoShow)
             {
                 toolStripMenuCancel.Enabled = false;
@@ -120,6 +127,17 @@ namespace CMS.Appointments.Controls
         {
             using (frmAppointmentInfo frm = new frmAppointmentInfo((int)dgvAppointments.CurrentRow.Cells[0].Value))
             {
+                frm.ShowDialog();
+            }
+        }
+
+        private void ToolStripMenuConfirm_Click(object sender, EventArgs e)
+        {
+            var mode = frmAddShowPayment.enFormInfoMode.eByAppointmentID;
+            int id = (int)dgvAppointments.CurrentRow.Cells[0].Value;
+            using (frmAddShowPayment frm = new frmAddShowPayment(mode,id ))
+            {
+                frm.OnPaymentSaved += _LoadData;
                 frm.ShowDialog();
             }
         }

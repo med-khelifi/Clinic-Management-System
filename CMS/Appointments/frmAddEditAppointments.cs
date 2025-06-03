@@ -60,6 +60,7 @@ namespace CMS.Appointments
             else
             {
                 _loadAppointmentInfo();
+                tabControl1.SelectedIndex = 2;
             }
         }
 
@@ -69,11 +70,14 @@ namespace CMS.Appointments
 
             if (_appointment != null)
             {
-                lblAppointmentID.Text = _appointment.ToString();
+                lblAppointmentID.Text = _appointment.AppointmentID.ToString();
                 dtpAppointmentDate.Text = _appointment.AppointmentDateTime.ToString();
                 ucFindDoctor1.LoadDoctorInfo(_appointment.DoctorID);
+                ucFindDoctor1.DisableFilter();
                 ucFindPatient1.LoadPatientInfo(_appointment.PatientID);
+                ucFindPatient1.DisableFilter();
                 lblAppointmentStatus.Text = _appointment.GetStatusString();
+                lblTotalAmount.Text = _appointment.DoctorInfo.BasePrice.ToString();
             }
             else 
             {
@@ -98,7 +102,7 @@ namespace CMS.Appointments
 
             _appointment.AppointmentStatus = _FormeMode == eFormMode.update ? 
                 clsAppointment.enAppointmentStatus.Rescheduled : 
-                clsAppointment.enAppointmentStatus.NotConfirmed; ;
+                clsAppointment.enAppointmentStatus.NotConfirmed;
             _appointment.DoctorID = ucFindDoctor1.DoctorID;
             _appointment.PatientID = ucFindPatient1.PatientID;
 

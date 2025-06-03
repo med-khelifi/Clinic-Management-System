@@ -96,7 +96,7 @@
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(921, 295);
             this.guna2GroupBox1.TabIndex = 2;
-            this.guna2GroupBox1.Text = "Person Details :";
+            this.guna2GroupBox1.Text = "Appointment Details :";
             // 
             // llPatientInfo
             // 

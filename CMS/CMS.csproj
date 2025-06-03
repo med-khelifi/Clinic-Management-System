@@ -179,6 +179,18 @@
     <Compile Include="Payments\Controls\ucManagePayments.Designer.cs">
       <DependentUpon>ucManagePayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payments\frmAddShowPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmAddShowPayment.Designer.cs">
+      <DependentUpon>frmAddShowPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\ucPaymentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\ucPaymentCard.Designer.cs">
+      <DependentUpon>ucPaymentCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persons\Controls\ucPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction\frmTransactionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTransactionList.Designer.cs">
+      <DependentUpon>frmTransactionList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\Controls\ucUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -283,6 +301,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payments\Controls\ucManagePayments.resx">
       <DependentUpon>ucManagePayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmAddShowPayment.resx">
+      <DependentUpon>frmAddShowPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\ucPaymentCard.resx">
+      <DependentUpon>ucPaymentCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persons\Controls\ucPersonCard.resx">
       <DependentUpon>ucPersonCard.cs</DependentUpon>

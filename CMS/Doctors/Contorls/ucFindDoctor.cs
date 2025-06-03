@@ -72,9 +72,7 @@ namespace CMS.Doctors.Contorls
             }
             ucShortDoctorCard1.LoadDoctorInfo(_doctor);
             OnSearchButtonClicked?.Invoke(_doctor.UserInfo.PersonInfo.NationalNo);
-        }
-        
-
+        }   
         private void gbFilter_Click(object sender, EventArgs e)
         {
 
@@ -99,7 +97,6 @@ namespace CMS.Doctors.Contorls
         {
             cbFindBy.SelectedIndex = 0;
         }
-
         public void LoadDoctorInfo(int DoctorID)
         {
             _doctor = clsDoctor.Find(DoctorID);
@@ -109,10 +106,9 @@ namespace CMS.Doctors.Contorls
                 MessageBox.Show("Cannot load info,Doctor is null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            txtSearchBox.Text = _doctor.UserInfo.PersonInfo.NationalNo;
             ucShortDoctorCard1.LoadDoctorInfo(_doctor);
         }
-
         public void LoadDoctorInfo(clsDoctor _doctor)
         {
             if (_doctor is null)
@@ -121,7 +117,17 @@ namespace CMS.Doctors.Contorls
                 return;
             }
             this._doctor = _doctor;
+            txtSearchBox.Text = _doctor.UserInfo.PersonInfo.NationalNo;
             ucShortDoctorCard1.LoadDoctorInfo(_doctor);
+        }
+
+        public void EnableFilter()
+        {
+            gbFilter.Enabled = true;
+        }
+        public void DisableFilter() 
+        {
+            gbFilter.Enabled = false;
         }
     }
 }
