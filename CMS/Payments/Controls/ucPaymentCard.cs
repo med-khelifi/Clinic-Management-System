@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using CMS.Appointments;
+using CMS.Transaction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,7 +74,7 @@ namespace CMS.Payments
         }
         private void llAppointmentInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            int id =  _appointment is null ? _appointment.AppointmentID : _appointment.AppointmentID;
+            int id =  _appointment is null ? _payment.AppointmentID : _appointment.AppointmentID;
             using (frmAppointmentInfo frm = new frmAppointmentInfo(id))
             {
                 frm.ShowDialog();
@@ -128,7 +129,6 @@ namespace CMS.Payments
             lblTotalAmount.Text = "-";
             lblisFullyPaid.Text = "-";
         }
-
         public clsPayment GetPaymentInfo()
         {
             var payment = new clsPayment();
@@ -139,10 +139,17 @@ namespace CMS.Payments
 
             return payment;
         }
-
+        public void HideTransactionLink()
+        {
+            llTransactionList.Visible = false;
+        }
         private void llTransactionList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            int id = _payment.PaymentID ;
+            using (frmTransactionList frm = new frmTransactionList(id))
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

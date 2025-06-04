@@ -185,10 +185,10 @@
     <Compile Include="Payments\frmAddShowPayment.Designer.cs">
       <DependentUpon>frmAddShowPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payments\ucPaymentCard.cs">
+    <Compile Include="Payments\Controls\ucPaymentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Payments\ucPaymentCard.Designer.cs">
+    <Compile Include="Payments\Controls\ucPaymentCard.Designer.cs">
       <DependentUpon>ucPaymentCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Persons\Controls\ucPersonCard.cs">
@@ -211,6 +211,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction\frmAddEditPaymentTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmAddEditPaymentTransaction.Designer.cs">
+      <DependentUpon>frmAddEditPaymentTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmTransactionList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,7 +311,7 @@
     <EmbeddedResource Include="Payments\frmAddShowPayment.resx">
       <DependentUpon>frmAddShowPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payments\ucPaymentCard.resx">
+    <EmbeddedResource Include="Payments\Controls\ucPaymentCard.resx">
       <DependentUpon>ucPaymentCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persons\Controls\ucPersonCard.resx">
@@ -327,6 +333,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transaction\frmAddEditPaymentTransaction.resx">
+      <DependentUpon>frmAddEditPaymentTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTransactionList.resx">
+      <DependentUpon>frmTransactionList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\Controls\ucUserCard.resx">
       <DependentUpon>ucUserCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,7 +503,9 @@
   <ItemGroup>
     <None Include="Resources\tasks.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bleu_payment.png" />
   </ItemGroup>

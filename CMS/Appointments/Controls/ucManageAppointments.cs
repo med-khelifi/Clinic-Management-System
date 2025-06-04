@@ -73,28 +73,27 @@ namespace CMS.Appointments.Controls
                 toolStripMenuReschedule.Enabled = false;
                 ToolStripMenuConfirm.Enabled = false;
             }
-            else if (status == clsAppointment.enAppointmentStatus.NotConfirmed)
+            if (status == clsAppointment.enAppointmentStatus.NotConfirmed)
             {
                 toolStripMenuCancel.Enabled = true;
                 toolStripMenuReschedule.Enabled = false;
                 ToolStripMenuConfirm.Enabled = true;
             }
-            else if (status == clsAppointment.enAppointmentStatus.Scheduled)
+            if (
+                status == clsAppointment.enAppointmentStatus.Scheduled
+                || status == clsAppointment.enAppointmentStatus.Rescheduled  
+                )
             {
                 toolStripMenuCancel.Enabled = true;
                 toolStripMenuReschedule.Enabled = true;
                 ToolStripMenuConfirm.Enabled = false;
             }
-            else if(status == clsAppointment.enAppointmentStatus.NoShow)
+            if(status == clsAppointment.enAppointmentStatus.NoShow)
             {
                 toolStripMenuCancel.Enabled = false;
                 toolStripMenuReschedule.Enabled = true;
             }
-            else
-            {
-                toolStripMenuCancel.Enabled = true;
-                toolStripMenuReschedule.Enabled = true;
-            }
+           
         }
 
 

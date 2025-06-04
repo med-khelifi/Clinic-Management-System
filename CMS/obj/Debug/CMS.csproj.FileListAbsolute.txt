@@ -62,3 +62,5 @@ C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Patients.ucManagePayments.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Payments.ucPaymentCard.resources
 C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Payments.frmAddShowPayment.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Transaction.frmTransactionList.resources
+C:\Users\kheli\Desktop\Wal3a\Coding\ProgrammingAdvices\Projects\CMS_Project\CMS\obj\Debug\CMS.Transaction.frmAddEditPaymentTransaction.resources

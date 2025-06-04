@@ -10,18 +10,18 @@ namespace BusinessLayer
 
         public enum enPaymentType
         {
-            Advance = 1,Remaining = 2,wholeAmount = 3
+            Advance = 1,Remaining = 2,FullPayment = 3
         }
         public enum enPaymentMethod
         {
-            Cash,CreditCard
+            Cash = 0,CreditCard = 1
         }
 
         public int PaymentTransactionID { get; set; }
         public int PaymentID { get; set; }
         public double Amount { get; set; }
         public DateTime PaymentDate { get; set; }
-        public int PaymentType { get; set; }
+        public enPaymentType PaymentType { get; set; }
         public string PaymentMethod { get; set; }
 
         public clsPaymentTransaction()
@@ -31,10 +31,10 @@ namespace BusinessLayer
             PaymentID = -1;
             Amount = 0;
             PaymentDate = DateTime.Now;
-            PaymentType = -1;
+            PaymentType = enPaymentType.Advance;
             PaymentMethod = "";
         }
-        private clsPaymentTransaction(int PaymentTransactionID, int PaymentID, double Amount, DateTime PaymentDate, int PaymentType, string PaymentMethod)
+        private clsPaymentTransaction(int PaymentTransactionID, int PaymentID, double Amount, DateTime PaymentDate, enPaymentType PaymentType, string PaymentMethod)
         {
             this.PaymentTransactionID = PaymentTransactionID;
             this.PaymentID = PaymentID;
@@ -63,12 +63,12 @@ namespace BusinessLayer
         }
         private bool _addnew()
         {
-            this.PaymentTransactionID = clsPaymentTransactionData.AddNew(this.PaymentID, this.Amount, this.PaymentDate, this.PaymentType, this.PaymentMethod);
+            this.PaymentTransactionID = clsPaymentTransactionData.AddNew(this.PaymentID, this.Amount, this.PaymentDate, (int)this.PaymentType, this.PaymentMethod);
              return this.PaymentTransactionID != 0;
         }
         private bool _update()
         {
-            return clsPaymentTransactionData.Update(PaymentTransactionID, PaymentID, Amount, PaymentDate, PaymentType, PaymentMethod);
+            return clsPaymentTransactionData.Update(PaymentTransactionID, PaymentID, Amount, PaymentDate, (int)PaymentType, PaymentMethod);
         }
         public bool Delete()
         {
@@ -87,7 +87,7 @@ namespace BusinessLayer
             string PaymentMethod = "";
             if (clsPaymentTransactionData.GetByID(PaymentTransactionID, ref PaymentID, ref Amount, ref PaymentDate, ref PaymentType, ref PaymentMethod))
             {
-                return new clsPaymentTransaction(PaymentTransactionID, PaymentID, Amount, PaymentDate, PaymentType, PaymentMethod);
+                return new clsPaymentTransaction(PaymentTransactionID, PaymentID, Amount, PaymentDate, (enPaymentType)PaymentType,PaymentMethod);
             }
             return null;
         }

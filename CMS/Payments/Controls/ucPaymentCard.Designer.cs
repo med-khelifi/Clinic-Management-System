@@ -113,7 +113,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox6.Image = global::CMS.Properties.Resources.info;
             this.pictureBox6.Location = new System.Drawing.Point(486, 130);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 24);
@@ -123,7 +123,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox3.Image = global::CMS.Properties.Resources.dollar;
             this.pictureBox3.Location = new System.Drawing.Point(170, 130);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 24);
@@ -133,7 +133,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox5.Image = global::CMS.Properties.Resources.tasks;
             this.pictureBox5.Location = new System.Drawing.Point(486, 89);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 24);
@@ -143,7 +143,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox1.Image = global::CMS.Properties.Resources.dollar;
             this.pictureBox1.Location = new System.Drawing.Point(170, 89);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 24);
@@ -153,7 +153,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox2.Image = global::CMS.Properties.Resources.tasks;
             this.pictureBox2.Location = new System.Drawing.Point(170, 45);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 24);

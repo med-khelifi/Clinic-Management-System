@@ -35,13 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
-            this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsPayments = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsIShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsIUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
-            this.cmsUsers.SuspendLayout();
+            this.cmsPayments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +49,7 @@
             this.lbRecordCount.BackColor = System.Drawing.Color.Transparent;
             this.lbRecordCount.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRecordCount.ForeColor = System.Drawing.Color.Black;
-            this.lbRecordCount.Location = new System.Drawing.Point(22, 655);
+            this.lbRecordCount.Location = new System.Drawing.Point(13, 661);
             this.lbRecordCount.Name = "lbRecordCount";
             this.lbRecordCount.Size = new System.Drawing.Size(180, 36);
             this.lbRecordCount.TabIndex = 22;
@@ -69,7 +68,7 @@
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(317, 303);
+            this.guna2TextBox1.Location = new System.Drawing.Point(317, 202);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -92,7 +91,7 @@
             this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(130, 303);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(130, 202);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(180, 36);
@@ -103,7 +102,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(22, 304);
+            this.label2.Location = new System.Drawing.Point(22, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 36);
             this.label2.TabIndex = 17;
@@ -115,7 +114,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(392, 202);
+            this.label1.Location = new System.Drawing.Point(389, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 34);
             this.label1.TabIndex = 18;
@@ -130,69 +129,50 @@
             this.dgvPayments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPayments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayments.ContextMenuStrip = this.cmsUsers;
-            this.dgvPayments.Location = new System.Drawing.Point(17, 356);
+            this.dgvPayments.ContextMenuStrip = this.cmsPayments;
+            this.dgvPayments.Location = new System.Drawing.Point(17, 255);
             this.dgvPayments.MultiSelect = false;
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.ReadOnly = true;
             this.dgvPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvPayments.RowHeadersWidth = 51;
             this.dgvPayments.RowTemplate.Height = 24;
-            this.dgvPayments.Size = new System.Drawing.Size(1240, 296);
+            this.dgvPayments.Size = new System.Drawing.Size(1240, 403);
             this.dgvPayments.TabIndex = 15;
             // 
-            // cmsUsers
+            // cmsPayments
             // 
-            this.cmsUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsPayments.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsPayments.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsIShowDetails,
             this.cmsIUpdate});
-            this.cmsUsers.Name = "cmsUsers";
-            this.cmsUsers.Size = new System.Drawing.Size(169, 56);
+            this.cmsPayments.Name = "cmsUsers";
+            this.cmsPayments.Size = new System.Drawing.Size(215, 84);
             // 
             // cmsIShowDetails
             // 
             this.cmsIShowDetails.Image = global::CMS.Properties.Resources.PersonInfo;
             this.cmsIShowDetails.Name = "cmsIShowDetails";
-            this.cmsIShowDetails.Size = new System.Drawing.Size(168, 26);
+            this.cmsIShowDetails.Size = new System.Drawing.Size(208, 26);
             this.cmsIShowDetails.Text = "Show Details";
+            this.cmsIShowDetails.Click += new System.EventHandler(this.cmsIShowDetails_Click);
             // 
             // cmsIUpdate
             // 
-            this.cmsIUpdate.Image = global::CMS.Properties.Resources.EditPerson;
+            this.cmsIUpdate.Image = global::CMS.Properties.Resources.date_Icon;
             this.cmsIUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cmsIUpdate.Name = "cmsIUpdate";
-            this.cmsIUpdate.Size = new System.Drawing.Size(168, 26);
-            this.cmsIUpdate.Text = "Edit";
-            // 
-            // btnAddNewUser
-            // 
-            this.btnAddNewUser.BorderRadius = 6;
-            this.btnAddNewUser.BorderThickness = 2;
-            this.btnAddNewUser.CheckedState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.CustomImages.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewUser.HoverState.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Image = global::CMS.Properties.Resources.add_user;
-            this.btnAddNewUser.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddNewUser.Location = new System.Drawing.Point(1207, 304);
-            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Padding = new System.Windows.Forms.Padding(2);
-            this.btnAddNewUser.PressedColor = System.Drawing.Color.Silver;
-            this.btnAddNewUser.ShadowDecoration.Parent = this.btnAddNewUser;
-            this.btnAddNewUser.Size = new System.Drawing.Size(50, 50);
-            this.btnAddNewUser.TabIndex = 21;
+            this.cmsIUpdate.Size = new System.Drawing.Size(214, 26);
+            this.cmsIUpdate.Text = "Transaction History";
+            this.cmsIUpdate.Click += new System.EventHandler(this.cmsIUpdate_Click);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::CMS.Properties.Resources.Payments;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(410, 17);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(431, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(209, 182);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(167, 152);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 16;
             this.guna2PictureBox1.TabStop = false;
@@ -208,13 +188,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPayments);
-            this.Controls.Add(this.btnAddNewUser);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "ucManagePayments";
             this.Size = new System.Drawing.Size(1274, 708);
             this.Load += new System.EventHandler(this.ucManagePayments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
-            this.cmsUsers.ResumeLayout(false);
+            this.cmsPayments.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,10 +208,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPayments;
-        private System.Windows.Forms.ContextMenuStrip cmsUsers;
+        private System.Windows.Forms.ContextMenuStrip cmsPayments;
         private System.Windows.Forms.ToolStripMenuItem cmsIShowDetails;
         private System.Windows.Forms.ToolStripMenuItem cmsIUpdate;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewUser;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

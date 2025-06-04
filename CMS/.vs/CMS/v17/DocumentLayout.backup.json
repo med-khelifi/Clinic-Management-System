@@ -3,37 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162D3CE3-0966-4BAD-8C71-93F29B09C58F}|..\\CMS-Data Access Layer\\CMS-Data Access Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-data access layer\\clsappointmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43A6E44F-2B2F-4B06-8913-114056A76CC9}|..\\CMS-Business Layer\\CMS-Business Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-business layer\\clsappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\doctors\\contorls\\ucfinddoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:doctors\\contorls\\ucfinddoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\patients\\controls\\ucfindpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:patients\\controls\\ucfindpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\payments\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\payments\\frmaddshowpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\frmaddshowpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43A6E44F-2B2F-4B06-8913-114056A76CC9}|..\\CMS-Business Layer\\CMS-Business Layer.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms-business layer\\clspayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,118 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsAppointmentData.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsAppointmentData.cs",
-              "RelativeDocumentMoniker": "..\\CMS-Data Access Layer\\clsAppointmentData.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Data Access Layer\\clsAppointmentData.cs",
-              "RelativeToolTip": "..\\CMS-Data Access Layer\\clsAppointmentData.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAhwH8AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ucPaymentCard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
+              "RelativeDocumentMoniker": "Payments\\Controls\\ucPaymentCard.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs [Design]",
+              "RelativeToolTip": "Payments\\Controls\\ucPaymentCard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:37.842Z",
+              "WhenOpened": "2025-06-04T20:05:40.984Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddEditPaymentTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
+              "RelativeDocumentMoniker": "Transaction\\frmAddEditPaymentTransaction.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
+              "RelativeToolTip": "Transaction\\frmAddEditPaymentTransaction.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwGwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T19:24:15.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clsAppointment.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsAppointment.cs",
-              "RelativeDocumentMoniker": "..\\CMS-Business Layer\\clsAppointment.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsAppointment.cs",
-              "RelativeToolTip": "..\\CMS-Business Layer\\clsAppointment.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAmwFEAAAAsAAAAAAAAAA==",
+              "Title": "frmAddEditPaymentTransaction.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
+              "RelativeDocumentMoniker": "Transaction\\frmAddEditPaymentTransaction.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs [Design]",
+              "RelativeToolTip": "Transaction\\frmAddEditPaymentTransaction.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:15.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ucFindPatient.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Patients\\Controls\\ucFindPatient.cs",
-              "RelativeDocumentMoniker": "Patients\\Controls\\ucFindPatient.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Patients\\Controls\\ucFindPatient.cs",
-              "RelativeToolTip": "Patients\\Controls\\ucFindPatient.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAQwGMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:56:54.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ucFindDoctor.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ucFindDoctor.cs",
-              "RelativeDocumentMoniker": "Doctors\\Contorls\\ucFindDoctor.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ucFindDoctor.cs",
-              "RelativeToolTip": "Doctors\\Contorls\\ucFindDoctor.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAwwIEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:50:38.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAddEditAppointments.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
-              "RelativeDocumentMoniker": "Appointments\\frmAddEditAppointments.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
-              "RelativeToolTip": "Appointments\\frmAddEditAppointments.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAgwD4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:48:13.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmAddEditAppointments.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
-              "RelativeDocumentMoniker": "Appointments\\frmAddEditAppointments.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs [Design]",
-              "RelativeToolTip": "Appointments\\frmAddEditAppointments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:48:10.738Z",
+              "WhenOpened": "2025-06-03T14:10:26.551Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ucPaymentCard.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\ucPaymentCard.cs",
-              "RelativeDocumentMoniker": "Payments\\ucPaymentCard.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\ucPaymentCard.cs",
-              "RelativeToolTip": "Payments\\ucPaymentCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
+              "RelativeDocumentMoniker": "Payments\\Controls\\ucPaymentCard.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
+              "RelativeToolTip": "Payments\\Controls\\ucPaymentCard.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAnwCwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:02:29.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "clsPayment.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsPayment.cs",
-              "RelativeDocumentMoniker": "..\\CMS-Business Layer\\clsPayment.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS-Business Layer\\clsPayment.cs",
-              "RelativeToolTip": "..\\CMS-Business Layer\\clsPayment.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T08:57:10.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmAddShowPayment.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\frmAddShowPayment.cs",
-              "RelativeDocumentMoniker": "Payments\\frmAddShowPayment.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\frmAddShowPayment.cs",
-              "RelativeToolTip": "Payments\\frmAddShowPayment.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAwE4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:27:53.666Z",
+              "WhenOpened": "2025-06-03T13:18:59.975Z",
               "EditorCaption": ""
             }
           ]
