@@ -13,11 +13,13 @@ namespace CMS.Transaction
 {
     public partial class frmAddEditPaymentTransaction : Form
     {
+        public event Action OnTransactionSaved;
         enum eFormMode { eAddNew = 0, eUpdate = 1 }
         eFormMode _Mode;
 
         int _paymentID;
         int _transactionID;
+        double _MaxPayment;
         clsPaymentTransaction _transaction;
         public frmAddEditPaymentTransaction(int paymentID)
         {
@@ -54,6 +56,17 @@ namespace CMS.Transaction
                 MessageBox.Show("Cannot load Payment transaction info.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error); 
             }
         }   
+        private void _SetControlsInitialValues()
+        {
+            cbPaymentMethod.SelectedIndex = 0;
+            cbPaymentType.SelectedIndex = 0;
+
+
+            if (ucPaymentCard1.PaymentInfo == null)
+            {
+                btnSave.Enabled = false;
+            }
+        }
         private void _ShowFormUI() 
         {
             string title = "";
@@ -71,15 +84,9 @@ namespace CMS.Transaction
         {
             _ShowFormUI();
             _LoadPaymentData();
-
-            cbPaymentMethod.SelectedIndex = 0;
-            cbPaymentType.SelectedIndex = 0;
+            _SetControlsInitialValues();
 
 
-            if(ucPaymentCard1.PaymentInfo == null)
-            {
-                btnSave.Enabled = false;    
-            }
             if(_Mode == eFormMode.eUpdate)
             {
                 _LoadTransactionInfo();
@@ -88,26 +95,70 @@ namespace CMS.Transaction
             {
                 _transaction = new clsPaymentTransaction();
             }
+
+            _MaxPayment = ucPaymentCard1.PaymentInfo.TotalAmount - ucPaymentCard1.PaymentInfo.AmountPaid;
+            udAmount.Maximum = (decimal) _MaxPayment;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _transaction.PaymentTransactionID = _paymentID;
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Check the red icons errors", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             _transaction.PaymentDate = DateTime.Now;
-            _transaction.PaymentMethod = cbPaymentMethod.SelectedText;
+            _transaction.PaymentMethod = cbPaymentMethod.SelectedIndex == 0 ? "CASH" : "CREDITCARD" ;
             _transaction.PaymentType = (clsPaymentTransaction.enPaymentType)(cbPaymentType.SelectedIndex + 1);
-            // check if the amount exeeded
+            _transaction.PaymentID = _paymentID;
             _transaction.Amount = (double)udAmount.Value;
 
             if (_transaction.Save())
             {
                 lblTransactionID.Text = _transaction.PaymentTransactionID.ToString();
                 // event
+                OnTransactionSaved?.Invoke();
+                _LoadPaymentData();
+                MessageBox.Show("Payment transaction saved ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else 
             {
                 MessageBox.Show("Cannot save Payment transaction.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        private void udAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (udAmount.Value <= 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(udAmount, "Please enter a valid amount.");
+            }
+            else
+            {
+                // Clear any existing error
+                errorProvider1.SetError(udAmount, string.Empty);
+            }
+        }
+
+
+        private void udAmount_ValueChanged(object sender, EventArgs e)
+        {
+            if (udAmount.Value == (decimal)
+                 _MaxPayment && _MaxPayment == ucPaymentCard1.PaymentInfo.TotalAmount)
+            {
+                cbPaymentType.SelectedIndex = (int)clsPaymentTransaction.enPaymentType.FullPayment - 1;
+            }
+            if (udAmount.Value == (decimal)
+                 _MaxPayment && ucPaymentCard1.PaymentInfo.AmountPaid > 0)
+            {
+                cbPaymentType.SelectedIndex = (int)clsPaymentTransaction.enPaymentType.Remaining - 1;
+            }
+            else 
+            {
+                cbPaymentType.SelectedIndex = (int)clsPaymentTransaction.enPaymentType.Advance - 1;
             }
         }
     }

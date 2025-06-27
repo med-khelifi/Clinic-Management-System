@@ -43,6 +43,7 @@
             this.lblTitle.Size = new System.Drawing.Size(157, 36);
             this.lblTitle.TabIndex = 86;
             this.lblTitle.Text = "Doctor Info :";
+            this.lblTitle.UseWaitCursor = true;
             // 
             // BtnClose
             // 
@@ -63,17 +64,19 @@
             this.BtnClose.Size = new System.Drawing.Size(107, 40);
             this.BtnClose.TabIndex = 87;
             this.BtnClose.Text = "Close";
+            this.BtnClose.UseWaitCursor = true;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // ucDoctorCard1
             // 
             this.ucDoctorCard1.BackColor = System.Drawing.Color.White;
-            this.ucDoctorCard1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ucDoctorCard1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ucDoctorCard1.DoctorID = 0;
             this.ucDoctorCard1.Location = new System.Drawing.Point(6, 60);
             this.ucDoctorCard1.Name = "ucDoctorCard1";
             this.ucDoctorCard1.Size = new System.Drawing.Size(824, 597);
             this.ucDoctorCard1.TabIndex = 0;
+            this.ucDoctorCard1.UseWaitCursor = true;
             // 
             // frmDoctorInfo
             // 
@@ -84,6 +87,7 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ucDoctorCard1);
+            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDoctorInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

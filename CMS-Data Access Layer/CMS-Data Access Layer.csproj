@@ -43,12 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAppointmentData.cs" />
+    <Compile Include="clsMedicalRecordData.cs" />
     <Compile Include="clsPatientData.cs" />
     <Compile Include="clsBloodTypeData.cs" />
     <Compile Include="clsCountryData.cs" />
     <Compile Include="clsDataAccessUtil.cs" />
     <Compile Include="clsDoctorData.cs" />
-    <Compile Include="clsMedicalRecordData.cs" />
     <Compile Include="clsMessageData.cs" />
     <Compile Include="clsPaymentData.cs" />
     <Compile Include="clsPaymentTransactionData.cs" />
@@ -56,6 +56,7 @@
     <Compile Include="clsPrescriptionData.cs" />
     <Compile Include="clsRoleData.cs" />
     <Compile Include="clsUserData.cs" />
+    <Compile Include="GlobalClasses\clsPasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

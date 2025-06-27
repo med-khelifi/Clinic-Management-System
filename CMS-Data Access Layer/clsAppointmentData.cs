@@ -6,7 +6,7 @@ namespace DataLayer
 {
     public static class clsAppointmentData
     {
-        public static bool GetByID(int AppointmentID, ref int PatientID, ref int DoctorID, ref DateTime AppointmentDateTime, ref byte AppointmentStatus, ref int? MedicalRecordID)
+        public static bool GetByID(int AppointmentID, ref int PatientID, ref int DoctorID, ref DateTime AppointmentDateTime, ref byte AppointmentStatus)
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -26,7 +26,6 @@ namespace DataLayer
                             DoctorID = Convert.ToInt32(reader["DoctorID"]);
                             AppointmentDateTime = Convert.ToDateTime(reader["AppointmentDateTime"]);
                             AppointmentStatus = Convert.ToByte(reader["AppointmentStatus"]);
-                            MedicalRecordID = reader["MedicalRecordID"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["MedicalRecordID"]);
 
                         }
                     }
@@ -78,7 +77,28 @@ namespace DataLayer
             }
             return dt;
         }
-        public static int AddNew(int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID)
+        public static DataTable GetAll(int doctorID)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetAllAppointmentsByDoctorID", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@DoctorID", doctorID);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    dt.Load(reader);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return dt;
+        }
+        public static int AddNew(int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus)
         {
             int newID = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -89,7 +109,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DoctorID", DoctorID);
                 command.Parameters.AddWithValue("@AppointmentDateTime", AppointmentDateTime);
                 command.Parameters.AddWithValue("@AppointmentStatus", AppointmentStatus);
-                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID is null ? (object)DBNull.Value : MedicalRecordID);
+                
                 try
                 {
                     connection.Open();
@@ -102,7 +122,7 @@ namespace DataLayer
             }
             return newID;
         }
-        public static bool Update(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus, int? MedicalRecordID)
+        public static bool Update(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, byte AppointmentStatus)
         {
             int result = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
@@ -114,7 +134,6 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DoctorID", DoctorID);
                 command.Parameters.AddWithValue("@AppointmentDateTime", AppointmentDateTime);
                 command.Parameters.AddWithValue("@AppointmentStatus", AppointmentStatus);
-                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID is null ? (object)DBNull.Value : MedicalRecordID);
                 try
                 {
                     connection.Open();
@@ -153,7 +172,6 @@ namespace DataLayer
 
             return -1; // Indicates an error or invalid value
         }
-
         public static bool ChangeStatus(int AppointmentID, byte NewStatus) 
         {
             int result = 0;
@@ -175,6 +193,82 @@ namespace DataLayer
                 }
             }
             return result > 0;
+        }
+        public static int GetAppointmentsCount()
+        {
+            int AppointmentsCount = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetAppointmentsCount", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Person parameters
+
+                SqlParameter outputParam = new SqlParameter("@AppointmentsCount", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    AppointmentsCount = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+
+            return AppointmentsCount;
+        }
+
+        public static DataTable GetAppointmentsByDate(DateTime Date)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetAppointmentsByDate", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Date", Date.Date);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    dt.Load(reader);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return dt;
+        }
+
+        public static DataTable GetAllAppointmentsTableByDoctorIDAndDate(int doctorID, DateTime date)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetAllAppointmentsByDoctorIDAndDate", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@DoctorID", doctorID);
+                command.Parameters.AddWithValue("@Date", date);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    dt.Load(reader);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return dt;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace BusinessLayer
             BasePrice = 0;
             UserInfo = new clsUser();
         }
-        private clsDoctor(int DoctorID, int UserID, string Specialization,float BasePrice)
+        private clsDoctor(int DoctorID, int UserID, string Specialization, float BasePrice)
         {
             this.DoctorID = DoctorID;
             this.UserID = UserID;
@@ -54,18 +54,18 @@ namespace BusinessLayer
         {
             this.DoctorID = clsDoctorData.AddNew
                 (
-                
-                this.UserInfo.Username, clsPasswordHasher.Hash(this.UserInfo.Password), this.UserInfo.RoleId, 
-                this.UserInfo.IsActive,this.UserInfo.PersonInfo.Name, this.UserInfo.PersonInfo.DateOfBirth, 
-                this.UserInfo.PersonInfo.Gender,this.UserInfo.PersonInfo.PhoneNumber, this.UserInfo.PersonInfo.Email,
-                this.UserInfo.PersonInfo.Address,this.UserInfo.PersonInfo.ImagePath, this.UserInfo.PersonInfo.NationalityID,
-                this.UserInfo.PersonInfo.NationalNo,this.Specialization,this.BasePrice
+
+                this.UserInfo.Username, clsPasswordHasher.Hash(this.UserInfo.Password), this.UserInfo.RoleId,
+                this.UserInfo.IsActive, this.UserInfo.PersonInfo.Name, this.UserInfo.PersonInfo.DateOfBirth,
+                this.UserInfo.PersonInfo.Gender, this.UserInfo.PersonInfo.PhoneNumber, this.UserInfo.PersonInfo.Email,
+                this.UserInfo.PersonInfo.Address, this.UserInfo.PersonInfo.ImagePath, this.UserInfo.PersonInfo.NationalityID,
+                this.UserInfo.PersonInfo.NationalNo, this.Specialization, this.BasePrice
                 );
             return this.DoctorID != 0;
         }
         private bool _update()
         {
-            
+
             return clsDoctorData.Update(
                 this.UserInfo.UserId,
                 this.UserInfo.Username,
@@ -101,21 +101,21 @@ namespace BusinessLayer
             int UserID = -1;
             string Specialization = null;
             float BasePrice = 0;
-            if (clsDoctorData.GetByID(DoctorID, ref UserID, ref Specialization,ref BasePrice))
+            if (clsDoctorData.GetByID(DoctorID, ref UserID, ref Specialization, ref BasePrice))
             {
-                return new clsDoctor(DoctorID, UserID, Specialization,BasePrice);
+                return new clsDoctor(DoctorID, UserID, Specialization, BasePrice);
             }
             return null;
         }
         public static clsDoctor FindByUsername(string username)
         {
             int PersonID = -1;
-            int DoctorID = -1;  
+            int DoctorID = -1;
             string Specialization = null;
             float BasePrice = 0;
-            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice ,username))
+            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice, username))
             {
-                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
+                return new clsDoctor(DoctorID, PersonID, Specialization, BasePrice);
             }
             return null;
         }
@@ -126,11 +126,34 @@ namespace BusinessLayer
             int DoctorID = -1;
             string Specialization = null;
             float BasePrice = 0;
-            if (clsDoctorData.GetByUsername(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice , nationalNo))
+            if (clsDoctorData.GetByNationalNo(ref DoctorID, ref PersonID, ref Specialization, ref BasePrice, nationalNo))
             {
-                return new clsDoctor(DoctorID, PersonID, Specialization,BasePrice);
+                return new clsDoctor(DoctorID, PersonID, Specialization, BasePrice);
             }
             return null;
+        }
+
+        public static int GetDoctorsCount()
+        {
+            return clsDoctorData.GetDoctorsCount();
+        }
+
+        public static int GetPatientsCountByDoctorID(int DoctorID)
+        {
+            return clsDoctorData.GetPatientsCountByDoctorID(DoctorID);
+        }
+        public int GetPatientsCount()
+        {
+            return GetPatientsCountByDoctorID(this.DoctorID);
+        }
+        
+        public static int GetMedicalRecordsCountByDoctorID(int DoctorID)
+        {
+            return clsDoctorData.GetMedicalRecordsCountByDoctorID(DoctorID);
+        }
+        public int GetMedicalRecordsCount()
+        {
+            return GetMedicalRecordsCountByDoctorID(this.DoctorID);
         }
     }
 }

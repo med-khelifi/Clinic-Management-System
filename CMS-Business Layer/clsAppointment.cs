@@ -26,7 +26,7 @@ namespace BusinessLayer
         public clsDoctor DoctorInfo { get; set; }   
         public DateTime AppointmentDateTime { get; set; }
         public enAppointmentStatus AppointmentStatus { get; set; }
-        public int? MedicalRecordID { get; set; }
+
         public clsMedicalRecord MedicalRecordInfo { get; set; }
 
         public clsAppointment()
@@ -39,10 +39,9 @@ namespace BusinessLayer
             DoctorInfo = new clsDoctor();
             AppointmentDateTime = DateTime.Now;
             AppointmentStatus = 0;
-            MedicalRecordID = null;
             MedicalRecordInfo = new clsMedicalRecord();
         }
-        private clsAppointment(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, enAppointmentStatus AppointmentStatus, int? MedicalRecordID)
+        private clsAppointment(int AppointmentID, int PatientID, int DoctorID, DateTime AppointmentDateTime, enAppointmentStatus AppointmentStatus)
         {
             this.AppointmentID = AppointmentID;
             this.PatientID = PatientID;
@@ -51,8 +50,6 @@ namespace BusinessLayer
             DoctorInfo = clsDoctor.Find(DoctorID);
             this.AppointmentDateTime = AppointmentDateTime;
             this.AppointmentStatus = AppointmentStatus;
-            this.MedicalRecordID = MedicalRecordID;
-            MedicalRecordInfo = MedicalRecordID.HasValue ? clsMedicalRecord.Find(MedicalRecordID.Value) : null;
             Mode = enMode.Update;
         }
         public bool Save()
@@ -74,12 +71,12 @@ namespace BusinessLayer
         }
         private bool _addnew()
         {
-            this.AppointmentID = clsAppointmentData.AddNew(this.PatientID, this.DoctorID, this.AppointmentDateTime, (byte)this.AppointmentStatus, this.MedicalRecordID);
+            this.AppointmentID = clsAppointmentData.AddNew(this.PatientID, this.DoctorID, this.AppointmentDateTime, (byte)this.AppointmentStatus);
              return this.AppointmentID != 0;
         }
         private bool _update()
         {
-            return clsAppointmentData.Update(AppointmentID, PatientID, DoctorID, AppointmentDateTime,(byte) AppointmentStatus, MedicalRecordID);
+            return clsAppointmentData.Update(AppointmentID, PatientID, DoctorID, AppointmentDateTime,(byte) AppointmentStatus);
         }
         public bool Delete()
         {
@@ -88,6 +85,10 @@ namespace BusinessLayer
         public static DataTable GetAllAppointmentsTable()
         {
             return clsAppointmentData.GetAll();
+        } 
+        public static DataTable GetAllAppointmentsTableByDoctorID(int doctorID)
+        {
+            return clsAppointmentData.GetAll(doctorID);
         }
         public static clsAppointment Find(int AppointmentID)
         {
@@ -95,10 +96,10 @@ namespace BusinessLayer
             int DoctorID = -1;
             DateTime AppointmentDateTime = DateTime.Now;
             byte AppointmentStatus = 0;
-            int? MedicalRecordID = null;
-            if (clsAppointmentData.GetByID(AppointmentID, ref PatientID, ref DoctorID, ref AppointmentDateTime, ref AppointmentStatus, ref MedicalRecordID))
+
+            if (clsAppointmentData.GetByID(AppointmentID, ref PatientID, ref DoctorID, ref AppointmentDateTime, ref AppointmentStatus))
             {
-                return new clsAppointment(AppointmentID, PatientID, DoctorID, AppointmentDateTime, (enAppointmentStatus)AppointmentStatus, MedicalRecordID);
+                return new clsAppointment(AppointmentID, PatientID, DoctorID, AppointmentDateTime, (enAppointmentStatus)AppointmentStatus);
             }
             return null;
         }
@@ -139,6 +140,18 @@ namespace BusinessLayer
         {
             return CancelAppointment(AppointmentID);
         }
-       
+        public static int GetAppointmentsCount() 
+        {
+            return clsAppointmentData.GetAppointmentsCount();
+        }
+        public static DataTable GetAppointmentsByDate(DateTime Date)
+        {
+            return clsAppointmentData.GetAppointmentsByDate(Date);
+        }
+
+        public static DataTable GetAllAppointmentsTableByDoctorIDAndDate(int doctorID,DateTime Date)
+        {
+            return clsAppointmentData.GetAllAppointmentsTableByDoctorIDAndDate(doctorID,Date);
+        }
     }
 }

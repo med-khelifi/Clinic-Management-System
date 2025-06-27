@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbPaymentType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.udAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -41,16 +45,15 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.BtnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.udAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbPaymentType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ucPaymentCard1 = new CMS.Payments.ucPaymentCard();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -77,6 +80,74 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(831, 166);
             this.guna2GroupBox1.TabIndex = 97;
             this.guna2GroupBox1.Text = "Payment Transaction Details :";
+            // 
+            // cbPaymentMethod
+            // 
+            this.cbPaymentMethod.BackColor = System.Drawing.Color.Transparent;
+            this.cbPaymentMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaymentMethod.FocusedColor = System.Drawing.Color.Empty;
+            this.cbPaymentMethod.FocusedState.Parent = this.cbPaymentMethod;
+            this.cbPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbPaymentMethod.FormattingEnabled = true;
+            this.cbPaymentMethod.HoverState.Parent = this.cbPaymentMethod;
+            this.cbPaymentMethod.ItemHeight = 30;
+            this.cbPaymentMethod.Items.AddRange(new object[] {
+            "Cash",
+            "CreditCard"});
+            this.cbPaymentMethod.ItemsAppearance.Parent = this.cbPaymentMethod;
+            this.cbPaymentMethod.Location = new System.Drawing.Point(595, 101);
+            this.cbPaymentMethod.Name = "cbPaymentMethod";
+            this.cbPaymentMethod.ShadowDecoration.Parent = this.cbPaymentMethod;
+            this.cbPaymentMethod.Size = new System.Drawing.Size(212, 36);
+            this.cbPaymentMethod.TabIndex = 11;
+            // 
+            // cbPaymentType
+            // 
+            this.cbPaymentType.BackColor = System.Drawing.Color.Transparent;
+            this.cbPaymentType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaymentType.FocusedColor = System.Drawing.Color.Empty;
+            this.cbPaymentType.FocusedState.Parent = this.cbPaymentType;
+            this.cbPaymentType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPaymentType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbPaymentType.FormattingEnabled = true;
+            this.cbPaymentType.HoverState.Parent = this.cbPaymentType;
+            this.cbPaymentType.ItemHeight = 30;
+            this.cbPaymentType.Items.AddRange(new object[] {
+            "Advance",
+            "Remaining",
+            "FullPayment"});
+            this.cbPaymentType.ItemsAppearance.Parent = this.cbPaymentType;
+            this.cbPaymentType.Location = new System.Drawing.Point(595, 51);
+            this.cbPaymentType.Name = "cbPaymentType";
+            this.cbPaymentType.ShadowDecoration.Parent = this.cbPaymentType;
+            this.cbPaymentType.Size = new System.Drawing.Size(212, 36);
+            this.cbPaymentType.TabIndex = 11;
+            // 
+            // udAmount
+            // 
+            this.udAmount.BackColor = System.Drawing.Color.Transparent;
+            this.udAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.udAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.udAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.udAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.udAmount.DisabledState.Parent = this.udAmount;
+            this.udAmount.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.udAmount.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.udAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.udAmount.FocusedState.Parent = this.udAmount;
+            this.udAmount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.udAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.udAmount.Location = new System.Drawing.Point(235, 105);
+            this.udAmount.Name = "udAmount";
+            this.udAmount.ShadowDecoration.Parent = this.udAmount;
+            this.udAmount.Size = new System.Drawing.Size(100, 32);
+            this.udAmount.TabIndex = 9;
+            this.udAmount.UpDownButtonFillColor = System.Drawing.Color.Gray;
+            this.udAmount.ValueChanged += new System.EventHandler(this.udAmount_ValueChanged);
+            this.udAmount.Validating += new System.ComponentModel.CancelEventHandler(this.udAmount_Validating);
             // 
             // pictureBox4
             // 
@@ -228,71 +299,9 @@
             this.btnSave.UseWaitCursor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // udAmount
+            // errorProvider1
             // 
-            this.udAmount.BackColor = System.Drawing.Color.Transparent;
-            this.udAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.udAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.udAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.udAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.udAmount.DisabledState.Parent = this.udAmount;
-            this.udAmount.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.udAmount.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.udAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.udAmount.FocusedState.Parent = this.udAmount;
-            this.udAmount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.udAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.udAmount.Location = new System.Drawing.Point(235, 105);
-            this.udAmount.Name = "udAmount";
-            this.udAmount.ShadowDecoration.Parent = this.udAmount;
-            this.udAmount.Size = new System.Drawing.Size(100, 32);
-            this.udAmount.TabIndex = 9;
-            this.udAmount.UpDownButtonFillColor = System.Drawing.Color.Gray;
-            // 
-            // cbPaymentType
-            // 
-            this.cbPaymentType.BackColor = System.Drawing.Color.Transparent;
-            this.cbPaymentType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPaymentType.FocusedColor = System.Drawing.Color.Empty;
-            this.cbPaymentType.FocusedState.Parent = this.cbPaymentType;
-            this.cbPaymentType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPaymentType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbPaymentType.FormattingEnabled = true;
-            this.cbPaymentType.HoverState.Parent = this.cbPaymentType;
-            this.cbPaymentType.ItemHeight = 30;
-            this.cbPaymentType.Items.AddRange(new object[] {
-            "Advance",
-            "Remaining",
-            "FullPayment"});
-            this.cbPaymentType.ItemsAppearance.Parent = this.cbPaymentType;
-            this.cbPaymentType.Location = new System.Drawing.Point(595, 51);
-            this.cbPaymentType.Name = "cbPaymentType";
-            this.cbPaymentType.ShadowDecoration.Parent = this.cbPaymentType;
-            this.cbPaymentType.Size = new System.Drawing.Size(140, 36);
-            this.cbPaymentType.TabIndex = 11;
-            // 
-            // cbPaymentMethod
-            // 
-            this.cbPaymentMethod.BackColor = System.Drawing.Color.Transparent;
-            this.cbPaymentMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPaymentMethod.FocusedColor = System.Drawing.Color.Empty;
-            this.cbPaymentMethod.FocusedState.Parent = this.cbPaymentMethod;
-            this.cbPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbPaymentMethod.FormattingEnabled = true;
-            this.cbPaymentMethod.HoverState.Parent = this.cbPaymentMethod;
-            this.cbPaymentMethod.ItemHeight = 30;
-            this.cbPaymentMethod.Items.AddRange(new object[] {
-            "Cash",
-            "CreditCard"});
-            this.cbPaymentMethod.ItemsAppearance.Parent = this.cbPaymentMethod;
-            this.cbPaymentMethod.Location = new System.Drawing.Point(595, 101);
-            this.cbPaymentMethod.Name = "cbPaymentMethod";
-            this.cbPaymentMethod.ShadowDecoration.Parent = this.cbPaymentMethod;
-            this.cbPaymentMethod.Size = new System.Drawing.Size(140, 36);
-            this.cbPaymentMethod.TabIndex = 11;
+            this.errorProvider1.ContainerControl = this;
             // 
             // ucPaymentCard1
             // 
@@ -319,11 +328,12 @@
             this.Load += new System.EventHandler(this.frmAddEditPaymentTransaction_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +357,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2ComboBox cbPaymentMethod;
         private Guna.UI2.WinForms.Guna2ComboBox cbPaymentType;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

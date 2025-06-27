@@ -9,6 +9,7 @@ namespace CMS.GlobalClasses
 {
     internal class clsGlobal
     {
-        public static clsUser CurrentUser { get; set; }
+        public static object CurrentUser { get; set; }
+        
     }
 }

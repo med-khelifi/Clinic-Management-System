@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using CMS.Doctors;
+using CMS.GlobalClasses;
 using CMS.Patients;
 using CMS.Payments;
 using CMS.Users;
@@ -26,12 +27,15 @@ namespace CMS.Appointments.Controls
         private void ucManageAppointments_Load(object sender, EventArgs e)
         {
             _LoadData();    
+            btnAddNewAppointment.Visible = clsGlobal.CurrentUser is clsUser;
         }
 
         private void _LoadData()
         {
-            //dgvAppointments.Rows.Clear();
-            dgvAppointments.DataSource = clsAppointment.GetAllAppointmentsTable();
+            if (clsGlobal.CurrentUser is clsDoctor doctor)
+                dgvAppointments.DataSource = clsAppointment.GetAllAppointmentsTableByDoctorID(doctor.DoctorID);
+            else
+                dgvAppointments.DataSource = clsAppointment.GetAllAppointmentsTable();
             lbRecordCount.Text = "#Count = " + dgvAppointments.Rows.Count;   
         }
 
@@ -64,6 +68,21 @@ namespace CMS.Appointments.Controls
         private void csmAppointments_Opening(object sender, CancelEventArgs e)
         {
             var status = clsAppointment.GetAppointmentStatus((int)dgvAppointments.CurrentRow.Cells[0].Value);
+            if(clsGlobal.CurrentUser is clsDoctor)
+            {
+                toolStripMenuCancel.Enabled = false;
+                toolStripMenuReschedule.Enabled = false;
+                ToolStripMenuConfirm.Enabled = false;
+                
+                if (
+                status == clsAppointment.enAppointmentStatus.Scheduled
+                || status == clsAppointment.enAppointmentStatus.Rescheduled
+                )
+                {
+                    consultationToolStripMenuItem.Enabled = true;
+                }
+                return; 
+            }
 
             // First, disable both actions for Cancelled or Completed status
             if (status == clsAppointment.enAppointmentStatus.Cancelled ||
@@ -79,6 +98,10 @@ namespace CMS.Appointments.Controls
                 toolStripMenuReschedule.Enabled = false;
                 ToolStripMenuConfirm.Enabled = true;
             }
+            if (status == clsAppointment.enAppointmentStatus.Completed)
+            {
+                medicalRecordInformationToolStripMenuItem.Enabled = true;
+            }
             if (
                 status == clsAppointment.enAppointmentStatus.Scheduled
                 || status == clsAppointment.enAppointmentStatus.Rescheduled  
@@ -87,6 +110,7 @@ namespace CMS.Appointments.Controls
                 toolStripMenuCancel.Enabled = true;
                 toolStripMenuReschedule.Enabled = true;
                 ToolStripMenuConfirm.Enabled = false;
+                
             }
             if(status == clsAppointment.enAppointmentStatus.NoShow)
             {
@@ -140,5 +164,16 @@ namespace CMS.Appointments.Controls
                 frm.ShowDialog();
             }
         }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int id = (int)dgvAppointments.CurrentRow.Cells[0].Value;
+            using (frmConsultation frm = new frmConsultation(id))
+            {
+                frm.ShowDialog();
+            }
+        }
+
     }
 }

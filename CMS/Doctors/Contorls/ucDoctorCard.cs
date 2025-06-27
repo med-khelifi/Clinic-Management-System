@@ -31,9 +31,9 @@ namespace CMS.Doctors.Contorls
             InitializeComponent();
         }
 
-        public void LoadDoctorInfo(string userName)
+        public void LoadDoctorInfoByNationalNo(string userName)
         {
-            _Doctor = clsDoctor.FindByUsername(userName);
+            _Doctor = clsDoctor.FindByNationalNo(userName);
             if (_Doctor != null)
             {
                 _LoadInfo();

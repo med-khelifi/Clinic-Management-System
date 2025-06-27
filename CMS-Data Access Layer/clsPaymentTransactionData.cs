@@ -57,13 +57,14 @@ namespace DataLayer
             }
             return result > 0;
         }
-        public static DataTable GetAll()
+        public static DataTable GetAll(int PaymentID)
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_GetAllPaymentTransactions", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetAllPaymentTransactionsByPaymentID", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PaymentID",PaymentID);
                 try
                 {
                     connection.Open();

@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:appointments\\frmaddeditappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:transaction\\frmaddeditpaymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\medicalrecords\\frmconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:medicalrecords\\frmconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\medicalrecords\\frmconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:medicalrecords\\frmconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:payments\\controls\\ucpaymentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\medicalrecords\\frmmedicalrecordinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:medicalrecords\\frmmedicalrecordinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\doctors\\contorls\\ctrmanagedoctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:doctors\\contorls\\ctrmanagedoctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\doctors\\contorls\\ctrmanagedoctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:doctors\\contorls\\ctrmanagedoctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|c:\\users\\kheli\\desktop\\wal3a\\coding\\programmingadvices\\projects\\cms_project\\cms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3E27A-AF00-45AE-978A-3B8558FFA12D}|CMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,53 +54,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ucPaymentCard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
-              "RelativeDocumentMoniker": "Payments\\Controls\\ucPaymentCard.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs [Design]",
-              "RelativeToolTip": "Payments\\Controls\\ucPaymentCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:05:40.984Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAddEditPaymentTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
-              "RelativeDocumentMoniker": "Transaction\\frmAddEditPaymentTransaction.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
-              "RelativeToolTip": "Transaction\\frmAddEditPaymentTransaction.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAmwGwAAABAAAAAAAAAAA==",
+              "Title": "frmAddEditAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
+              "RelativeDocumentMoniker": "Appointments\\frmAddEditAppointments.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Appointments\\frmAddEditAppointments.cs",
+              "RelativeToolTip": "Appointments\\frmAddEditAppointments.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAywCwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:24:15.263Z",
+              "WhenOpened": "2025-06-27T17:08:05.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmAddEditPaymentTransaction.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs",
-              "RelativeDocumentMoniker": "Transaction\\frmAddEditPaymentTransaction.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Transaction\\frmAddEditPaymentTransaction.cs [Design]",
-              "RelativeToolTip": "Transaction\\frmAddEditPaymentTransaction.cs [Design]",
+              "Title": "frmConsultation.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmConsultation.cs",
+              "RelativeDocumentMoniker": "MedicalRecords\\frmConsultation.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmConsultation.cs",
+              "RelativeToolTip": "MedicalRecords\\frmConsultation.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAIwIIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:10:26.551Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-27T17:04:08.39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ucPaymentCard.cs",
-              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
-              "RelativeDocumentMoniker": "Payments\\Controls\\ucPaymentCard.cs",
-              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Payments\\Controls\\ucPaymentCard.cs",
-              "RelativeToolTip": "Payments\\Controls\\ucPaymentCard.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAnwCwAAAACAAAAAAAAAA==",
+              "Title": "frmConsultation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmConsultation.cs",
+              "RelativeDocumentMoniker": "MedicalRecords\\frmConsultation.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmConsultation.cs [Design]",
+              "RelativeToolTip": "MedicalRecords\\frmConsultation.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T13:18:59.975Z",
+              "WhenOpened": "2025-06-27T17:04:04.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMedicalRecordInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmMedicalRecordInfo.cs",
+              "RelativeDocumentMoniker": "MedicalRecords\\frmMedicalRecordInfo.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\MedicalRecords\\frmMedicalRecordInfo.cs [Design]",
+              "RelativeToolTip": "MedicalRecords\\frmMedicalRecordInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T17:03:58.55Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ctrManageDoctors.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ctrManageDoctors.cs",
+              "RelativeDocumentMoniker": "Doctors\\Contorls\\ctrManageDoctors.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ctrManageDoctors.cs",
+              "RelativeToolTip": "Doctors\\Contorls\\ctrManageDoctors.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAIA9wDsAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T16:51:16.859Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ctrManageDoctors.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ctrManageDoctors.cs",
+              "RelativeDocumentMoniker": "Doctors\\Contorls\\ctrManageDoctors.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Doctors\\Contorls\\ctrManageDoctors.cs [Design]",
+              "RelativeToolTip": "Doctors\\Contorls\\ctrManageDoctors.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T16:51:11.928Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAlwKwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T16:49:04.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\kheli\\Desktop\\Wal3a\\Coding\\ProgrammingAdvices\\Projects\\CMS_Project\\CMS\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T16:48:59.719Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

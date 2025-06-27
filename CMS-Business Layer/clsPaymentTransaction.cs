@@ -32,7 +32,7 @@ namespace BusinessLayer
             Amount = 0;
             PaymentDate = DateTime.Now;
             PaymentType = enPaymentType.Advance;
-            PaymentMethod = "";
+            PaymentMethod = string.Empty;
         }
         private clsPaymentTransaction(int PaymentTransactionID, int PaymentID, double Amount, DateTime PaymentDate, enPaymentType PaymentType, string PaymentMethod)
         {
@@ -74,9 +74,9 @@ namespace BusinessLayer
         {
             return clsPaymentTransactionData.Delete(this.PaymentTransactionID);
         }
-        public static DataTable GetAllPaymentTransactionsTable()
+        public static DataTable GetAllPaymentTransactionsTableByPaymentID(int paymentID)
         {
-            return clsPaymentTransactionData.GetAll();
+            return clsPaymentTransactionData.GetAll(paymentID);
         }
         public static clsPaymentTransaction Find(int PaymentTransactionID)
         {

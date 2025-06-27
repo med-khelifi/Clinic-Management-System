@@ -2,6 +2,8 @@ using System;
 using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Net;
+using System.Xml.Linq;
 namespace DataLayer
 {
     public static class clsDoctorData
@@ -72,7 +74,7 @@ namespace DataLayer
             using (SqlCommand command = new SqlCommand("sp_GetDoctorByNationalNo", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@@ationalNo", nationalNo);
+                command.Parameters.AddWithValue("@NationalNo", nationalNo);
                 try
                 {
                     connection.Open();
@@ -239,5 +241,131 @@ namespace DataLayer
             }
             return result > 0;
         }
+
+        public static int GetDoctorsCount()
+        {
+            int DoctorsCount = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetDoctorsCount", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                
+                SqlParameter outputParam = new SqlParameter("@DoctorsCount", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    DoctorsCount = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+
+            return DoctorsCount;
+        }
+
+        public static int GetUsersCount()
+        {
+            int UsersCount = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetUsersCount", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Person parameters
+
+                SqlParameter outputParam = new SqlParameter("@UsersCount", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    UsersCount = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+
+            return UsersCount;
+        }
+
+        public static int GetPatientsCountByDoctorID(int DoctorID)
+        {
+            int PatientCount = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetPatientsCountByDoctorID", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@DoctorID", DoctorID);
+                SqlParameter outputParam = new SqlParameter("@PatientsCount", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    PatientCount = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+
+            return PatientCount;
+        }
+        
+        public static int GetMedicalRecordsCountByDoctorID(int DoctorID)
+        {
+            int MedicalRecordsCount = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetMedicalRecordsCountByDoctorID", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@DoctorID", DoctorID);
+                SqlParameter outputParam = new SqlParameter("@MedicalRecordsCount", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MedicalRecordsCount = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+
+            return MedicalRecordsCount;
+        }
+
     }
 }

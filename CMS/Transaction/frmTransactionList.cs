@@ -24,9 +24,9 @@ namespace CMS.Transaction
             ucPaymentCard1.LoadPaymentInfoByPaymentID(_paymentID);
             ucPaymentCard1.HideTransactionLink();
         }
-        private void _LoadTransactionInfo()
+        private void _LoadTransactionsList()
         {
-            dgvTransactions.DataSource = clsPaymentTransaction.GetAllPaymentTransactionsTable();
+            dgvTransactions.DataSource = clsPaymentTransaction.GetAllPaymentTransactionsTableByPaymentID(_paymentID);
             lbRecordCount.Text = "#Count = " + dgvTransactions.Rows.Count;
         }
 
@@ -38,15 +38,22 @@ namespace CMS.Transaction
         private void frmTransactionList_Load(object sender, EventArgs e)
         {
             _LoadPaymentInfo();
-            _LoadTransactionInfo();
+            _LoadTransactionsList();
 
             if(ucPaymentCard1.PaymentInfo == null) btnAddNewTransaction.Enabled = false;
         }
 
         private void btnAddNewTransaction_Click(object sender, EventArgs e)
         {
+            if (ucPaymentCard1.PaymentInfo.isFullyPaid)
+            {
+                MessageBox.Show("Cannot add new transaction due is fully paid", "Already paid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             using (frmAddEditPaymentTransaction frm = new frmAddEditPaymentTransaction(_paymentID))
             {
+                frm.OnTransactionSaved += _LoadTransactionsList;
+                frm.OnTransactionSaved += _LoadPaymentInfo;
                 frm.ShowDialog();
             }
         }

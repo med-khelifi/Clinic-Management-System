@@ -57,7 +57,7 @@ namespace CMS.Doctors.Controls
 
         private void cmsIShowDetails_Click(object sender, EventArgs e)
         {
-            using(frmDoctorInfo frm = new frmDoctorInfo(dgvDoctors.CurrentRow.Cells[1].Value.ToString()))
+            using(frmDoctorInfo frm = new frmDoctorInfo(dgvDoctors.CurrentRow.Cells[0].Value.ToString()))
             {
                 frm.ShowDialog();
             }
@@ -71,6 +71,14 @@ namespace CMS.Doctors.Controls
         private void showDetaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmChangePassword frm = new frmChangePassword(dgvDoctors.CurrentRow.Cells[1].Value.ToString()))
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

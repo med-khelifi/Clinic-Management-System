@@ -195,11 +195,10 @@ namespace DataLayer
         {
             bool isFound = false;
             using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
-            using (SqlCommand command = new SqlCommand("sp_LogIn", connection))
+            using (SqlCommand command = new SqlCommand("sp_GetUserByUsername", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@UserName", Username);
-                command.Parameters.AddWithValue("@Password", Password);
                 try
                 {
                     connection.Open();
@@ -207,11 +206,15 @@ namespace DataLayer
                     {
                         if (reader.Read())
                         {
-                            Username = reader["Username"].ToString();
-                            Password = reader["Password"].ToString();
-                            RoleId = Convert.ToInt32(reader["RoleId"]);
-                            IsActive = Convert.ToBoolean(reader["IsActive"]);
-                            PersonID = Convert.ToInt32(reader["PersonID"]);
+                            string storedHashedPassword = reader["Password"].ToString();
+                            if (clsPasswordHasher.Verify(Password, storedHashedPassword))
+                            {
+                                UserId = Convert.ToInt32(reader["UserID"]);
+                                RoleId = Convert.ToInt32(reader["RoleId"]);
+                                IsActive = Convert.ToBoolean(reader["IsActive"]);
+                                PersonID = Convert.ToInt32(reader["PersonID"]);
+                                isFound = true;
+                            }
                         }
                     }
                 }

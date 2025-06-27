@@ -7,7 +7,10 @@ namespace BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-
+        public enum enRoles
+        {
+            admin = 1,doctor = 2,simpleUser = 3
+        }
         public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -161,13 +164,13 @@ namespace BusinessLayer
         public static clsUser LogIn(string UserName, string Password)
         {
             int UserId = -1;
-            string HashedPassword = clsPasswordHasher.Hash(Password);
+            //string HashedPassword = clsPasswordHasher.Hash(Password.Trim()).Trim();
             int RoleId = -1;
             bool IsActive = false;
             int PersonID = -1;
-            if (clsUserData.LogIn(ref UserId,UserName,HashedPassword, ref RoleId, ref IsActive, ref PersonID))
+            if (clsUserData.LogIn(ref UserId,UserName,Password, ref RoleId, ref IsActive, ref PersonID))
             {
-                return new clsUser(UserId, UserName, HashedPassword, RoleId, IsActive, PersonID);
+                return new clsUser(UserId, UserName, Password, RoleId, IsActive, PersonID);
             }
             return null;
         }
@@ -195,6 +198,11 @@ namespace BusinessLayer
         public bool isDoctor()
         {
             return isDoctor(this.Username);
+        }
+
+        public static int GetUsersCount()
+        {
+            return clsDoctorData.GetUsersCount();
         }
     }
 }

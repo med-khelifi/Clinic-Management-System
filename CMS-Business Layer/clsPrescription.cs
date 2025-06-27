@@ -90,5 +90,20 @@ namespace BusinessLayer
             }
             return null;
         }
+        public static clsPrescription FindByMedicalRecordID(int medicalRecord)
+        {
+            int PrescriptionID = -1;;
+            string MedicationName = "";
+            string Dosage = "";
+            string Frequency = "";
+            DateTime StartDate = DateTime.Now;
+            DateTime EndDate = DateTime.Now;
+            string SpecialInstructions = null;
+            if (clsPrescriptionData.GetByMedicalrecordID(medicalRecord,ref PrescriptionID, ref MedicationName, ref Dosage, ref Frequency, ref StartDate, ref EndDate, ref SpecialInstructions))
+            {
+                return new clsPrescription(PrescriptionID, medicalRecord, MedicationName, Dosage, Frequency, StartDate, EndDate, SpecialInstructions);
+            }
+            return null;
+        }
     }
 }

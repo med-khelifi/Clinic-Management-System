@@ -63,11 +63,28 @@ namespace CMS.Login
                     return;
                 }
 
-                clsGlobal.CurrentUser = user;
+
+                if (user.RoleId == (int)clsUser.enRoles.doctor)
+                {
+                    var doctor = clsDoctor.FindByUsername(user.Username);
+                    if (doctor == null)
+                    {
+                        MessageBox.Show("An error occurred while retrieving doctor information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    clsGlobal.CurrentUser = doctor;
+                }
+                else
+                {
+                    clsGlobal.CurrentUser = user;
+                }
+
+
 
                 //this.Hide();
                 FrmMain f = new FrmMain();
-                f.ShowDialog();
+                    f.ShowDialog();
             }
             else
             {

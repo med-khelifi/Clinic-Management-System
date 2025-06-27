@@ -42,7 +42,7 @@ namespace CMS.Appointments
 
         void _LoadInitialValues()
         {
-            dtpAppointmentDate.MinDate = DateTime.Now;
+           // dtpAppointmentDate.MinDate = DateTime.Now;
 
             lblAppointmentID.Text = "N/A";
             string title = _FormeMode == eFormMode.update ? "Edit Appointment" : "Add New Appointment";

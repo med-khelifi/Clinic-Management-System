@@ -28,6 +28,41 @@ namespace DataLayer
                             StartDate = Convert.ToDateTime(reader["StartDate"]);
                             EndDate = Convert.ToDateTime(reader["EndDate"]);
                             SpecialInstructions = reader["SpecialInstructions"].ToString();
+
+                            isFound = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsDataAccessUtil.LogError(ex);
+                }
+            }
+            return isFound;
+        }
+        public static bool GetByMedicalrecordID(int MedicalRecordID,ref int PrescriptionID, ref string MedicationName, ref string Dosage, ref string Frequency, ref DateTime StartDate, ref DateTime EndDate, ref string SpecialInstructions)
+        {
+            bool isFound = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessUtil.GetConnectionString()))
+            using (SqlCommand command = new SqlCommand("sp_GetPrescriptionByMedicalRecordID", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MedicalRecordID", MedicalRecordID);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            PrescriptionID = Convert.ToInt32(reader["PrescriptionID"]);
+                            MedicationName = reader["MedicationName"].ToString();
+                            Dosage = reader["Dosage"].ToString();
+                            Frequency = reader["Frequency"].ToString();
+                            StartDate = Convert.ToDateTime(reader["StartDate"]);
+                            EndDate = Convert.ToDateTime(reader["EndDate"]);
+                            SpecialInstructions = reader["SpecialInstructions"].ToString();
+                            isFound = true;
                         }
                     }
                 }
@@ -91,7 +126,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@Frequency", Frequency);
                 command.Parameters.AddWithValue("@StartDate", StartDate);
                 command.Parameters.AddWithValue("@EndDate", EndDate);
-                command.Parameters.AddWithValue("@SpecialInstructions", SpecialInstructions);
+                command.Parameters.AddWithValue("@SpecialInstructions", string.IsNullOrWhiteSpace(SpecialInstructions) ? (object)DBNull.Value : SpecialInstructions);
                 try
                 {
                     connection.Open();
@@ -118,7 +153,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@Frequency", Frequency);
                 command.Parameters.AddWithValue("@StartDate", StartDate);
                 command.Parameters.AddWithValue("@EndDate", EndDate);
-                command.Parameters.AddWithValue("@SpecialInstructions", SpecialInstructions);
+                command.Parameters.AddWithValue("@SpecialInstructions", string.IsNullOrWhiteSpace(SpecialInstructions) ? (object)DBNull.Value : SpecialInstructions);
                 try
                 {
                     connection.Open();

@@ -12,11 +12,11 @@ namespace CMS.Doctors
 {
     public partial class frmDoctorInfo : Form
     {
-        string _username;   
-        public frmDoctorInfo(string username)
+        string _nationalNo;   
+        public frmDoctorInfo(string NationalNo)
         {
             InitializeComponent();
-            _username = username;
+            _nationalNo = NationalNo;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace CMS.Doctors
 
         private void frmDoctorInfo_Load(object sender, EventArgs e)
         {
-            ucDoctorCard1.LoadDoctorInfo(_username);
+            ucDoctorCard1.LoadDoctorInfoByNationalNo(_nationalNo);
         }
     }
 }

@@ -69,7 +69,7 @@ namespace CMS.Appointments.Controls
 
         private void llDoctorInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (frmDoctorInfo frm = new frmDoctorInfo(_appointment.DoctorInfo.UserInfo.Username))
+            using (frmDoctorInfo frm = new frmDoctorInfo(_appointment.DoctorInfo.UserInfo.PersonInfo.NationalNo))
             {
                 frm.ShowDialog();
             }

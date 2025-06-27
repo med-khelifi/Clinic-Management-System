@@ -32,10 +32,10 @@
             this.BtnClose = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbBloodTypes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.llEditPersonInfo = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ucPersonCardWithSearch1 = new CMS.Persons.Controls.ucPersonCardWithSearch();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -110,6 +110,16 @@
             this.gbFilter.TabIndex = 86;
             this.gbFilter.Text = "Additional Info :";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CMS.Properties.Resources.blood;
+            this.pictureBox2.Location = new System.Drawing.Point(171, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // cbBloodTypes
             // 
             this.cbBloodTypes.BackColor = System.Drawing.Color.Transparent;
@@ -150,17 +160,8 @@
             this.llEditPersonInfo.TabIndex = 87;
             this.llEditPersonInfo.TabStop = true;
             this.llEditPersonInfo.Text = "Edit Person Info :";
+            this.llEditPersonInfo.Visible = false;
             this.llEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CMS.Properties.Resources.blood;
-            this.pictureBox2.Location = new System.Drawing.Point(171, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
             // 
             // ucPersonCardWithSearch1
             // 
